@@ -1,7 +1,7 @@
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ErrorBoundary from "../layouts/ErrorBoundary";
-//import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 import Fallback from "../views/Fallback";
 
 
@@ -17,12 +17,9 @@ const routes = [
     path: "/test-module-sample",
     component: lazy(() => import("modules/TestModule")),
   },
-
- 
-  
 ];
 
-//const UserDashboard = lazy(() => import("../views/UserDashboard"));
+const UserDashboard = lazy(() => import("../views/UserDashboard"));
 const Login = lazy(() => import("../views/Login"));
 const NotFound = lazy(() => import("../views/NotFound"));
 
@@ -45,9 +42,9 @@ function DefaultLayout() {
           <Route path="/login/*" element={<Login />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-      {/* <Route element={<PrivateRoute />}> */}
-            {/* <Route path="/dashboard/*" element={<UserDashboard />} /> */}
-
+      <Route element={<PrivateRoute />}> 
+             <Route path="/dashboard/*" element={<UserDashboard />} /> 
+          
             {isLoading ? (
               <Route path="*" element={<LoadingRoutes />} />
             ) : (
@@ -55,7 +52,7 @@ function DefaultLayout() {
                 <Route path={route.path} element={<route.component />} />
               ))
             )}
-          {/* </Route> */}
+          </Route> 
 
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
