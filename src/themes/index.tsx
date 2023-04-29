@@ -1,22 +1,22 @@
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import { ThemeProvider } from "../context/ThemeContext";
 
 export const colors = {
-  kudaWhite: "#FFFFFF",
-  kudaBlue: "#1DCBEF",
-  kudaYellow: "#FFC83E",
-  kudaGreen: "#48D38A",
-  kudaPurple: "#40196D",
-  kudaDarkPurple: "#EFF1FF",
-  kudaBlack: "#000000",
-  kudaRed: "#F7685B",
-  kudaDarkRed: "#FFDBDB",
-  kudaGrey: "#CACACA",
-  kudaDarkGrey: "#979797",
-  kudaLightGrey: "#F9F9F9",
-  kudaLighterGrey: "#F4F4F4",
-  kudaLightPurple: "#8369A0",
-  kudaInactivePurple: "#EFF1FF",
-  kudaLightBlue: "#DBF8FF",
+  lendSqrWhite: "#FFFFFF",
+  lendSqrBlue: "#1DCBEF",
+  lendSqrYellow: "#FFC83E",
+  lendSqrGreen: "#48D38A",
+  lendSqrPurple: "#40196D",
+  lendSqrDarkPurple: "#EFF1FF",
+  lendSqrBlack: "#000000",
+  lendSqrRed: "#F7685B",
+  lendSqrDarkRed: "#FFDBDB",
+  lendSqrGrey: "#CACACA",
+  lendSqrDarkGrey: "#979797",
+  lendSqrLightGrey: "#F9F9F9",
+  lendSqrLighterGrey: "#F4F4F4",
+  lendSqrLightPurple: "#8369A0",
+  lendSqrInactivePurple: "#EFF1FF",
+  lendSqrLightBlue: "#DBF8FF",
 };
 
 const fontSizes = {
@@ -37,7 +37,7 @@ const breakPoints = {
   "2xl": "1536px",
 };
 
-const theme: DefaultTheme = {
+const theme = {
   colors,
   fontSizes,
   radiuses,
