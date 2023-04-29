@@ -1,0 +1,56 @@
+
+$fontfamily1: "Avenir next", sans-serif;
+$fontfamily2: "Work Sans", sans-serif;
+$fontfamily1B: "Avenir next bold", sans-serif;
+$blueColor: #213f7d;
+$textColor: #545f7d;
+$greenColor: #39cdcc;
+
+
+@mixin Desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin Phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin Tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin ExtendedTablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin buttonPrimary {
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 15px 20px;
+  font-weight: 600;
+  background-color: $greenColor;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  font-family: $fontfamily1;
+}
+
+@mixin input {
+  color: $textColor;
+  outline: none;
+  width: 100%;
+  border: 2px solid #545f7d26;
+  border-radius: 5px;
+  height: 50px;
+  font-family: $fontfamily1;
+  font-size: 14px;
+}
