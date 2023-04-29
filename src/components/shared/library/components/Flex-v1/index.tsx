@@ -47,6 +47,14 @@ export const Flex = (props) => (
       width: props.width || "auto",
       height: props.height || "auto",
       maxWidth: props.maxWidth || "none",
+      borderBottomColor: props.borderBottomColor ? props.borderBottomColor : "",
+      borderWidth: props.borderWidth ? props.borderWidth :  "0",
+      borderBottomStyle: props.borderBottomStyle ? props.borderBottomStyle:  "none",
+      backgroundColor: props.backgroundColor ? props.backgroundColor : "#fff",
+      zIndex: props.zIndex ? props.zIndex : "1",
+      position: props.position ? props.position : "relative",
+      top: props.top? props.top: "0px",
+      bottom: props.bottom? props.bottom : "0px"
     }}
   >
     {props.children || ""}

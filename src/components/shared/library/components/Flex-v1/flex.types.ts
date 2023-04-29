@@ -1,6 +1,6 @@
 /*** TYPESCRIPT TYPES ***/
 
-interface FlexProps {
+export interface FlexProps {
   children?: any;
   className?: string;
   container?: boolean;
