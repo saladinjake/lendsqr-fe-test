@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import App from "./App";
 import "./assets/css/modern-normalize.css";
+import "./styles/index.scss"
 import Theme from "./themes";
 import  AuthProvider from "./context/AuthContext";
 import queryKeys from "modules/AuditTrailManagement/queryKeys";

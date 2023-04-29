@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-
+import RouteOutlets from "./routes"
 
 
 function App() {
 
-  return <>Build awesome codes</>;
+  return <RouteOutlets />;
 }
 
 export default App;
