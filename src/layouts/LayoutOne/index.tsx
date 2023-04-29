@@ -1,9 +1,26 @@
-import React from "react"
+import SideBar from "./SideBar";
+import NavBar from "./NavBar";
+import Row from "components/shared/library/components/Grids/Row";
+import Col from "components/shared/library/components/Grids/Column";
 
-const Layout = (props) =>{
-  return <React.Fragment>
-    {props.children}
-  </React.Fragment>
-}
+const Layout = ({ children }) => {
+  return (
+    <Row>
+      <Row>
+        <NavBar />
+      </Row>
 
-export default Layout
+      <Col sm={3} lg={3}>
+        <SideBar />
+      </Col>
+
+     
+
+      <Col sm={9} lg={9}>
+      {children}
+      </Col>
+      </Row>
+  );
+};
+
+export default Layout;
