@@ -7,6 +7,19 @@ $textColor: #545f7d;
 $greenColor: #39cdcc;
 
 
+.loadingIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    .imgloader {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
 @mixin Desktop {
   @media (max-width: 1024px) {
     @content;
