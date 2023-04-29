@@ -31,6 +31,7 @@ interface FlexProps {
 
   padding?: string;
   margin?: string;
+
   width?: string;
   height?: string;
   maxWidth?: string;
