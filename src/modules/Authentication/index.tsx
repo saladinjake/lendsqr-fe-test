@@ -19,7 +19,6 @@ const LeftSection = () => {
       >
         <img src={Logo} className="Logo" />
       </Flex>
-    
 
       <div className="StyledIllustration rigidSection">
         <div className="illustration-wrapper">
@@ -32,7 +31,7 @@ const LeftSection = () => {
 
 const RightSection = () => {
   return (
-    <div className="leftside rigidSection">
+    <div className="rightside rigidSection">
       <FormSection />
     </div>
   );
