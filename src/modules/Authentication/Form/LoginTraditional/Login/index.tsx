@@ -50,21 +50,10 @@ function Login() {
   /*redux aware auth dispatchers*/
   //const dispatchPersistenceLogin = (userData) => reduxDispatcher(loginSuccessfulDispatcher(userData))
 
-  const defaultErrorTitle = "Login  failed";
-  const defaultErrorMessage = "Some error occured.";
-  const defaultSuccessTitle = "Login Successsful";
-  const defaultSuccessMessage = "You have successfully logged in.";
+ 
   const { id } = useParams();
-  const [editable, setEditable] = useState(false);
-  const [headerLinks, setHeaderLinks] = useState([]);
-  const [showInformationModal, setShowInformationModal] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-  const [errorTitle, setErrorTitle] = useState(defaultErrorTitle);
-  const [errorMessage, setErrorMessage] = useState(defaultErrorMessage);
-  const [successTitle, setSuccessTitle] = useState(defaultSuccessTitle);
-  const [successMessage, setSuccessMessage] = useState(defaultSuccessMessage);
-  const [showAlertModal, setShowAlertModal] = useState(false);
+  const [showError, setShowError] = useState(false)
+ 
   const { user } = useContext(AuthContext);
 
   const [initialValues, setInitialValues] = useState({
@@ -79,7 +68,7 @@ function Login() {
       validations,
       onSubmit(e) {
         e.preventDefault();
-        setShowInformationModal(true);
+       
       },
     });
 
@@ -109,6 +98,10 @@ function Login() {
         adminRoles
       );
 
+      if(!freshLoginAdminRoles || !apiResponseData ){
+        setShowError(true)
+      }
+
       freshLoginAdminRoles && navigate("/dashboard");
     } catch (error) {}
   };
@@ -127,6 +120,7 @@ function Login() {
             Welcome
           </h3>
           <p className="info">Enter details to login</p>
+         <span className="">{showError && "Invalid Credentials"}</span> 
 
           <Input
            
