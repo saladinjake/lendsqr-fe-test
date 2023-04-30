@@ -39,8 +39,10 @@ borderStyle="",
 borderBottomColor="",
 borderBottomStyle="",
 zIndex="",
+style={},
 transition=""}: IBaseProps) => {
   const Styled = {
+    ...style,
     marginTop : manageBreakpoints("margin-top", mt || my || m, theme, spacing),
     marginBottom : manageBreakpoints("margin-bottom", mb || my || m, theme, spacing),
     marginLeft : manageBreakpoints("margin-left", ml || mx || m, theme, spacing),
@@ -78,6 +80,7 @@ transition=""}: IBaseProps) => {
    zIndex : manageBreakpoints("z-index", zIndex, theme),
 
    transition : manageBreakpoints("transition", transition, theme),
+
   
 
 }

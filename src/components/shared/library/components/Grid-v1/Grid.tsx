@@ -12,6 +12,8 @@ const { spacing, perimeters } = libraryConfig;
 
 
 
+console.log(   manageBreakpoints("width", 50, theme))
+
 export const Item: React.FC<IBaseProps & IGridItemProps> = ({
     bg,
     colSpan,
@@ -52,11 +54,13 @@ export const Item: React.FC<IBaseProps & IGridItemProps> = ({
     borderBottomColor="",
     borderBottomStyle="",
     zIndex="",
-    transition=""
+    transition="",
+    style={}
    
 }) => {
 
     const GridStyle ={
+      ...style,
         gridRow: rowSpan && rowStart
               ? rowStart + " / span " + rowSpan
               : rowStart
@@ -103,6 +107,7 @@ export const Item: React.FC<IBaseProps & IGridItemProps> = ({
 
 export const GridRoot: React.FC<IBaseProps & IGridProps> = ({
   templateColumn,
+  style={},
   templateRow,
   columnGap,
   gap,
@@ -146,6 +151,7 @@ export const GridRoot: React.FC<IBaseProps & IGridProps> = ({
 
 
   const StyledGrid = {
+    ...style,
       display: "grid",
       gridTemplateColumns: templateColumn ? templateColumn : "",
       gridTemplateRows: templateRow ? templateRow : "",

@@ -248,17 +248,7 @@ function Sidebar({
             height="100%"
             container
           >
-            {sidebarOpen ? (
-              <>
-               <img src={Logo} />
-
-                
-              </>
-            ) : (
-              <>
-                  <img src={Logo} />
-              </>
-            )}
+           
 
             <div>
               <Flex

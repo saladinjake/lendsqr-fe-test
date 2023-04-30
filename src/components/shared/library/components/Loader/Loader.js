@@ -1,6 +1,5 @@
 import React from "react";
 import  "./Loader.styles.scss";
-import PropTypes from "prop-types";
 
 const Loader = ({ variant }) => {
   return (
@@ -12,15 +11,6 @@ const Loader = ({ variant }) => {
   );
 };
 
-Loader.propTypes = {
-  variant: PropTypes.string,
-  spinning: PropTypes.bool,
-  speed: PropTypes.string,
-};
 
-Loader.defaultProps = {
-  variant: "white",
-  spinning: true,
-};
 
 export default Loader;

@@ -1,6 +1,9 @@
 import libraryConfig from "../../utilities/libraryConfig";
 
 export default interface IBaseProps {
+  as?: string;
+  ref?: any;
+  style?: any;
   m?:
     | Array<keyof typeof libraryConfig.spacing>
     | keyof typeof libraryConfig.spacing;
