@@ -62,7 +62,7 @@ export const getUserProfile = () => {
 export const isTokenStillValid = async () => {
 try{
   const activeUserProfile = await Promise.resolve(res => {
-    return "test sample auth"
+    return true //for dummy purposes
   });
   return activeUserProfile
 }catch(err){

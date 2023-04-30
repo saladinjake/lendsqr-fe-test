@@ -232,12 +232,10 @@ import {
         );
         let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/;
         let ip = ipaddr.match(ipRegex)[0];
-        const MaxTimeForRetrials = 3;
-        let count = 0;
         const apiResponseData = await authService.authenticateUser(payload);
         const decoded = apiResponseData?.data;
         const adminRoles = apiResponseData?.data?.user?.roles;
-        const hasAdminRoles = true; //for demo purposes
+        const hasAdminRoles = adminRoles.every(role => role.name =="SuperAdmin")
         if (hasAdminRoles) {
           const userToken = apiResponseData?.data?.access_token;
           const userProfile = {
@@ -296,7 +294,7 @@ import {
               notificationCtx.error("Invalid credentials. Please Try again");
             }
           } catch (error) {
-            count = count + 1;
+         
             dispatch({ type: "LOGOUT" });
             dispatchPersistenceLogout();
             await cleanUserSession();
@@ -306,7 +304,6 @@ import {
         }
         return apiResponseData.data;
       } catch (error) {
-        console.log(error);
         notificationCtx.error("Invalid credentials.");
       }
     };
@@ -340,7 +337,7 @@ import {
     async function changePassword(payload) {
       try {
         const response = await authService.resetPassword(payload);
-        console.log(response)
+       
         if (response?.data.success) {
           dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
           notificationCtx.success("Your  password was reset successfully.");
@@ -363,7 +360,7 @@ import {
     async function updatePassword(payload) {
       try {
         const response = await authService.updatePassword(payload);
-        console.log(response)
+       
         if (response?.data.success) {
           dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
           notificationCtx.success("Your  password was reset successfully.");

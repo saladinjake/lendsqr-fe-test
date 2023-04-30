@@ -12,39 +12,56 @@ export const postCall = async (url, data, params, headerConfig) => {
 
 export const postCallMock = async (url, data, params, headerConfig) => {
   const mockRes = {
-    user: {
-      first_name: "Victor",
-      last_name: "Juwa",
-      email: "juwavictor@gmail.com",
-      password: "lead.developer",
-      username: "saladinjake",
-      token: "jde938923982jewioiejwdsjd90-212781625@!#$%^%^&*()(LLJG",
-      roles: [{
-        name: "SuperAdmin"
-      }]
-    },
-    successful: true,
-    status: 200,
-    isAuthenticated: true,
-    isSuccessful: true,
-    isActive: true
-  };
-  const  response = await  new Promise((resolve, reject)=> {
+    data:{
+      user: {
+        id: "qwertyiofudiofioid-uiopasdsjjsqwquwqwq-oieiwieiowoieoiwe-kjdksjdjdjs-ewioeuwew",
+        employeeNumber: "007",
+        middle_name:"James Bond",
+        first_name: "Victor",
+        last_name: "Juwa",
+        email: "juwavictor@gmail.com",
+        password: "lead.developer",
+        username: "saladinjake A.K.A  JAMES BOND",
+        token: "jde938923982jewioiejwdsjd90-212781625@!#$%^%^&*()(LLJG",
+        phone_number: "+234-",
+        image_url: "anonymous.jpg",
+        roles: [
+          {
+            name: "SuperAdmin",
+          },
+        ],
+      },
+      success: true,
+      isAuthenticated: true,
+      isSuccessful: true,
+      isActive: true,
+      access_token: "jde938923982jewioiejwdsjd90-212781625@!#$%^%^&*()(LLJG",
+      status_code:200,
 
-    if(mockRes.user.email == data.email && mockRes.user.password === data.password ){
-      return    setTimeout(() =>  resolve(mockRes), 2000)
+
+
+
+    },
+    
+   
+  };
+  const response = await new Promise((resolve, reject) => {
+    if (
+      mockRes.data.user.email === data.email &&
+      mockRes.data.user.password === data.password
+    ) {
+      return resolve(mockRes)
     }
 
-    return    setTimeout(() =>  reject(mockRes), 2000)
- 
-  }) 
-  return  response
+    return reject(mockRes);
+  });
+  console.log(response);
+  return response;
 };
 
 export const getCall = async (url, params) => {
   const config = {
-    headers: {
-    },
+    headers: {},
     ...params,
   };
   return await axiosInstance.get(url, config);

@@ -15,7 +15,7 @@ import { AxiosResponse } from "axios";
 
 export const authenticateUser = (data, params = null, headerConfig = null) =>
   postCallMock(`${AUTH_URL}`, data, params, headerConfig) as Promise<
-    AxiosResponse<IResponse & { user: any, message: string }>
+    AxiosResponse<any>
   >;
 
 export const logOut = (data=null, params = null, headerConfig = null) =>

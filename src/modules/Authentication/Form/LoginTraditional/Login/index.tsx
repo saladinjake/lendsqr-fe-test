@@ -101,6 +101,8 @@ function Login() {
       );
       const apiResponseData = await authContext.login(payload);
 
+      console.log(apiResponseData, ">>>>>>>.")
+
       const adminRoles = apiResponseData?.data?.user?.roles;
       let freshLoginAdminRoles = isAuthenticatedByRoles(
         "SuperAdmin",
