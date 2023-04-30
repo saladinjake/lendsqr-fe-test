@@ -37,7 +37,7 @@ const breakPoints = {
   "2xl": "1536px",
 };
 
-const theme = {
+export const theme = {
   colors,
   fontSizes,
   radiuses,
