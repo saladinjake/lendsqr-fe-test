@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 const Login = lazy(() => import("../views/Login"));
 const NotFound = lazy(() => import("../views/NotFound"));
 const UserDashBoard = lazy(() => import("../views/UserDashboard"));
-
+const UserDetail = lazy(() => import("../views/UserDetail"));
 
 function DefaultLayout() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,8 +22,8 @@ function DefaultLayout() {
         <Route element={<PrivateRoute />}>
           <Route path="/*" element={<UserDashBoard />} />
           <Route path="/dashboard" element={<Navigate to="/" replace />}  />
-          {/* <Route path="/profile/:id/detail" element={<UserDetail />} /> */}
-          {/* <Route path="/course/:id" element={<UserDetail />} /> */}
+          
+          <Route path="/user/:id" element={<UserDetail />} /> 
         </Route>
         <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />

@@ -50,5 +50,5 @@ export const getUsersByFilter = (data, params = null, headerConfig = null) =>
     AxiosResponse<IResponse & { data: IUser[] }>
   >;
 
-export const getUserById = () =>
-  getCall(`${USER_URL}`, {}).then((res) => res.data);
+export const getUserById = (id) =>
+  getCall(`${USER_URL}/`+ id, {}).then((res) => res.data);

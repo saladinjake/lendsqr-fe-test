@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../layouts/LayoutOne";
-import UserDashboardHome from "modules/UserDashboard/UserDashboardHome";
+
 import UserDetail from "modules/UserDashboard/User";
-function UserDashboard() {
+function UserDetails() {
   return (
     <Dashboard>
       <Routes>
-        <Route index element={<UserDashboardHome />} />
+        <Route index  element={<UserDetail />} />
         
       </Routes>
     </Dashboard>
@@ -15,4 +15,4 @@ function UserDashboard() {
 
 
 
-export default UserDashboard;
+export default UserDetails;

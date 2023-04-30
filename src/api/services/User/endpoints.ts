@@ -6,8 +6,8 @@ const endpoints = {
   CHANGE_PASSWORD_URL: "/",
   UPDATE_PASSWORD_URL: "",
 
-  USERS_URL: "/",
-  USER_URL:"/",
+  USERS_URL: "/users",
+  USER_URL:"/user/",
 
 
 };
