@@ -1,0 +1,79 @@
+.Login {
+  width: 661px;
+  height: 485px;
+  border: none;
+  background: #fff;
+  padding: 48px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  p a {
+    margin-left: 10px;
+    color:#39CDCC;
+  }
+
+  h3 {
+    color: #213f7d;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Avenir Next";
+
+    line-height: 54.64px;
+  }
+  .info {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Avenir Next";
+    color: #545f7d;
+
+    line-height: 27.32px;
+  }
+  .reset-link,  p a{
+    color:#39CDCC;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Avenir Next";
+    line-height: 16.39px;
+
+ 
+  }
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+.rigidSection {
+  margin-top: 106px;
+}
+
+.Title {
+  color: red;
+  font-size: 34px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.Logo {
+  width: 132px;
+  margin-top: 106px;
+  margin-left: 132.33px;
+}
+
+.StyledIllustration {
+  width: 600px;
+  height: 337.57px;
+  left: 67px;
+  top: 281px;
+}
+
+.leftside {
+  width: 600px;
+  height: 337.57px;
+  margin-left: 67px;
+}

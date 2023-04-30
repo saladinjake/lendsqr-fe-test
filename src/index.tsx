@@ -8,8 +8,14 @@ import App from "./App";
 import "./assets/css/modern-normalize.css";
 import "./styles/index.scss"
 import Theme from "./themes";
-import  AuthProvider from "./context/AuthContext";
+
 import queryKeys from "modules/AuditTrailManagement/queryKeys";
+
+import { AuthProvider } from "./context/AuthContext";
+import { Provider as PersistorContext } from "react-redux";
+import store from "./store";
+import { NotificationProvider } from 'context/NotificationContext';
+import NotificationBar from 'components/shared/Notifier';
 
 const container = document.getElementById("root") as HTMLDivElement;
 const root = createRoot(container);
@@ -36,6 +42,10 @@ const RenderDevTool = () => {
 
 root.render(
   <React.StrictMode>
+     <PersistorContext store={store}>
+     <NotificationProvider>
+          <NotificationBar />
+   
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <Router>
@@ -46,5 +56,7 @@ root.render(
       </AuthProvider>
       <RenderDevTool />
     </QueryClientProvider>
+    </NotificationProvider>
+    </PersistorContext>
   </React.StrictMode>
 );

@@ -1,0 +1,14 @@
+const endpoints = {
+  LOGIN_URL: "/",
+  LOGOUT_URL:'/',
+  USER_IDENTITY_PROFILE:"/",
+  FORGET_PASS_URL: "/",
+  CHANGE_PASSWORD_URL: "/",
+  UPDATE_PASSWORD_URL: "",
+
+  USERS_URL: "/",
+  USER_URL:"/",
+
+
+};
+export default endpoints;

@@ -8,7 +8,7 @@ import { Box } from "components/shared/library/components/Box-v1";
 import { Svg } from "assets/svg";
 
 import { useEffect, useState } from "react";
-import  Avatar from "components/shared/library/components/Avatar-v1"
+import Avatar from "components/shared/library/components/Avatar-v1";
 import Logo from "../../../assets/img/svg/logo.svg";
 import SearchField from "components/shared/library/components/SearchField-v1";
 import "./nav.styles.scss";
@@ -27,11 +27,15 @@ const NavBar = () => {
     "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg"
   );
 
+  const [searchQuery, setSearchQuery] = useState("")
+
   useEffect(() => {
     if (localStorage.getItem("avatar")) {
       setAvatarProfile(localStorage.getItem("avatar"));
     }
   }, [avatarProfile]);
+
+  const handleChange = ({target}) => setSearchQuery(target?.value)
 
   return (
     <Flex
@@ -41,8 +45,7 @@ const NavBar = () => {
       style={{
         height: "90px",
         borderBottom: "1px solid #dbdce0",
-        boxShadow:
-          "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
+        boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
       }}
     >
       <img src={Logo} className="imgLogo" />
@@ -62,16 +65,16 @@ const NavBar = () => {
               btnText="Search"
               width="100%"
               height="48px"
-              value={"sample"}
+              value={searchQuery}
               searchColumns={[]}
-              onChange={(e) => {}}
+              onChange={handleChange}
               onResetSearch={() => {}}
             />
           </form>
         </div>
       </Flex>
 
-      <Flex container margin="0 10px 0 36px" >
+      <Flex container margin="0 10px 0 36px">
         <Flex container justifyContent="space-between">
           <Box marginRight="15px" marginLeft="15px">
             docs
@@ -80,8 +83,6 @@ const NavBar = () => {
           <Avatar shape="rounded" type="text" src={avatarProfile} />
           <Box mr="5">Adedeji</Box>
         </Flex>
-
-      
       </Flex>
     </Flex>
   );

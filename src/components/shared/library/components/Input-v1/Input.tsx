@@ -51,6 +51,9 @@ const Input: React.FC<InputProps> = ({
           required={required}
           name={name}
           value={value}
+          style={{
+            width: width
+          }}
           onChange={(e) => {
             onChangePure && onChangePure(e);
             onChange && onChange(e.currentTarget.value);
