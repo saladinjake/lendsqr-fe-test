@@ -7,7 +7,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_KUDA_ACADEMY_API_URL,
+  baseURL: "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1" || process.env.REACT_APP_API_URL,
   headers: {
     "Content-Type": "application/json",
     clientId: process.env.REACT_APP_CLIENT_ID,
