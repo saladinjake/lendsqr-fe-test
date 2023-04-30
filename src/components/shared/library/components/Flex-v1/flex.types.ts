@@ -4,6 +4,7 @@ export interface FlexProps {
   children?: any;
   className?: string;
   container?: boolean;
+  style?: any;
 
   flexDirection?: "row" | "column";
   justifyContent?:
