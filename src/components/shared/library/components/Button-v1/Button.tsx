@@ -18,8 +18,13 @@ const Button: React.FC<ButtonProps> = ({
   margin,
   type,
 }) => {
+
+  const style ={
+    width,
+    height
+  }
   return (
-    <div className="StyledButton"
+    <div style={style} className="StyledButton"
       onClick={onClick}
     >
       {loading ? (

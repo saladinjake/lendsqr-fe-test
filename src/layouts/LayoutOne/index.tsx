@@ -1,7 +1,7 @@
 import SideBar from "./SideBar";
 import NavBar from "./NavBar";
-import Row from "components/shared/library/components/Grids/Row";
-import Col from "components/shared/library/components/Grids/Column";
+import Row from "components/shared/library/components/RowsAndColumns-v1/Row";
+import Col from "components/shared/library/components/RowsAndColumns-v1/Column";
 import { useState, useRef, useEffect } from "react";
 import "./layout.styles.scss";
 
@@ -95,8 +95,7 @@ const Layout = ({ children }) => {
       <Row>
         <NavBar />
       </Row>
-
-      <div className="mainSidebar">
+    
         <Col sm={3} lg={3}>
           <div
             className="sidebar-overlay"
@@ -108,7 +107,7 @@ const Layout = ({ children }) => {
             sidebarOpen={sidebarOpen}
           />
         </Col>
-      </div>
+   
 
       <Col sm={9} lg={9}>
         {children}
