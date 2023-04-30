@@ -1,4 +1,4 @@
-import { postCall } from "../apiCalls";
+import { postCall , postCallMock } from "../apiCalls";
 import endpoints from "./User/endpoints";
 import {
   AUTH_URL,
@@ -14,7 +14,7 @@ import { AxiosResponse } from "axios";
 
 
 export const authenticateUser = (data, params = null, headerConfig = null) =>
-  postCall(`${AUTH_URL}`, data, params, headerConfig) as Promise<
+  postCallMock(`${AUTH_URL}`, data, params, headerConfig) as Promise<
     AxiosResponse<IResponse & { user: any, message: string }>
   >;
 

@@ -10,6 +10,37 @@ export const postCall = async (url, data, params, headerConfig) => {
   return await axiosInstance.post(url, data, config);
 };
 
+export const postCallMock = async (url, data, params, headerConfig) => {
+  const mockRes = {
+    user: {
+      first_name: "Victor",
+      last_name: "Juwa",
+      email: "juwavictor@gmail.com",
+      password: "lead.developer",
+      username: "saladinjake",
+      token: "jde938923982jewioiejwdsjd90-212781625@!#$%^%^&*()(LLJG",
+      roles: [{
+        name: "SuperAdmin"
+      }]
+    },
+    successful: true,
+    status: 200,
+    isAuthenticated: true,
+    isSuccessful: true,
+    isActive: true
+  };
+  const  response = await  new Promise((resolve, reject)=> {
+
+    if(mockRes.user.email == data.email && mockRes.user.password === data.password ){
+      return    setTimeout(() =>  resolve(mockRes), 2000)
+    }
+
+    return    setTimeout(() =>  reject(mockRes), 2000)
+ 
+  }) 
+  return  response
+};
+
 export const getCall = async (url, params) => {
   const config = {
     headers: {
