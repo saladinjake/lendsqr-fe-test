@@ -4,12 +4,9 @@ import ErrorBoundary from "../layouts/ErrorBoundary";
 import PrivateRoute from "./PrivateRoute";
 import Fallback from "../views/Fallback";
 
-
 const pageMap = {
   "test-management": lazy(() => import("modules/TestModule")),
-  "test-management/:id": lazy(
-    () => import("modules/TestModule/Test")
-  ),
+  "test-management/:id": lazy(() => import("modules/TestModule/Test")),
 };
 
 const routes = [
@@ -23,13 +20,8 @@ const UserDashboard = lazy(() => import("../views/UserDashboard"));
 const Login = lazy(() => import("../views/Login"));
 const NotFound = lazy(() => import("../views/NotFound"));
 
-
-
 function DefaultLayout() {
-  const [isLoading,setIsLoading] = useState(false)
-  
-
- 
+  const [isLoading, setIsLoading] = useState(false);
 
   const LoadingRoutes = () => {
     return <div>initializing....</div>;
@@ -41,10 +33,11 @@ function DefaultLayout() {
         <Routes>
           <Route path="/login/*" element={<Login />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard/*" element={<UserDashboard />} />
 
-      <Route element={<PrivateRoute />}> 
-             <Route path="/dashboard/*" element={<UserDashboard />} /> 
-          
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard/*" element={<UserDashboard />} />
+
             {isLoading ? (
               <Route path="*" element={<LoadingRoutes />} />
             ) : (
@@ -52,7 +45,7 @@ function DefaultLayout() {
                 <Route path={route.path} element={<route.component />} />
               ))
             )}
-          </Route> 
+          </Route>
 
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />

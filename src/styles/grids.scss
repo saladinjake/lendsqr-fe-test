@@ -1,0 +1,35 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  $desktop-breakpoint: 600;
+  $breakpoints: ((sm), (md, 600px), (lg, 800px)) !default;
+  
+  $num-columns: 12;
+  
+  @mixin grid-sizes($namespace) {
+    @for $i from 1 through $num-columns {
+      .#{$namespace}#{-col-}#{$i} {
+        flex-basis: percentage($i / 12);
+        max-width: percentage($i / 12);
+      }
+    }
+  }
+  
+  @each $breakpoint in $breakpoints {
+    @if length($breakpoint) == 1 {
+      $namespace: nth($breakpoint, 1);
+      @include grid-sizes($namespace);
+    } @else {
+      $breakpoint-val: nth($breakpoint, 2);
+      $namespace: nth($breakpoint, 1);
+      @media (min-width: #{$breakpoint-val}) {
+        @include grid-sizes($namespace);
+      }
+    }
+  }
+  
