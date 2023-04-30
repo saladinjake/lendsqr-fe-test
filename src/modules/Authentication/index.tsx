@@ -11,15 +11,15 @@ const LeftSection = () => {
   return (
     <div className="leftside">
       <Flex
-        style={{ top: "10px" }}
+        style={{ marginTop: "0px" }}
         position="relative"
         justifyContent="space-between"
         alignItems="center"
         container
       >
-        <img src={Logo} className="logo" />
+        <img src={Logo} className="Logo" />
       </Flex>
-      <div style={{ marginTop: "10px" }}></div>
+    
 
       <div className="StyledIllustration rigidSection">
         <div className="illustration-wrapper">

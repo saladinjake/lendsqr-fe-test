@@ -32,6 +32,7 @@ function DefaultLayout() {
       <Suspense fallback={<Fallback />}>
         <Routes>
           <Route path="/login/*" element={<Login />} />
+          <Route path="/get-started" element={<Navigate to="/login" replace />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
         
 

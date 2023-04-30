@@ -17,7 +17,7 @@ const LeftSection = () => {
         alignItems="center"
         container
       >
-        <img src={Logo} className="logo" />
+        <img src={Logo} className="Logo" />
       </Flex>
       <div style={{ marginTop: "10px" }}></div>
 
@@ -42,10 +42,10 @@ const ForgetPassword = () => {
   return (
     <>
     <div className="flexbox">
-    <div>
+    
         <LeftSection />
       <RightSection />
-        </div>
+     
  </div>
  </>
   );

@@ -16,7 +16,7 @@ const LeftSection = () => {
         alignItems="center"
         container
       >
-      <img src={Logo} className="logo" />
+      <img src={Logo} className="Logo"  />
       
      
       </Flex>
@@ -45,11 +45,11 @@ const Login = () => {
   return (
     <>
     <div className="flexbox">
-    <div >
+
         <LeftSection />
       <RightSection />
         </div>
- </div>
+
  </>
    
   );

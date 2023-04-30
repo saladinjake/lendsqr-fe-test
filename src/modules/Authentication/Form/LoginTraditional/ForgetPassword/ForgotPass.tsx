@@ -102,14 +102,14 @@ function Login() {
   return (
     <Box border="none " height="100vh">
       <Flex
-        style={{ top: "10vmin", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+        style={{ top: "10vmin"}}
         position="relative"
         justifyContent="between"
         alignItems="center"
         border="none"
       >
         <div className="Login">
-          <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "bold" }}>
+          <h3>
             Forgot Password
           </h3>
           <Input

@@ -114,35 +114,35 @@ function Login() {
   return (
     <Box border="none " height="100vh" >
       <Flex
-        style={{ top: "10vmin", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+        style={{ top: "10vmin"}}
         position="relative"
         justifyContent="between"
         alignItems="center"
         border="none"
       >
         <div className="Login">
-          <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "bold" }}>
-            Admin Login
+          <h3>
+            Welcome
           </h3>
-          <p>Enter details to login</p>
+          <p className="info">Enter details to login</p>
 
           <Input
-            required
+           
             width="100%"
-            label="Email"
+            label=""
             isLoading={false}
             name="email"
             value={values.email}
             onChangePure={handleChange}
             error={hasError("email", touched, errors)}
             message={hasError("email", touched, errors)}
-            placeholder="Enter Name / Email"
+            placeholder="Email"
           />
 
           <Input
-            required
+           
             width="100%"
-            label="password"
+            label=""
             isLoading={false}
             type="password"
             name="password"
@@ -150,11 +150,11 @@ function Login() {
             onChangePure={handleChange}
             error={hasError("password", touched, errors)}
             message={hasError("password", touched, errors)}
-            placeholder="Enter Password"
+            placeholder="Password"
           />
 
-          <p style={{ color: "#40196D" }}>
-            <a href="./get-started/forget-password">Forgot Password? </a>
+          <p className="reset-link">
+            <a href="./login/forget-password">Forgot Password? </a>
           </p>
           <Box ml="2">
             <Button
