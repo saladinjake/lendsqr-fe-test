@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Skeleton from "../Skeleton-v1";
 import {  Flex } from "../Flex-v1";
 import {  Box } from "../Box-v1";
@@ -23,6 +23,7 @@ const Input: React.FC<InputProps> = ({
   name,
   isLoading,
 }) => {
+  const [toggleVIew, setToggle] = useState(false)
   return (
     <Flex direction="column" style={{ opacity: disabled ? "0.7" : 1 }}>
       {isLoading ? (
@@ -43,10 +44,12 @@ const Input: React.FC<InputProps> = ({
           <Skeleton height="40px" width="100%" />
         </Box>
       ) : (
-        <input 
+        <>
+        
+         <input 
           className="wrapperInput"
           width={width}
-          type={type}
+          type={ toggleVIew? "text": type}
           placeholder={disabled ? "" : placeholder}
           required={required}
           name={name}
@@ -60,6 +63,12 @@ const Input: React.FC<InputProps> = ({
           }}
           disabled={disabled}
         />
+         {type=="password" && (
+            <p className="togglepassword" onClick={() => setToggle(prev => !prev)}>show password</p>
+         )}
+
+        </>
+       
       )}
 
       {error && (

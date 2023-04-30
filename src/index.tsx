@@ -14,7 +14,7 @@ import  "./components/shared/library/components/DatePicker/DatePickerOverrides.c
 import "./styles/index.scss";
 import Theme from "./themes";
 
-import queryKeys from "modules/AuditTrailManagement/queryKeys";
+
 
 import { AuthProvider } from "./context/AuthContext";
 import { Provider as PersistorContext } from "react-redux";
@@ -36,7 +36,7 @@ export const queryClient = new QueryClient({
   },
 });
 
-queryClient.invalidateQueries([queryKeys.getAllAuditTrail]);
+queryClient.invalidateQueries(["find_user_track"]);
 
 const RenderDevTool = () => {
   if (process.env.NODE_ENV === "development") {
