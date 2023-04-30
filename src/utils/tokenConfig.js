@@ -14,7 +14,7 @@ export const finishAuth = (
   userData,
   visitorId,
   expires_at,
-  profile
+  googleProfile
 ) => {
   const encryptedUserIdentity = sha256(visitorId + userData.id)
     .toString()
@@ -30,8 +30,8 @@ export const finishAuth = (
     moment().minute(expires_at)
   );
   localStorage.setItem(
-    sessionInfo.AppData,
-    JSON.stringify(profile)
+    sessionInfo.AppGoogleData,
+    JSON.stringify(googleProfile)
   );
 };
 
@@ -51,17 +51,29 @@ export const getUserData = () => {
   return null;
 };
 
-export const getProfile = () => {
-  let profile = localStorage.getItem(sessionInfo.AppData);
-  if (profile) {
-    return JSON.parse(profile);
+export const getUserProfile = () => {
+  let googleProfile = localStorage.getItem(sessionInfo.AppGoogleData);
+  if (googleProfile) {
+    return JSON.parse(googleProfile);
   }
   return null;
 };
 
+export const isTokenStillValid = async () => {
+try{
+  const activeUserProfile = await Promise.resolve(res => {
+    return "test sample auth"
+  });
+  return activeUserProfile
+}catch(err){
+  console.log(err)
+}
+ 
+};
+
 export const getEncryptedUserIdentity = () => {
   let encryptedUserIdentity = localStorage.getItem(
-    sessionInfo.AppEncryptedUserIdentity
+    sessionInfo.KudaAppEncryptedUserIdentity
   );
   if (encryptedUserIdentity) {
     return JSON.parse(encryptedUserIdentity);
