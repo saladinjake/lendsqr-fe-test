@@ -33,7 +33,7 @@ function DefaultLayout() {
         <Routes>
           <Route path="/login/*" element={<Login />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/dashboard/*" element={<UserDashboard />} />
+        
 
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard/*" element={<UserDashboard />} />

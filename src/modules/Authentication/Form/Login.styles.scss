@@ -1,0 +1,48 @@
+
+.Login{
+
+  width: 661px;
+  height: 485px;
+  border: none;
+  background: #fff;
+  padding: 48px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4px;
+  top:20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  p a{
+    margin-left:10px;
+    color: #40196D;
+  }
+}
+
+.flexbox{
+  display : flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  margin-top: 200px;
+  
+}
+
+.Title{
+  color: red;
+  font-size: 34px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.Logo{
+  width: 132px;
+}
+
+
+.StyledIllustration{
+  margin-top: 1px;
+  width: 50vmin;
+  margin-left: 10%;
+}
+ 
+

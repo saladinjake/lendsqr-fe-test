@@ -1,6 +1,6 @@
 import {
-    GET_COURSES,
-    COURSE_ERROR,
+    GET_USERS,
+    USER_ERROR,
     SET_LOADING,
 } from '../actions/types';
 
@@ -13,7 +13,7 @@ const initialState = {
 
 const courseReducer = (state=initialState,action) => {
     switch(action.type) {
-        case GET_COURSES:
+        case GET_USERS:
             return {
               ...state,
               courses: action.payload,
@@ -24,7 +24,7 @@ const courseReducer = (state=initialState,action) => {
               ...state,
               courseLoading: true
             }
-        case COURSE_ERROR:
+        case USER_ERROR:
             return {
                 ...state,
                 error:action.payload,
