@@ -53,16 +53,13 @@ const SearchField: React.FC<SearchFieldProps> = ({
   };
 
   return (
-    <div className="StyledSearchField">
-      <input
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        className="wrapperInput StyledSearchField"
-      />
+    <div className="StyledSearchField" contentEditable  placeholder={placeholder}
+   
+    onChange={onChange}
+    onFocus={handleFocus}
+    onBlur={handleBlur}
+   >
+     
       <div className="tooltip">{"Search table by " + searchColumnsString}</div>
       {withBtn && (
         <>

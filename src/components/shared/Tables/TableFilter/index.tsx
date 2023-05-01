@@ -1,14 +1,14 @@
-import { Flex} from "components/shared/library/components/Flex-v1";
+import { Flex } from "components/shared/library/components/Flex-v1";
 import { Box } from "components/shared/library/components/Box-v1";
-import   Button  from "components/shared/library/components/Button-v1"
+import Button from "components/shared/library/components/Button-v1";
 import Input from "components/shared/library/components/Input-v1/Input";
 import { GridItem } from "components/shared/library/components/Grid";
 import Select from "components/shared/library/components/Select/Select";
 import DatePicker from "components/shared/library/components/DatePicker/DatePicker";
-
+import { Text } from "components/shared/library/components/Text-v1";
 import React, { useState } from "react";
 
-import  "./TableFilter.styles.scss";
+import "./TableFilter.styles.scss";
 import TableFilterProps from "./TableFilter.types";
 
 const TableFilter: React.FC<TableFilterProps> = (props) => {
@@ -28,103 +28,90 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
     values,
     handleChange,
     showModalFilter,
-    setShowModalFilter
-    
+    setShowModalFilter,
   } = props;
 
   const [searchValue, setSearchValue] = useState("");
 
   return (
-     <div className="TableFilter">
+    <div className="TableFilter">
       {showModalFilter && (
-      <div className="filters-dropdown-container filters">
-        <Box mb="3"></Box>
-      <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
-             <Box ml="2" mb="4">Organization</Box>
+        <div className="filters-dropdown-container filters">
+          <Box mb="3"></Box>
+          <Box mb="3">
+            <Text>Organization</Text>
+            <Box>
               <Select
                 placeholder={"Select Organization"}
-                width="250px"
+                width="150px"
                 options={filterColumns || []}
                 onGetSelectValue={(item) => {
                   onSortColumn(item.id);
                 }}
                 hasShadow={false}
+                label=""
               />
-           
-          </Flex>
+            </Box>
           </Box>
 
           <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
-
+            <Text>User Name</Text>
             <Input
-              required
+              label=""
               width="250px"
-              label="User Name"
               isLoading={false}
               name="name"
               value={values?.firstName}
               onChangePure={handleChange}
               placeholder="Enter username"
             />
-          </Flex>
-        </Box>
+          </Box>
 
-        <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
+          <Box mb="3">
+            <Text>Email</Text>
             <Input
-              required
+              label=""
               width="250px"
-              label="Email"
               isLoading={false}
               name="name"
               value={values?.email}
               onChangePure={handleChange}
               placeholder="Enter email"
             />
-          </Flex>
-        </Box>
+          </Box>
 
-        <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
-        <DatePicker
-          required
-          label="D.O.B"
-          date={values?.dateOfBirth || ""}
-          disabled={false}
-          setDate={(value) =>
-            handleChange({ target: { name: "dateOfBirth", value } })
-          }
-          width="250px"
-        />
-          </Flex>
-        </Box>
-
-
-
-
-        <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
-            <Input
-              required
+          <Box mb="3">
+            <Text>D.O.B</Text>
+            <DatePicker
+              label=""
+              date={values?.dateOfBirth || ""}
+              disabled={false}
+              setDate={(value) =>
+                handleChange({ target: { name: "dateOfBirth", value } })
+              }
               width="250px"
-              label="Phone Number"
+            />
+          </Box>
+
+          <Box mb="3">
+            <Text>Phone Number</Text>
+            <Input
+              width="250px"
+              label=""
               isLoading={false}
               name="name"
               value={values?.phoneNumber}
               onChangePure={handleChange}
               placeholder="Enter Phone Number"
             />
-          </Flex>
-        </Box>
+          </Box>
 
-        <Box mb="3">
-          <Flex direction="column" alignItems="start" container>
-          <Box ml="2" mb="4">Status</Box>
+          <Box mb="3">
+            <Text>Status</Text>
             <Select
+              label=""
               placeholder={"Select Status"}
-              width="250px"
+              width="150px"
               options={[
                 { name: "Active", id: "asc" },
                 { name: "Blocked", id: "desc" },
@@ -134,39 +121,42 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
               }}
               hasShadow={false}
             />
-          </Flex>
-        </Box>
+          </Box>
 
-        <GridItem colSpan={2}>
-          <Flex height="100%" container>
-            <div>
-              <Button
-                color="secondary"
-                variant="outline"
-                width="115px"
-                onClick={() =>   setShowModalFilter(false)}
-              >
-                Reset
-              </Button>
-            </div>
+          <Text></Text>
+          <Text></Text>
 
-            <Box ml="4">
-              <Button
-                type="submit"
-                width="115px"
-                loading={false}
-                onClick={() => {}}
-              >
-                Filter
-              </Button>
-            </Box>
-          </Flex>
-        </GridItem>
+          <GridItem colSpan={2}>
+            <Flex height="100%" container>
+              <div>
+                <Button
+                  color="secondary"
+                  variant="outline"
+                  width="115px"
+                  onClick={() => setShowModalFilter(false)}
+                >
+                  Reset
+                </Button>
+              </div>
 
-        
+              <Box ml="4">
+                <Button
+                  color="primary"
+                  variant="solid"
+                  textColor="#fff"
+                  type="submit"
+                  width="115px"
+                  loading={false}
+                  onClick={() => {}}
+                >
+                  Filter
+                </Button>
+              </Box>
+            </Flex>
+          </GridItem>
 
-        {children && children}
-      </div>
+          {children && children}
+        </div>
       )}
     </div>
   );

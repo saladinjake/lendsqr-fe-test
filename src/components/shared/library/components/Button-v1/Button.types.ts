@@ -48,4 +48,6 @@ export interface ButtonProps {
 
   type?: "submit" | "reset" | "button";
   className?: string;
+  floatable?: boolean;
+  textColor?: string;
 }
