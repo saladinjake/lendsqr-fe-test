@@ -75,6 +75,7 @@ body {
   display: none;
 }
 
+
 /*login svg left*/
 .leftside {
   @include Desktop {
@@ -116,6 +117,10 @@ body {
       margin-left: 67px;
     }
 
+    .nav-bar{
+      display:none
+    }
+
     .sm-only {
       display: block;
     }
@@ -131,6 +136,8 @@ body {
     margin: 20px;
     padding: 20px;
     height: 500px;
+
+ 
 
     .sm-only {
       display: none;
@@ -167,6 +174,9 @@ body {
     margin: 20px;
     padding: 10px;
     height: 500px;
+
+    
+
     .Login {
       width: 100%;
       margin: 10px;
