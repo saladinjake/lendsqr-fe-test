@@ -105,6 +105,7 @@ function Home() {
 
   const handlePageSize = ({ target }) => {
     setPageNumber(1);
+    console.log(target.value)
     setPageSize(Number(target.value));
   };
 
@@ -315,7 +316,7 @@ function Home() {
      
 
       <Flex justifyContent="space-between" alignItems="center" container margin="40px 0 0 0">
-      <Flex alignItems="center"  container margin="45px 0 0 0">
+      <Flex alignItems="center"  container margin="70px 40px 0 0">
        
         <div className="PaginationText">Showing</div>{" "}
       
@@ -332,11 +333,11 @@ function Home() {
         < div className="PaginationText">results per page</div>
       </Flex>
       <Box mt="10">
-      <Flex alignItems="center"  container margin="70px 10px 0 0">
+      <Flex alignItems="center"  container margin="100px 10px 0 0">
       <Pagination
           totalRecords={100}
           pageLimit={10}
-          pageNeighbours={1}
+          pageNeighbours={pageNumber}
           onPageChanged={onPageChanged}
         />
         </Flex>

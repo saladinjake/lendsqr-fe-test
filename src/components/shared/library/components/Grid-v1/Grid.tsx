@@ -12,7 +12,6 @@ const { spacing, perimeters } = libraryConfig;
 
 
 
-console.log(   manageBreakpoints("width", 50, theme))
 
 export const Item: React.FC<IBaseProps & IGridItemProps> = ({
     bg,

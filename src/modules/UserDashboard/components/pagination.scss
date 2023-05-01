@@ -4,11 +4,11 @@
 }
 
 ul.pagination {
-  margin-top: -40px;
+ margin-top:30px;
   margin-bottom: 0;
 }
 ul.pagination li.page-item.active a.page-link {
-  background: #fbfdff;
+  background: #ffff;
   border: none;
 }
 ul.pagination a.page-link {
@@ -20,11 +20,11 @@ ul.pagination a.page-link {
   color: #545f7d;
   font-weight: 900;
   font-size: 1rem;
-  background: #fbfdff;
+  background: #fff;
   border: none;
 }
 ul.pagination a.page-link:hover {
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 
 
