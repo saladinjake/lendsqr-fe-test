@@ -57,6 +57,7 @@ export const Flex = (props) => (
       top: props.top? props.top: "0px",
       bottom: props.bottom? props.bottom : "0px"
     }}
+    
   >
     {props.children || ""}
   </div>

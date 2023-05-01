@@ -11,6 +11,8 @@ export const Box = (props) => (
     className={props.className}
     style={{
       display: props.display ? props.display : "block",
+      textDecoration: props?.underline ? "underline": "none",
+      color: props.color? props?.color: "#000",
 
       alignItems: props.alignItems || "left",
       margin: props.margin || props.m || "0",
