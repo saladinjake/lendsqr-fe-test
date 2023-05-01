@@ -29,6 +29,56 @@
     margin-left: 10px;
   }
 
+
+
+  
+  @media only screen and (max-width: 1024px) {
+    height: 2rem;
+    font-size: 0.9rem;
+    width: fit-content;
+  }
+}
+
+
+
+
+
+
+.StyledButton2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-style: normal;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.6s;
+  padding: 0px 20px;
+  border: none;
+  white-space: nowrap;
+  border-radius: 5px;
+  outline: none;
+  width: auto;
+  height: 44px;
+  margin-right:-10px;
+  background: #fff;
+  border: 1px solid #39CDCC;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  .icon-left {
+    margin-right: 10px;
+  }
+
+  .icon-right {
+    margin-left: 10px;
+  }
+
+
+
+  
   @media only screen and (max-width: 1024px) {
     height: 2rem;
     font-size: 0.9rem;

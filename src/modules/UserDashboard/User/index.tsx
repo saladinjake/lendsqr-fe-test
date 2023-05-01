@@ -173,8 +173,10 @@ function UserDetail() {
         </Grid>
         <div className="Wrapper" >
           <div className="TabContainer">
+            <Flex container justifyContent="space-around">
+
             {tabs.map((tab) => (
-              <Button className="Tab"
+              <Button className="Tab" floatable={true}
                 // as="button"
                 // active={tab.id === currentTab}
                 // cursor="pointer"
@@ -187,7 +189,11 @@ function UserDetail() {
 
                 {tab.id === currentTab && <div  className="Line" />}
               </Button>
+
+         
+            
             ))}
+               </Flex>
           </div>
         </div>
       </div>
