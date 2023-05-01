@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import Avatar from "components/shared/library/components/Avatar-v1";
 import Logo from "../../../assets/img/svg/logo.svg";
 import SearchField from "components/shared/library/components/SearchField-v1";
+import Col from "components/shared/library/components/RowsAndColumns-v1/Column";
+import Row from "components/shared/library/components/RowsAndColumns-v1/Row";
 import "./nav.styles.scss";
 const pageMap = {
   dashboard: "Dashboard",
@@ -38,6 +40,7 @@ const NavBar = () => {
   const handleChange = ({ target }) => setSearchQuery(target?.value);
 
   return (
+    <Row>
     <div className="nav-bar">
       <Flex
         container
@@ -115,6 +118,7 @@ const NavBar = () => {
         </Flex>
       </Flex>
     </div>
+    </Row>
   );
 };
 

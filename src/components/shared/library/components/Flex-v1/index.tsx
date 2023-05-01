@@ -21,7 +21,7 @@ import { FlexProps } from "./flex.types"
 */
 export const Flex = (props) => (
   <div
-    className={props.className}
+    className={props.className|| "flex_classic"}
     style={{
      ...props.style,
       display: props.container ? "flex" : "block",

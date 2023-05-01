@@ -19,12 +19,12 @@ function DefaultLayout() {
         <Route path="/login/*" element={<Login />} />
         {/* <Route path="/" element={<Navigate to="/get-started" replace />} /> */}
 
-        <Route element={<PrivateRoute />}>
+        {/* <Route element={<PrivateRoute />}> */}
           <Route path="/*" element={<UserDashBoard />} />
           <Route path="/dashboard" element={<Navigate to="/" replace />}  />
           
           <Route path="/user/:id" element={<UserDetail />} /> 
-        </Route>
+        {/* </Route> */}
         <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
