@@ -37,7 +37,7 @@ body{
 }
 
 @mixin Tablet {
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
     @content;
   }
 }
@@ -70,4 +70,100 @@ body{
   height: 50px;
   font-family: $fontfamily1;
   font-size: 14px;
+}
+
+
+
+
+/*login svg left*/
+.leftside{
+  @include Desktop {
+		display: block;
+    width: 600px;
+    height: 337.57px;
+    margin-left: 67px;
+    body{
+      height:100vh
+    }
+	}
+
+  @include Phone {
+		display: none;
+    body{
+      height:100vh
+    }
+	}
+
+  @include Tablet {
+		display: none
+    body{
+      height:100vh
+    }
+	}
+}
+
+
+.rightside{
+  @include Desktop {
+   .Login{
+    display: block;
+    width: 600px;
+    height: 337.57px;
+    margin-left: 67px;
+  
+   }
+
+   .sm-only{
+    display: none
+ }
+		
+    body{
+      height:100vh
+    }
+	}
+
+  @include Phone {
+
+    margin-top:-100px;
+		width: 100%;
+    margin:20px;
+    padding:20px;
+    height: 500px;
+    .sm-only{
+      display: block;
+    
+   }
+
+    .Login{
+      width: 100%;
+      margin:10px;
+      padding:20px;
+   
+    }
+    body{
+      height:100vh
+    }
+	}
+
+  @include Tablet {
+    margin-top:-100px;
+    width: 100%;
+    margin:20px;
+    padding:10px;
+    height: 500px;
+    .Login{
+      width: 100%;
+      margin:10px;
+      padding:10px;
+      margin-top:-100px;
+    
+    }
+
+    .sm-only{
+       display: block;
+    }
+    body{
+      height:100vh
+    }
+	}
 }

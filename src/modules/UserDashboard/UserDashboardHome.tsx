@@ -333,7 +333,7 @@ function Home() {
         < div className="PaginationText">results per page</div>
       </Flex>
       <Box mt="10">
-      <Flex alignItems="center"  container margin="100px 10px 0 0">
+      <Flex alignItems="center"  container margin="100px 5px 0 0">
       <Pagination
           totalRecords={100}
           pageLimit={10}

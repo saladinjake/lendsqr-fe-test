@@ -41,7 +41,50 @@ borderBottomStyle="",
 zIndex="",
 style={},
 transition=""}: IBaseProps) => {
+  const Styled = {
+    ...style,
+    marginTop : manageBreakpoints("margin-top", mt || my || m, theme, spacing),
+    marginBottom : manageBreakpoints("margin-bottom", mb || my || m, theme, spacing),
+    marginLeft : manageBreakpoints("margin-left", ml || mx || m, theme, spacing),
+    marginRight : manageBreakpoints("margin-right", mr || mx || m, theme, spacing),
+   paddingTop: manageBreakpoints("padding-top", pt || py || p, theme, spacing),
+    paddingBottom: manageBreakpoints("padding-bottom", pb || py || p, theme, spacing),
+   paddingLeft:  manageBreakpoints("padding-left", pl || px || p, theme, spacing),
+   paddingRight:  manageBreakpoints("padding-right", pr || px || p, theme, spacing),
+   width:manageBreakpoints("width", width, theme, perimeters),
+   height: manageBreakpoints("height", height, theme),
+   position: manageBreakpoints("position", position, theme),
+   rounded:  manageBreakpoints("border-radius", rounded, theme, libraryConfig.rounds),
+   cursor : manageBreakpoints("cursor", cursor, theme),
+   backgroundColor :
+   manageBreakpoints(
+     "background-color",
+     backgroundColor,
+     theme,
+     libraryConfig.colors
+   ),
+   color : manageBreakpoints("color", color, theme, libraryConfig.colors),
+   border: border && border,
+   borderWidth : manageBreakpoints("border-width", borderWidth, theme),
+   borderColor : manageBreakpoints("border-color", borderColor, theme),
+   borderStyle : manageBreakpoints("border-style", borderStyle, theme),
+   borderBottomColor :
+   manageBreakpoints("border-bottom-color", borderBottomColor, theme),
+   top: top ,
  
+   borderBottomStyle :
+   manageBreakpoints("border-bottom-style", borderBottomStyle, theme),
+
+   opacity:  manageBreakpoints("opacity", opacity, theme),
+
+   zIndex : manageBreakpoints("z-index", zIndex, theme),
+
+   transition : manageBreakpoints("transition", transition, theme),
+
+  
+
+}
+
 
 
 return <div >{children}</div>

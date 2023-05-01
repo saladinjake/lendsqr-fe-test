@@ -123,37 +123,19 @@ class Pagination extends Component {
     return (
       <nav aria-label="Countries Pagination">
         <ul className="pagination">
+          <li className="page-item">
+            <a
+              className="page-link"
+              href="#"
+              aria-label="Previous"
+              onClick={this.handleMoveLeft}
+            >
+              
+              <span aria-hidden="true">&laquo;</span>
+              <span className="sr-only">Previous</span>
+            </a>
+          </li>
           {pages.map((page, index) => {
-            if (page === LEFT_PAGE)
-              return (
-                <li key={index} className="page-item">
-                  <a
-                    className="page-link"
-                    href="#"
-                    aria-label="Previous"
-                    onClick={this.handleMoveLeft}
-                  >
-                    <span aria-hidden="true">&laquo;</span>
-                    <span className="sr-only">Previous</span>
-                  </a>
-                </li>
-              );
-
-            if (page === RIGHT_PAGE)
-              return (
-                <li key={index} className="page-item">
-                  <a
-                    className="page-link"
-                    href="#"
-                    aria-label="Next"
-                    onClick={this.handleMoveRight}
-                  >
-                    <span aria-hidden="true">&raquo;</span>
-                    <span className="sr-onlyx">Next</span>
-                  </a>
-                </li>
-              );
-
             return (
               <li
                 key={index}
@@ -169,6 +151,18 @@ class Pagination extends Component {
               </li>
             );
           })}
+
+          <li className="page-item">
+            <a
+              className="page-link"
+              href="#"
+              aria-label="Next"
+              onClick={this.handleMoveRight}
+            >
+              <span aria-hidden="true">&raquo;</span>
+              <span className="sr-only">Next</span>
+            </a>
+          </li>
         </ul>
       </nav>
     );
