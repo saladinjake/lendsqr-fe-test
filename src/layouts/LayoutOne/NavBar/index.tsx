@@ -57,13 +57,13 @@ const NavBar = () => {
         alignItems="center"
         container
         flex={4}
-        margin="0 100px 0px 506px"
+        margin="0 100px 0px 206px"
       >
         <div className="filter-global-search-container">
           <form onSubmit={(e) => {}}>
             <SearchField
               withBtn
-              placeholder="Search"
+              placeholder="Search for anything" 
               btnText="Search"
               width="100%"
               height="48px"
