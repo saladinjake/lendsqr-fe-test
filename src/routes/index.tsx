@@ -1,64 +1,34 @@
 import { Suspense, lazy, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import ErrorBoundary from "../layouts/ErrorBoundary";
 import PrivateRoute from "./PrivateRoute";
 import Fallback from "../views/Fallback";
+import { useQuery } from "@tanstack/react-query";
 
 
-const pageMap = {
-  "test-management": lazy(() => import("modules/TestModule")),
-  "test-management/:id": lazy(
-    () => import("modules/TestModule/Test")
-  ),
-};
-
-const routes = [
-  {
-    path: "/test-module-sample",
-    component: lazy(() => import("modules/TestModule")),
-  },
-];
-
-const UserDashboard = lazy(() => import("../views/UserDashboard"));
 const Login = lazy(() => import("../views/Login"));
 const NotFound = lazy(() => import("../views/NotFound"));
-
-
+const UserDashBoard = lazy(() => import("../views/UserDashboard"));
+const UserDetail = lazy(() => import("../views/UserDetail"));
 
 function DefaultLayout() {
-  const [isLoading,setIsLoading] = useState(false)
-  
-
- 
-
-  const LoadingRoutes = () => {
-    return <div>initializing....</div>;
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <ErrorBoundary>
-      <Suspense fallback={<Fallback />}>
-        <Routes>
-          <Route path="/login/*" element={<Login />} />
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+    <Suspense fallback={<Fallback />}>
+      <Routes>
+        <Route path="/login/*" element={<Login />} />
+        {/* <Route path="/" element={<Navigate to="/get-started" replace />} /> */}
 
-      <Route element={<PrivateRoute />}> 
-             <Route path="/dashboard/*" element={<UserDashboard />} /> 
+        <Route element={<PrivateRoute />}>
+          <Route path="/*" element={<UserDashBoard />} />
+          <Route path="/dashboard" element={<Navigate to="/" replace />}  />
           
-            {isLoading ? (
-              <Route path="*" element={<LoadingRoutes />} />
-            ) : (
-              routes.map((route) => (
-                <Route path={route.path} element={<route.component />} />
-              ))
-            )}
-          </Route> 
-
-          <Route path="/not-found" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </ErrorBoundary>
+          <Route path="/user/:id" element={<UserDetail />} /> 
+        </Route>
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 

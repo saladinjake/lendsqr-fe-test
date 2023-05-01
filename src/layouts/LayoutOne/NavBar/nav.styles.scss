@@ -1,0 +1,20 @@
+.imgLogo{
+  padding: 10px;
+  width: 120px;
+  margin: 10px;
+  margin-left: 50px;
+
+}
+
+.drop-toggle:after {
+  font-family: 'FontAwesome';/* essential to enable caret symbol*/
+  content: "\f0d7";
+  color: grey;
+  margin-left:5px;
+}
+.drop-toggle.collapsed:after {
+  content: "\f0d7";
+}
+ a{
+  color:#213F7D
+}

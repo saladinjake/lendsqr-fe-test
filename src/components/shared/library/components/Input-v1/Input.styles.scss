@@ -1,0 +1,70 @@
+
+.label{
+  font-size: 13.5px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+
+.wrapperInput{
+  height: 46px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 10px;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #545F7D;
+}
+  
+.asterisk{
+  color: #F7685B;
+  margin-left:2px
+}
+
+.error{
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #F7685B
+}
+
+.errorIcon{
+  display: inline-block;
+  margin-right: 4px;
+}
+ 
+
+
+
+
+::placeholder { 
+  color: #545F7D;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #545F7D
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #545F7D
+}
+
+
+
+.togglepassword {
+  position: absolute;
+  right: 14px;
+  bottom: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-size: 12px;
+  font-family:"Avenir Next";
+  font-weight:normal;
+  color:#39CDCC
+}
