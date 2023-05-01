@@ -59,7 +59,6 @@ const SearchField: React.FC<SearchFieldProps> = ({
     onFocus={handleFocus}
     onBlur={handleBlur}
    >
-     
       <div className="tooltip">{"Search table by " + searchColumnsString}</div>
       {withBtn && (
         <>
