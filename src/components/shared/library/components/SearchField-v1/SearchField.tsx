@@ -61,7 +61,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        className="wrapperInput"
+        className="wrapperInput StyledSearchField"
       />
       <div className="tooltip">{"Search table by " + searchColumnsString}</div>
       {withBtn && (
