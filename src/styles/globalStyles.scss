@@ -8,6 +8,7 @@ $greenColor: #39cdcc;
 body {
   background-color: #f6f6f6;
   font-family: $fontfamily1;
+  overflow-x: hidden;
 }
 
 .loadingIcon {
@@ -156,6 +157,7 @@ body {
     }
     body {
       height: 100vh;
+      overflow-x: hidden;
     }
   }
 
@@ -211,13 +213,13 @@ body {
       margin-bottom: 1px;
     }
 
-    .StyledSearchField{
-      margin-left:-50px;
-      width:100px;
+    .StyledSearchField {
+      margin-left: -50px;
+      width: 100px;
     }
 
-    .user-action-notifier{
-      display: none
+    .user-action-notifier {
+      display: none;
     }
   }
 
@@ -228,25 +230,16 @@ body {
       box-shadow: 4px 2px 2px #f6f6f6;
     }
 
-    .StyledSearchField{
-      margin-left:-50px;
-      width:100px;
+    .StyledSearchField {
+      margin-left: -50px;
+      width: 100px;
     }
 
-    .user-action-notifier{
-      display: none
+    .user-action-notifier {
+      display: none;
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 /*sidebar responsiveness*/
 .sidebar-menu {
@@ -255,42 +248,73 @@ body {
 
   @include Phone {
     width: 100px;
-    .wrapperSidebar{
+    .wrapperSidebar {
       width: 100px;
-      .sidebar-item  .text{
-        display: none;  
+      .sidebar-item .text {
+        display: none;
       }
 
-      .dropdown-form select{
+      .dropdown-form select {
         width: 80px;
         font-size: 10px;
-        margin-left:-20px;
+        margin-left: -20px;
       }
-
-      
     }
 
-    
+    body {
+      height: 100vh;
+      overflow-x: hidden;
+    }
   }
 
   @include Tablet {
     width: 100px;
-    .wrapperSidebar{
+    .wrapperSidebar {
       width: 100px;
 
-      .sidebar-item  .text{
-        display: none;  
+      .sidebar-item .text {
+        display: none;
       }
 
-      .dropdown-form  select{
+      .dropdown-form select {
         width: 80px;
         font-size: 10px;
-        margin-left:-20px;
+        margin-left: -20px;
       }
-
-      
     }
-
-   
+    body {
+      height: 100vh;
+      overflow-x: hidden;
+    }
   }
 }
+
+
+
+
+
+
+
+
+/*main workbench responsiive*/
+.StyledMain  {
+  @include Desktop {
+  }
+
+  @include Phone {
+    margin-top:-60px;
+   
+   
+  
+  
+  }
+
+  @include Tablet {
+    margin-top:-60px;
+    
+
+   
+    
+  }
+}
+
