@@ -1,13 +1,11 @@
-.StyledLabel{
-    font-size: 13.5px;
-    line-height: 18px;
-    margin-bottom: 10px;
+.StyledLabel {
+  font-size: 13.5px;
+  line-height: 18px;
+  margin-bottom: 10px;
 }
-  
 
-
-    .StyledInformationModal{
-        text-align: start;
+.styledInformationModal {
+  text-align: start;
 
   margin-bottom: 20px;
 
@@ -16,71 +14,61 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-    }
-
-.DetailLabel{
-    font-size: 13px;
-    color: #979797;
-    margin: 5px;
-}
-  
-
-
-.DetailValue{
-    font-size: 15px;
-    color: black;
-    margin: 7px;
-}
- 
-
-
-.Line{
-    border-radius: 10px 10px 0px 0px;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    background-color: #39cdcc;
-    height: 4px;
-    position: absolute;
 }
 
-.TabText{
-    font-weight: 800;
-    font-size: 15px;
+.DetailLabel {
+  font-size: 13px;
+  color: #979797;
+  margin: 5px;
+  padding: 10px;
 }
 
-
-.TabContainer{
-    column-gap: 22px;
-    display:flex;
+.DetailValue {
+  font-size: 15px;
+  color: black;
+  margin: 7px;
+  padding:10px;
 }
 
-
-
-.Tab{
-    border: none;
-    background: #fff;
-    height: 56px;
-    width: 250px;
-    margin-top: 30px;
-    color: #39CDCC
+.Line {
+  border-radius: 10px 10px 0px 0px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  background-color: #39cdcc;
+  height: 4px;
+  position: absolute;
 }
 
-
-
-.TabNotification{
-    background: #f7685b;
-    color: white;
-    font-size: 11px;
-    font-weight: 900;
+.TabText {
+  font-weight: 800;
+  font-size: 15px;
 }
-  
 
-
-.Wrapper{
-    border-bottom: 1px solid #dbdce0;
-    margin-top: 30px;
-    margin-bottom: 0px;
+.TabContainer {
+  column-gap: 22px;
+  display: flex;
 }
-  
+
+.Tab {
+  border: none;
+  background: #fff;
+  height: 56px;
+  width: 250px;
+  margin-top: 30px;
+  color: #39cdcc;
+}
+
+.TabNotification {
+  background: #f7685b;
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.Wrapper {
+  border-bottom: 1px solid #dbdce0;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}

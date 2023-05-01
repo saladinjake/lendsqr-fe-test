@@ -75,7 +75,7 @@ function SideBarGroup(props) {
         style={{ paddingLeft: 12 }}
         alignItems="center"
         justifyContent="between"
-       
+        container
       >
         <Text
           fontSize="10px"
@@ -101,17 +101,9 @@ function SideBarGroup(props) {
             return <SideBarItem key={i} isLoading={isLoading} />;
           })}
 
-      {!isLoading && (
-        <Container listHeight={height.toString()} showMenu={showMenu}>
-          <Box
-            ref={menuItemsContainerRef}
-            opacity={showMenu ? "1" : "0"}
-            pt="5"
-            pb="10"
-            style={{
-              transition: "0.5s",
-            }}
-          >
+{!isLoading && (
+        <>
+          
             {menuItems.map((menuItem, i) => {
               const navElementName = menuItem["name"];
               return (
@@ -125,8 +117,8 @@ function SideBarGroup(props) {
                 />
               );
             })}
-          </Box>
-        </Container>
+    
+        </>
       )}
     </Box>
   );

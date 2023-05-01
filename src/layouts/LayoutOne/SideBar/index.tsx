@@ -51,111 +51,92 @@ function Sidebar({
     Logout,
   } = Svg;
 
+  
   const Menus = [
     {
-      name: "Account Management",
+      name: "Users",
       icon: <Users />,
-      link: "/account-management-settings",
+      link:"/dashboard"
     },
-
     {
-      name: "Blogs Management",
+      name: "Guarantors",
+      icon: <Guarantor />,
+      link:"/dashboard"
+    },
+    {
+      name: "Loans",
       icon: <Loan />,
-      link: "/dashboard",
+      link:"/dashboard"
     },
     {
-      name: "Certificates Management",
+      name: "Decision Model",
       icon: <Decision />,
-      link: "/dashboard",
+      link:"/dashboard"
     },
     {
-      name: "Course Bundle Management",
+      name: "Savings",
       icon: <Savings />,
-      link: "/dashboard",
+      link:"/dashboard"
     },
 
     {
-      name: "Course Information Management",
+      name: "Loans Request",
       icon: <LoanRequest />,
-      link: "/dashboard",
+      link:"/dashboard"
     },
 
     {
-      name: "Course Authoring Management",
+      name: "WhiteList",
       icon: <Whitelist />,
-      link: "/dashboard",
+      link:"/dashboard"
     },
 
     {
-      name: "Document Upload Management",
+      name: "Karma",
       icon: <Karma />,
-      link: "/dashboard",
-    },
-
-    {
-      name: "Programme Management",
-      icon: <Karma />,
-      link: "/dashboard",
-    },
-
-    {
-      name: "Events Sheduler Management",
-      icon: <Savings />,
-      link: "/dashboard",
-    },
-
-    {
-      name: "HR Analytics Management",
-      icon: <Savings />,
-      link: "/dashboard",
-    },
-
-    {
-      name: "Todo Manager",
-      icon: <Savings />,
-      link: "/dashboard",
-    },
-
-    {
-      name: "Notification Management",
-      icon: <ServiceACC />,
+      link:"/dashboard"
     },
   ];
 
   const MenuBack = [
     {
-      name: "Change  Organization Profile",
-      icon: <Briefcase />,
-      link: "/dashboard",
+      name: "Organization",
+      icon: <Briefcase/>,
+      link:"/dashboard"
     },
     {
-      name: "Business Organization Management",
-      icon: <Guarantor />,
-      link: "/dashboard",
+      name: "Loan Products",
+      icon: <Loan />,
+      link:"/dashboard"
     },
     {
-      name: "Earnings Management",
-      icon: <Savings />,
-      link: "/dashboard",
+      name: "Savings Product",
+      icon: <Savings/>,
+      link:"/dashboard"
     },
     {
-      name: "Learners Management",
-      icon: <FeeNCharge />,
-      link: "/dashboard",
+      name: "Fees And Charges",
+      icon: <FeeNCharge/>,
+      link:"/dashboard"
     },
     {
-      name: "Instructors Management",
-      icon: <FeeNCharge />,
-      link: "/dashboard",
-    },
-    {
-      name: "Issues Tracking Management",
+      name: "Transactions",
       icon: <Transaction />,
     },
 
     {
-      name: "JobPostings Management",
+      name: "Services",
       icon: <Services />,
+    },
+
+    {
+      name: "Service Account",
+      icon: <ServiceACC/>,
+    },
+
+    {
+      name: "Settlements",
+      icon: <Settlement />,
     },
 
     {
@@ -166,21 +147,16 @@ function Sidebar({
 
   const settingMaps = [
     {
-      name: "Prefrence",
-      icon: <Pref />,
+      name: "Prefrences",
+      icon: <Pref/>,
     },
     {
       name: "Fees And Pricing",
       icon: <FeeNPricing />,
     },
     {
-      name: "Roles And Previledges",
+      name: "Audit Logs",
       icon: <Users />,
-    },
-
-    {
-      name: "Tenant Service Account",
-      icon: <ServiceACC />,
     },
   ];
 
@@ -207,7 +183,6 @@ function Sidebar({
       ),
     [searchValue]
   );
-
   const handleSearch = (value) => setSearchValue(value);
 
   const dashboardMenuItem = {
@@ -222,7 +197,7 @@ function Sidebar({
         <Briefcase />
         <select name="hockeyList">
           <option>Switch Organization</option>
-          <option value="a">kUDA ACADEMY</option>
+          <option value="a"></option>
         </select>
       </div>
     );
@@ -230,59 +205,10 @@ function Sidebar({
 
   return (
     <div className="sidebar-menu">
-      <Box
-        borderBottomColor="#DBDCE0"
-        borderWidth="1px"
-        borderBottomStyle="solid"
-        backgroundColor={"#f3f4f9"}
-        zIndex="10"
-        position="sticky"
-        top="0px"
-      >
-        <Box height={sidebarOpen ? "90px" : "110px"} width="90%" mx="auto">
-          <Flex
-            justifyContent={sidebarOpen ? "between" : "center"}
-            gap="10px"
-            alignItems="center"
-            direction={sidebarOpen ? "row" : "column"}
-            height="100%"
-            container
-          >
-           
-
-            <div>
-              <Flex
-                container
-                as="button"
-                justifyContent="center"
-                alignItems="center"
-                backgroundColor="transparent"
-                borderStyle="none"
-                cursor="pointer"
-                onClick={() => setSidebarOpen(!sidebarOpen)}
-                style={
-                  sidebarOpen
-                    ? { transition: "0.4s" }
-                    : {
-                        transform: "rotate(180deg)",
-                        transition: "0.4s",
-                        background: "#dedfeb",
-                        height: 35,
-                        width: 35,
-                        borderRadius: "50%",
-                        marginTop: 10,
-                      }
-                }
-              >
-                <Svg.Hamburger />
-              </Flex>
-            </div>
-          </Flex>
-        </Box>
-      </Box>
+   
       <div className="wrapperSidebar">
-        <Box width="90%" mx="auto">
-          <Box mt="5" mb="4">
+        <Box width="100%" mx="auto">
+          <Box marginTop="5px" marginBottom="4px">
             <Organizations />
           </Box>
 

@@ -14,8 +14,8 @@ function HeaderActions(props: IProps) {
   const { setEditable, isActive, handleStatusUpdate } = props;
 
   return (
-    <Flex>
-      <Box mr="4">
+    <Flex container justifyContent="end">
+      <Box mr="5px">
         {(
           <>
            <Button color="danger" onClick={handleStatusUpdate}>
@@ -28,7 +28,7 @@ function HeaderActions(props: IProps) {
         )}
       </Box>
 
-      <Box  mr="4">
+      <Box  mr="5px">
       <Button color="primary"  onClick={handleStatusUpdate}>
             ACTIVATE USER
           </Button>

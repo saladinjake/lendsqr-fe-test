@@ -7,7 +7,7 @@ const endpoints = {
   UPDATE_PASSWORD_URL: "",
 
   USERS_URL: "/users",
-  USER_URL:"/user/",
+  USER_URL:"/users",
 
 
 };

@@ -34,16 +34,16 @@ export const Flex = (props) => (
       flex: props.flex || "0 1 auto",
       alignItems: props.alignItems || "stretch",
       margin: props.margin  || "0",
-    //   marginRight: props.marginRight || props.mr || "0",
-    //   marginBottom: props.marginBottom || props.mb || "0",
-    //   marginTop: props.margiTop || props.mt || "0",
-    //   marginLeft: props.marginLeft || props.ml || "0",
+      marginRight: props.marginRight || props.mr || "0",
+      marginBottom: props.marginBottom || props.mb || "0",
+      marginTop: props.margiTop || props.mt || "0",
+      marginLeft: props.marginLeft || props.ml || "0",
       padding: props.padding || "0",
 
-    //   paddingRight: props.paddingRight || props.pr || "0",
-    //   paddingBottom: props.paddingBottom || props.pb || "0",
-    //   paddingTop: props.paddingTop || props.pt || "0",
-    //   paddingLeft: props.paddingLeft || props.pl || "0",
+      paddingRight: props.paddingRight || props.pr || "0",
+      paddingBottom: props.paddingBottom || props.pb || "0",
+      paddingTop: props.paddingTop || props.pt || "0",
+      paddingLeft: props.paddingLeft || props.pl || "0",
 
       width: props.width || "auto",
       height: props.height || "auto",
@@ -56,6 +56,7 @@ export const Flex = (props) => (
       position: props.position ? props.position : "relative",
       top: props.top? props.top: "0px",
       bottom: props.bottom? props.bottom : "0px"
+      
     }}
     
   >

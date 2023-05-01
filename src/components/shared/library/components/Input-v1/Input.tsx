@@ -63,7 +63,7 @@ const Input: React.FC<InputProps> = ({
               className="togglepassword"
               onClick={() => setToggle((prev) => !prev)}
             >
-              show password
+              {toggleVIew? "HIDE": "SHOW"}
             </p>
           )}
         </>

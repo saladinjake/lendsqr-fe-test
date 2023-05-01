@@ -44,7 +44,7 @@ const NavBar = () => {
       justifyContent="between"
       padding="20px"
       style={{
-        height: "100px",
+        height: "80px",
 
         boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
       }}

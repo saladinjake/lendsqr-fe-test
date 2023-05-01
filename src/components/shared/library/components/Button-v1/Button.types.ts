@@ -47,4 +47,5 @@ export interface ButtonProps {
   margin?: string;
 
   type?: "submit" | "reset" | "button";
+  className?: string;
 }

@@ -1,5 +1,6 @@
 
-.PaginationDropdown{
+.dashboardSample{
+  .PaginationDropdown{
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
@@ -97,7 +98,7 @@
       padding-right: 10px;
     }
     .w-col-3 {
-      width: 24%;
+      width: 25%;
     }
     @media screen and (max-width: 767px) {
       .w-row {
@@ -280,3 +281,6 @@
 }
 
 
+
+
+}
