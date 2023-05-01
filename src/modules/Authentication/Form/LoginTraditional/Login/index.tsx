@@ -158,6 +158,7 @@ function Login() {
               type="submit"
               disabled={invalid}
               onClick={() => loginUser()}
+              textColor="#fff"
             >
               {"Login"}
             </Button>
