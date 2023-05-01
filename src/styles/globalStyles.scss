@@ -260,7 +260,17 @@ body {
       .sidebar-item  .text{
         display: none;  
       }
+
+      .dropdown-form select{
+        width: 80px;
+        font-size: 10px;
+        margin-left:-20px;
+      }
+
+      
     }
+
+    
   }
 
   @include Tablet {
@@ -271,6 +281,16 @@ body {
       .sidebar-item  .text{
         display: none;  
       }
+
+      .dropdown-form  select{
+        width: 80px;
+        font-size: 10px;
+        margin-left:-20px;
+      }
+
+      
     }
+
+   
   }
 }
