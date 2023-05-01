@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Skeleton from "../Skeleton-v1";
-import {  Flex } from "../Flex-v1";
-import {  Box } from "../Box-v1";
+import { Flex } from "../Flex-v1";
+import { Box } from "../Box-v1";
 import "./Input.styles.scss";
 import { InputProps } from "./Input.types";
-import { Svg } from "../../../../../assets/svg"
+import { Svg } from "../../../../../assets/svg";
 
 const { Error: ErrorIcon } = Svg;
 
@@ -23,7 +23,7 @@ const Input: React.FC<InputProps> = ({
   name,
   isLoading,
 }) => {
-  const [toggleVIew, setToggle] = useState(false)
+  const [toggleVIew, setToggle] = useState(false);
   return (
     <Flex direction="column" style={{ opacity: disabled ? "0.7" : 1 }}>
       {isLoading ? (
@@ -31,11 +31,7 @@ const Input: React.FC<InputProps> = ({
       ) : (
         <Flex>
           <div className="label">{label}</div>
-          {required && (
-            <span className="asterisk">
-              *
-            </span>
-          )}
+          {required && <span className="asterisk">*</span>}
         </Flex>
       )}
 
@@ -45,30 +41,32 @@ const Input: React.FC<InputProps> = ({
         </Box>
       ) : (
         <>
-        
-         <input 
-          className="wrapperInput"
-          width={width}
-          type={ toggleVIew? "text": type}
-          placeholder={disabled ? "" : placeholder}
-          required={required}
-          name={name}
-          value={value}
-          style={{
-            width: width
-          }}
-          onChange={(e) => {
-            onChangePure && onChangePure(e);
-            onChange && onChange(e.currentTarget.value);
-          }}
-          disabled={disabled}
-        />
-         {type=="password" && (
-            <p className="togglepassword" onClick={() => setToggle(prev => !prev)}>show password</p>
-         )}
-
+          <input
+            className="wrapperInput"
+            width={width}
+            type={toggleVIew ? "text" : type}
+            placeholder={disabled ? "" : placeholder}
+            required={required}
+            name={name}
+            value={value}
+            style={{
+              width: width,
+            }}
+            onChange={(e) => {
+              onChangePure && onChangePure(e);
+              onChange && onChange(e.currentTarget.value);
+            }}
+            disabled={disabled}
+          />
+          {type == "password" && (
+            <p
+              className="togglepassword"
+              onClick={() => setToggle((prev) => !prev)}
+            >
+              show password
+            </p>
+          )}
         </>
-       
       )}
 
       {error && (

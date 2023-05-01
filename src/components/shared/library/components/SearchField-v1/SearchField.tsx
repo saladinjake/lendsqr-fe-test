@@ -1,4 +1,4 @@
-import React , { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button-v1";
 import "./SearchField.styles.scss";
 import { SearchFieldProps } from "./SearchField.types";
@@ -17,48 +17,43 @@ const SearchField: React.FC<SearchFieldProps> = ({
   value,
   onButtonClick,
   onResetSearch,
-  searchColumns
+  searchColumns,
 }) => {
-  const [clicked, setClicked] = useState(false)
-  const [touched, setTouched] = useState(false)
-  const [searchBy, setSearchColumns] = useState([])
-  const [searchColumnsString, setSearchString] =  useState("")
-  useEffect(()=>{
-    if(value?.length<=0 ){
-      setClicked(false)
-      setTouched(false)
+  const [clicked, setClicked] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const [searchBy, setSearchColumns] = useState([]);
+  const [searchColumnsString, setSearchString] = useState("");
+  useEffect(() => {
+    if (value?.length <= 0) {
+      setClicked(false);
+      setTouched(false);
     }
-  },[value, clicked, touched])
+  }, [value, clicked, touched]);
 
-  useEffect(()=>{
-    searchColumns.forEach(searchItem=>{
-      if(!searchBy.includes(searchItem?.name)){
-        setSearchColumns([...searchBy,searchItem?.name ])
+  useEffect(() => {
+    searchColumns.forEach((searchItem) => {
+      if (!searchBy.includes(searchItem?.name)) {
+        setSearchColumns([...searchBy, searchItem?.name]);
       }
-       
-    })
-    setSearchString(searchBy.join(" ,"))
-  },[searchColumns])
+    });
+    setSearchString(searchBy.join(" ,"));
+  }, [searchColumns]);
 
-  const handleFocus = (ev) =>{
-    var tooltip= ev.target.nextElementSibling;
-    if (tooltip && tooltip.className=='tooltip'){
-      tooltip.style.opacity= 1;
+  const handleFocus = (ev) => {
+    var tooltip = ev.target.nextElementSibling;
+    if (tooltip && tooltip.className == "tooltip") {
+      tooltip.style.opacity = 1;
     }
-  }
-  const handleBlur =(ev) =>{
-    var tooltip= ev.target.nextElementSibling;
-    if (tooltip && tooltip.className=='tooltip'){
-      tooltip.style.opacity= 0;
+  };
+  const handleBlur = (ev) => {
+    var tooltip = ev.target.nextElementSibling;
+    if (tooltip && tooltip.className == "tooltip") {
+      tooltip.style.opacity = 0;
     }
-  }
-
-
- 
+  };
 
   return (
-    <div className="StyledSearchField" >
-     
+    <div className="StyledSearchField">
       <input
         type="text"
         placeholder={placeholder}
@@ -66,34 +61,37 @@ const SearchField: React.FC<SearchFieldProps> = ({
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        className="wrapperInput"
+        className="wrapperInput StyledSearchField"
       />
-      <div className="tooltip">{"Search table by " + searchColumnsString }</div>
+      <div className="tooltip">{"Search table by " + searchColumnsString}</div>
       {withBtn && (
         <>
-          {
-            (!touched && clicked.toString()!="true") ? (
-
-              <Button height="40px" width="56px" size="md" type="submit" onClick={onButtonClick}>
-                 <div className="icon">
-        <img src={""} alt="lens icon" />
-      </div>
-               </Button>
-            ): (
-              <Button width="87px" size="md" type="submit" onClick={() =>{
-                setTouched(false)
-                if(onResetSearch)onResetSearch()
-               
-              }}>
+          {!touched && clicked.toString() != "true" ? (
+            <Button
+              height="40px"
+              width="56px"
+              size="md"
+              type="submit"
+              onClick={onButtonClick}
+            >
+              <div className="icon">
+                <Search />
+              </div>
+            </Button>
+          ) : (
+            <Button
+              width="87px"
+              size="md"
+              type="submit"
+              onClick={() => {
+                setTouched(false);
+                if (onResetSearch) onResetSearch();
+              }}
+            >
               Reset
             </Button>
-             
-             
-            )
-          }
-
+          )}
         </>
-        
       )}
     </div>
   );

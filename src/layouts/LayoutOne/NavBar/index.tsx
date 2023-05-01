@@ -42,10 +42,12 @@ const NavBar = () => {
       container
       width="100%"
       justifyContent="between"
+      padding="20px"
       style={{
-        height: "90px",
-        borderBottom: "1px solid #dbdce0",
+        height: "100px",
+       
         boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
+       
       }}
     >
       <img src={Logo} className="imgLogo" />
@@ -74,14 +76,26 @@ const NavBar = () => {
         </div>
       </Flex>
 
-      <Flex container margin="0 10px 0 36px">
+
+
+
+
+
+
+      <Flex container   
+        alignItems="center"
+      
+        margin="0 30px 0px 90px">
         <Flex container justifyContent="space-between">
-          <Box marginRight="15px" marginLeft="15px">
-            docs
+          <Box marginRight="25px" marginLeft="25px" underline color={"#213F7D"}>
+            Docs
           </Box>
-          <Svg.NotificationBell />
-          <Avatar shape="rounded" type="text" src={avatarProfile} />
-          <Box mr="5">Adedeji</Box>
+          <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>   <Svg.NotificationBell /></Box>
+          <Box marginRight="25px" marginLeft="25px" >  
+          <Avatar shape="rounded" type="text" src={avatarProfile} /></Box>
+          <Box mr="5" color={"#213F7D"}><a href="#anyId" className="drop-toggle collapsed" data-toggle="collapse" >Adedeji</a> <div id="anyId" className=" collapse">
+  Hi
+</div></Box>
         </Flex>
       </Flex>
     </Flex>
