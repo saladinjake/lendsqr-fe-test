@@ -131,11 +131,6 @@ body {
     padding: 20px;
     height: 500px;
 
-    .flex_classic{
-      justify-content: center;
-      flex-direction: row;
-    }
-
     .sm-only {
       display: none;
     }
@@ -151,10 +146,12 @@ body {
       width: 100%;
       margin: 10px;
       padding: 20px;
-      input,.StyledButton2, .StyledButton,
+      input,
+      .StyledButton2,
+      .StyledButton,
       button {
         width: 80%;
-        width:200px;
+        width: 200px;
       }
     }
     body {
@@ -174,10 +171,12 @@ body {
       padding: 10px;
       margin-top: -30px;
 
-      input,.StyledButton2, .StyledButton,
+      input,
+      .StyledButton2,
+      .StyledButton,
       button {
         width: 80%;
-        width:200px;
+        width: 200px;
       }
     }
 
@@ -193,6 +192,49 @@ body {
     }
     body {
       height: 100vh;
+    }
+  }
+}
+
+/*nav bar responsive*/
+
+.nav-bar {
+  @include Desktop {
+  }
+
+  @include Phone {
+    height: 90px;
+    .flex-classic {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 4px 2px 2px #f6f6f6;
+      margin-bottom: 1px;
+    }
+
+    .StyledSearchField{
+      margin-left:-50px;
+      width:100px;
+    }
+
+    .user-action-notifier{
+      display: none
+    }
+  }
+
+  @include Tablet {
+    .flex-classic {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 4px 2px 2px #f6f6f6;
+    }
+
+    .StyledSearchField{
+      margin-left:-50px;
+      width:100px;
+    }
+
+    .user-action-notifier{
+      display: none
     }
   }
 }

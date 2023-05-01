@@ -42,6 +42,7 @@ const NavBar = () => {
   return (
     <Row>
     <div className="nav-bar">
+     
       <Flex
         container
         width="100%"
@@ -50,6 +51,7 @@ const NavBar = () => {
         backgroundColor="#fff"
         marginTop="20px"
         marginLeft="20px"
+        className="flex-classic"
         style={{
           height: "120px",
           backgroundColor: "#fff",
@@ -85,7 +87,7 @@ const NavBar = () => {
 
        </div>
         
-        <Flex container alignItems="center" margin="0 30px 0px 90px">
+        <Flex container alignItems="center" margin="0 30px 0px 90px" className="user-action-notifier">
           <Flex container justifyContent="space-between">
             <Box
               marginRight="25px"
