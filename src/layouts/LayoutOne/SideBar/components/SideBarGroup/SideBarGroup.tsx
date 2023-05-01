@@ -81,17 +81,14 @@ function SideBarGroup(props) {
           fontSize="10px"
           color={showMenu ? "#545F7D" : "#545F7D"}
           fontWeight="100"
+          style={{
+            marginLeft: "25px"
+          }}
+
         >
           {name}
         </Text>
 
-        {!isLoading && (
-          <Button onClick={() => { setShowMenu(!showMenu)}}>
-            <ButtonContentWrapper flip={showMenu} onClick={() => { setShowMenu(!showMenu)}}>
-              <Svg.FilledArrow />
-            </ButtonContentWrapper>
-          </Button>
-        )}
       </Flex>
 
       {isLoading &&
