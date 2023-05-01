@@ -21,10 +21,11 @@ import { getAllUsers  } from "api/services/User";
 
 // import { VerticalDotMenu } from "components/shared/library";
 import validations  from "./validations"
-import Pagination from "./components/Paginator";
+
 import "./dashboard.styles.scss"
 
-
+import Pagination from "./components/Paginator";
+import Button from "components/shared/library/components/Button-v1/Button";
 
 function Home() {
   const navigate = useNavigate();
@@ -119,6 +120,7 @@ function Home() {
       {
        //enabled:allData?.length>0,
         onSuccess: (data) =>{
+        
           const profileData = data.map(user =>{
             return {
               ...user.profile,
@@ -145,7 +147,7 @@ function Home() {
 
         }
   });
-  console.log(response)
+ 
 
   const Card = (props) => {
     return (
@@ -210,6 +212,7 @@ function Home() {
       Header: "STATUS",
       accessor: "",
       Cell: (data) => {
+        console.log(data.cell.row.original)
         if (data.cell.row.original.isActive == true)
           return (
             <Indicator
@@ -232,6 +235,7 @@ function Home() {
       Header: "Action",
       accessor: "id",
       Cell: (data) => {
+       return <Button onClick={() =>navigate("/user/"+ data.cell.row.id)}>test</Button>
       //  return <VerticalDotMenu
       //     handleBlackListUser={mockFunc}
       //     handleDropdown={mockFunc}
@@ -262,6 +266,7 @@ function Home() {
         <></>
       }
     >
+      <div className="dashboardSample">
       <div className="CardInfo">
         <div className="row w-row">
           <Card title="USERS" value="1200" Icon={AllUsers} />
@@ -307,8 +312,9 @@ function Home() {
 
      
 
-      <Flex justifyContent="between" alignItems="center" container>
-      <Flex alignItems="center">
+      <Flex justifyContent="space-between" alignItems="center" container margin="40px 0 0 0">
+      <Flex alignItems="center" container>
+       
         <div className="PaginationText">Showing</div>{" "}
         <div className="PaginationDropdown" onChange={handlePageSize}>
           {pageSizes.map((pageSize) => (
@@ -328,6 +334,9 @@ function Home() {
         />
       </Box>
      </Flex>
+
+      </div>
+     
       <Box mt="10" mb="20"></Box>
     </Main>
   );

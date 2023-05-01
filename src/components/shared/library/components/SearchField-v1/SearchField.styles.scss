@@ -2,8 +2,9 @@
 .StyledSearchField{
   display: flex;
   align-items: center;
+  border: 1px solid #dbdce0;
   border-radius: 5px;
-  padding: 10px 7px;
+  padding: 13px 7px;
   width: 400px;
   background-color: #fff;
   height: 40px;
@@ -20,9 +21,9 @@
 
   input {
     
-    border: none;
-    outline: none;
-    width: 100%;
+    // border: none;
+    // outline: none;
+    // width: 100%;
   }
 
   @media only screen and (max-width: 1024px) {

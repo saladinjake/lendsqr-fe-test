@@ -1,7 +1,4 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import format from "date-fns/format";
 import "./pagination.scss"
 const LEFT_PAGE = "LEFT";
 const RIGHT_PAGE = "RIGHT";
@@ -124,7 +121,7 @@ class Pagination extends Component {
     const pages = this.fetchPageNumbers();
 
     return (
-      <div className="PaginStyles">
+   
         <nav aria-label="Countries Pagination">
           <ul className="pagination">
             {pages.map((page, index) => {
@@ -177,7 +174,7 @@ class Pagination extends Component {
             })}
           </ul>
         </nav>
-      </div>
+    
     );
   }
 }

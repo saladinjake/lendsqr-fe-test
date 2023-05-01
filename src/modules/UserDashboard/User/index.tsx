@@ -36,21 +36,11 @@ const queryKeys = {
 };
 
 function UserDetail() {
-  const defaultErrorTitle = "sAMPLE creation failed";
-  const defaultErrorMessage =
-    "Sample creation failed due to invalid inputs or your internet connection may be unstable.";
-  const defaultSuccessTitle = "Sample created";
-  const defaultSuccessMessage = "You have successfully created a new sample";
+  
   const { id } = useParams();
   const [editable, setEditable] = useState(false);
   const [headerLinks, setHeaderLinks] = useState([]);
-  const [showInformationModal, setShowInformationModal] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-  const [errorTitle, setErrorTitle] = useState(defaultErrorTitle);
-  const [errorMessage, setErrorMessage] = useState(defaultErrorMessage);
-  const [successTitle, setSuccessTitle] = useState(defaultSuccessTitle);
-  const [successMessage, setSuccessMessage] = useState(defaultSuccessMessage);
+
   const [showAlertModal, setShowAlertModal] = useState(false);
   const { user } = useContext(AuthContext);
 
@@ -74,6 +64,7 @@ function UserDetail() {
   }, [id]);
 
   const navigate = useNavigate();
+  console.log(id)
 
   const {
     data: results,
@@ -119,13 +110,15 @@ function UserDetail() {
         />
       }
     >
-      <div className="StyledInformationModal">
+      <div className="styledInformationModal">
         <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
           <GridItem>
             <Flex
             container
               direction="row"
               alignItems="start"
+              
+              padding="20px"
               style={{
                 borderRight: "1px solid #545F7D",
                 height: "50px",
@@ -181,7 +174,7 @@ function UserDetail() {
         <div className="Wrapper" >
           <div className="TabContainer">
             {tabs.map((tab) => (
-              <div className="Tab"
+              <Button className="Tab"
                 // as="button"
                 // active={tab.id === currentTab}
                 // cursor="pointer"
@@ -193,7 +186,7 @@ function UserDetail() {
                 <div className="TabText">{tab.name}</div>
 
                 {tab.id === currentTab && <div  className="Line" />}
-              </div>
+              </Button>
             ))}
           </div>
         </div>

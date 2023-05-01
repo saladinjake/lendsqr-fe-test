@@ -6,12 +6,8 @@
 ul.pagination {
   margin-top: -40px;
   margin-bottom: 0;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
 }
 ul.pagination li.page-item.active a.page-link {
-  /* color: #445565 !important; */
-  /* background-color: #e3e7eb !important; */
-  /* border-color: #ced4da !important; */
   background: #fbfdff;
   border: none;
 }
@@ -20,7 +16,7 @@ ul.pagination a.page-link {
   min-width: 3.5rem;
   text-align: center;
   box-shadow: none !important;
-  /* border-color: #ced4da !important; */
+
   color: #545f7d;
   font-weight: 900;
   font-size: 1rem;
@@ -30,3 +26,11 @@ ul.pagination a.page-link {
 ul.pagination a.page-link:hover {
   background-color: #f4f4f4;
 }
+
+
+
+
+
+
+
+

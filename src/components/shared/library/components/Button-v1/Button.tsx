@@ -17,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   height,
   margin,
   type,
+  className="StyledButton"
 }) => {
 
   const style ={
@@ -24,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
     height
   }
   return (
-    <div style={style} className="StyledButton"
+    <div style={style} className={className}
       onClick={onClick}
     >
       {loading ? (

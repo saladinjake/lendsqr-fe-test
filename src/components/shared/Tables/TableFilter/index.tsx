@@ -35,7 +35,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
   const [searchValue, setSearchValue] = useState("");
 
   return (
-     <div className="StyledTableFilter">
+     <div className="TableFilter">
       {showModalFilter && (
       <div className="filters-dropdown-container filters">
         <Box mb="3"></Box>
