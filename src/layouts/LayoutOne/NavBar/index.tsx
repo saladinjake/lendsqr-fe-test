@@ -38,70 +38,83 @@ const NavBar = () => {
   const handleChange = ({ target }) => setSearchQuery(target?.value);
 
   return (
-    <Flex
-      container
-      width="100%"
-      justifyContent="between"
-      padding="20px"
-      style={{
-        height: "80px",
-
-        boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
-      }}
-    >
-      <img src={Logo} className="imgLogo" />
-
+    <div className="nav-bar">
       <Flex
-        height="100%"
-        alignItems="center"
         container
-        flex={4}
-        margin="0 100px 0px 206px"
+        width="100%"
+        justifyContent="between"
+        padding="20px"
+        backgroundColor="#fff"
+        marginTop="20px"
+        marginLeft="20px"
+        style={{
+          height: "120px",
+          backgroundColor: "#fff",
+          boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
+        }}
       >
-        <div className="filter-global-search-container">
-          <form onSubmit={(e) => {}}>
-            <SearchField
-              withBtn
-              placeholder="Search for anything"
-              btnText="Search"
-              width="100%"
-              height="48px"
-              value={searchQuery}
-              searchColumns={[]}
-              onChange={handleChange}
-              onResetSearch={() => {}}
-            />
-          </form>
-        </div>
-      </Flex>
+        <img src={Logo} className="imgLogo" />
+       <div className="searchBar">
+       <Flex
+          height="100%"
+          alignItems="center"
+          container
+          flex={4}
+          margin="0 100px 0px 506px"
+        >
+          <div className="filter-global-search-container">
+            <form onSubmit={(e) => {}}>
+              <SearchField
+                withBtn
+                placeholder="Search for anything"
+                btnText="Search"
+                width="100%"
+                height="48px"
+                value={searchQuery}
+                searchColumns={[]}
+                onChange={handleChange}
+                onResetSearch={() => {}}
+              />
+            </form>
+          </div>
+        </Flex>
 
-      <Flex container alignItems="center" margin="0 30px 0px 90px">
-        <Flex container justifyContent="space-between">
-          <Box marginRight="25px" marginLeft="25px" underline color={"#213F7D"}>
-            Docs
-          </Box>
-          <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>
-            {" "}
-            <Svg.NotificationBell />
-          </Box>
-          <Box marginRight="25px" marginLeft="25px">
-            <Avatar shape="rounded" type="text" src={avatarProfile} />
-          </Box>
-          <Box mr="5" color={"#213F7D"}>
-            <a
-              href="#anyId"
-              className="drop-toggle collapsed"
-              data-toggle="collapse"
+
+       </div>
+        
+        <Flex container alignItems="center" margin="0 30px 0px 90px">
+          <Flex container justifyContent="space-between">
+            <Box
+              marginRight="25px"
+              marginLeft="25px"
+              underline
+              color={"#213F7D"}
             >
-              Adedeji
-            </a>{" "}
-            <div id="anyId" className=" collapse">
-              Hi
-            </div>
-          </Box>
+              Docs
+            </Box>
+            <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>
+              {" "}
+              <Svg.NotificationBell />
+            </Box>
+            <Box marginRight="25px" marginLeft="25px">
+              <Avatar shape="rounded" type="text" src={avatarProfile} />
+            </Box>
+            <Box mr="5" color={"#213F7D"}>
+              <a
+                href="#anyId"
+                className="drop-toggle collapsed"
+                data-toggle="collapse"
+              >
+                Adedeji
+              </a>{" "}
+              <div id="anyId" className=" collapse">
+                Hi
+              </div>
+            </Box>
+          </Flex>
         </Flex>
       </Flex>
-    </Flex>
+    </div>
   );
 };
 

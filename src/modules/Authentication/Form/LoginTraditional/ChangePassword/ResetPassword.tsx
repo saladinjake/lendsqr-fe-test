@@ -167,6 +167,7 @@ function ChangePassword() {
               type="submit"
               disabled={invalid}
               onClick={() => changePassword()}
+              textColor="#fff"
             >
               {"Change Password"}
             </Button>

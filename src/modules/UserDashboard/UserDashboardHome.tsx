@@ -76,6 +76,7 @@ function Home() {
   const [showModalFilter, setShowModalFilter] = useState(false)
   const [allData,setAllData] = useState([])
   const [loadFromStore,setLoadFromStore] = useState(false)
+  const [total, setTotal] = useState(0)
   useEffect(()=>{
     if(localStorage.getItem("dataStored")){
       const prefetchedData = JSON.parse(localStorage.getItem("dataStored"))
@@ -84,7 +85,7 @@ function Home() {
     }else{
       setLoadFromStore(false)
     }
-  },[])
+  },[allData])
 
   const pageSizes = [1, 5, 10, 20, 50, 100];
 
@@ -132,6 +133,7 @@ function Home() {
 
             }
           })
+          setTotal(profileData?.length)
           let prefetchedStore = localStorage.setItem("dataStored", JSON.stringify(profileData))
 
           const offset = (1 - 1) * 10;
@@ -165,8 +167,8 @@ function Home() {
     );
   };
 
-  const mockFunc = (id) => {
-   return  navigate(`manage/${id}`)
+  const goTo = (id) => {
+   return  navigate(`/users/${id}`)
   };
 
  
@@ -212,7 +214,7 @@ function Home() {
       Header: "STATUS",
       accessor: "",
       Cell: (data) => {
-        console.log(data.cell.row.original)
+      
         if (data.cell.row.original.isActive == true)
           return (
             <Indicator
@@ -235,7 +237,7 @@ function Home() {
       Header: "Action",
       accessor: "id",
       Cell: (data) => {
-       return <Button onClick={() =>navigate("/user/"+ data.cell.row.id)}>test</Button>
+       return (<button onClick={() =>goTo( data.id)}>test</button>)
       //  return <VerticalDotMenu
       //     handleBlackListUser={mockFunc}
       //     handleDropdown={mockFunc}
@@ -313,7 +315,7 @@ function Home() {
      
 
       <Flex justifyContent="space-between" alignItems="center" container margin="40px 0 0 0">
-      <Flex alignItems="center"  container margin="40px 0 0 0">
+      <Flex alignItems="center"  container margin="45px 0 0 0">
        
         <div className="PaginationText">Showing</div>{" "}
       
@@ -330,7 +332,7 @@ function Home() {
         < div className="PaginationText">results per page</div>
       </Flex>
       <Box mt="10">
-      <Flex alignItems="center"  container margin="40px 0 0 0">
+      <Flex alignItems="center"  container margin="70px 10px 0 0">
       <Pagination
           totalRecords={100}
           pageLimit={10}

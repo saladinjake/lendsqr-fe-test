@@ -19,18 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   type,
   className = "StyledButton",
   floatable = false,
+  textColor =""
 }) => {
   const style = {
     width: !floatable ? width : "200px",
     height,
-    // backgroundColor:
-    //   color == "primary" && variant == "outline"
-    //     ? "#39CDCC"
-    //     : color == "secondary"
-    //     ? "black"
-    //     : "#fff",
+   
     color:
-      color == "primary" ? "#39CDCC" : color == "secondary" ? "black" : "#E4033B",
+      color == "primary" && textColor=="#fff" ? "#fff":   color == "primary" && textColor!=="#fff"? "#39CDCC"  : color == "secondary" ? "black" : "#E4033B",
     margin: margin ? margin : "3px",
     marginLeft: "10px",
     marginRight: "10px",

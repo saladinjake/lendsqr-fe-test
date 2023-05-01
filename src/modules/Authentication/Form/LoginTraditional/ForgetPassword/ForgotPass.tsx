@@ -134,6 +134,7 @@ function Login() {
               type="submit"
               disabled={invalid}
               onClick={() => handleResetPassword()}
+              textColor="#fff"
             >
               {"Reset Password"}
             </Button>
