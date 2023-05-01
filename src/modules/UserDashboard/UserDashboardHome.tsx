@@ -313,25 +313,31 @@ function Home() {
      
 
       <Flex justifyContent="space-between" alignItems="center" container margin="40px 0 0 0">
-      <Flex alignItems="center" container>
+      <Flex alignItems="center"  container margin="40px 0 0 0">
        
         <div className="PaginationText">Showing</div>{" "}
-        <div className="PaginationDropdown" onChange={handlePageSize}>
+      
+          <select className="PaginationDropdown" onChange={handlePageSize}>
           {pageSizes.map((pageSize) => (
             <option key={pageSize} value={pageSize}>
               {pageSize}
             </option>
           ))}
-        </div>
+
+          </select>
+         
+      
         < div className="PaginationText">results per page</div>
       </Flex>
       <Box mt="10">
+      <Flex alignItems="center"  container margin="40px 0 0 0">
       <Pagination
           totalRecords={100}
           pageLimit={10}
           pageNeighbours={1}
           onPageChanged={onPageChanged}
         />
+        </Flex>
       </Box>
      </Flex>
 

@@ -208,7 +208,7 @@ function Sidebar({
    
       <div className="wrapperSidebar">
         <Box width="100%" mx="auto">
-          <Box marginTop="5px" marginBottom="4px">
+          <Box marginTop="25px" marginBottom="4px">
             <Organizations />
           </Box>
 
