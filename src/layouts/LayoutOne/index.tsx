@@ -96,20 +96,20 @@ const Layout = ({ children }) => {
         <NavBar />
       </Row>
     
-        <Col sm={3} lg={3}>
+        <Col sm={2} lg={2}>
           <div
             className="sidebar-overlay"
             onClick={() => handleSidebarToggle(false)}
           ></div>
           <SideBar
-            width={sidebarOpen ? "330px" : "60px"}
+            width={sidebarOpen ? "200px" : "60px"}
             setSidebarOpen={handleSidebarToggle}
             sidebarOpen={sidebarOpen}
           />
         </Col>
    
 
-      <Col sm={9} lg={9}>
+      <Col sm={10} lg={10}>
         {children}
       </Col>
     </Row>
