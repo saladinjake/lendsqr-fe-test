@@ -29,21 +29,7 @@ import "./dashboard.styles.scss"
 function Home() {
   const navigate = useNavigate();
 
-  const defaultErrorTitle = "Sample text creation failed";
-  const defaultErrorMessage =
-    "Sample text failed due to invalid inputs or your internet connection may be unstable.";
-  const defaultSuccessTitle = "Sample text created";
-  const defaultSuccessMessage = "You have successfully created an Sample text.";
-  const { id, type } = useParams();
-  const [editable, setEditable] = useState(false);
-  const [headerLinks, setHeaderLinks] = useState([]);
-  const [showInformationModal, setShowInformationModal] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-  const [errorTitle, setErrorTitle] = useState(defaultErrorTitle);
-  const [errorMessage, setErrorMessage] = useState(defaultErrorMessage);
-  const [successTitle, setSuccessTitle] = useState(defaultSuccessTitle);
-  const [successMessage, setSuccessMessage] = useState(defaultSuccessMessage);
+  
   const { AllUsers, ActiveUsers, UserWithLoan, UserWithSavings } = Svg;
 
   const [initialValues, setInitialValues] = useState({
@@ -188,7 +174,7 @@ function Home() {
       initialValues,
       validations,
       onSubmit() {
-        setShowInformationModal(true);
+      
       },
     });
 

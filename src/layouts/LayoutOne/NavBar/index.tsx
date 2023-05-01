@@ -27,7 +27,7 @@ const NavBar = () => {
     "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg"
   );
 
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     if (localStorage.getItem("avatar")) {
@@ -35,7 +35,7 @@ const NavBar = () => {
     }
   }, [avatarProfile]);
 
-  const handleChange = ({target}) => setSearchQuery(target?.value)
+  const handleChange = ({ target }) => setSearchQuery(target?.value);
 
   return (
     <Flex
@@ -45,9 +45,8 @@ const NavBar = () => {
       padding="20px"
       style={{
         height: "100px",
-       
+
         boxShadow: "box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04)",
-       
       }}
     >
       <img src={Logo} className="imgLogo" />
@@ -63,7 +62,7 @@ const NavBar = () => {
           <form onSubmit={(e) => {}}>
             <SearchField
               withBtn
-              placeholder="Search for anything" 
+              placeholder="Search for anything"
               btnText="Search"
               width="100%"
               height="48px"
@@ -76,26 +75,30 @@ const NavBar = () => {
         </div>
       </Flex>
 
-
-
-
-
-
-
-      <Flex container   
-        alignItems="center"
-      
-        margin="0 30px 0px 90px">
+      <Flex container alignItems="center" margin="0 30px 0px 90px">
         <Flex container justifyContent="space-between">
           <Box marginRight="25px" marginLeft="25px" underline color={"#213F7D"}>
             Docs
           </Box>
-          <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>   <Svg.NotificationBell /></Box>
-          <Box marginRight="25px" marginLeft="25px" >  
-          <Avatar shape="rounded" type="text" src={avatarProfile} /></Box>
-          <Box mr="5" color={"#213F7D"}><a href="#anyId" className="drop-toggle collapsed" data-toggle="collapse" >Adedeji</a> <div id="anyId" className=" collapse">
-  Hi
-</div></Box>
+          <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>
+            {" "}
+            <Svg.NotificationBell />
+          </Box>
+          <Box marginRight="25px" marginLeft="25px">
+            <Avatar shape="rounded" type="text" src={avatarProfile} />
+          </Box>
+          <Box mr="5" color={"#213F7D"}>
+            <a
+              href="#anyId"
+              className="drop-toggle collapsed"
+              data-toggle="collapse"
+            >
+              Adedeji
+            </a>{" "}
+            <div id="anyId" className=" collapse">
+              Hi
+            </div>
+          </Box>
         </Flex>
       </Flex>
     </Flex>
