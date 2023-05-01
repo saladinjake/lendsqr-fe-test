@@ -238,3 +238,39 @@ body {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+/*sidebar responsiveness*/
+.sidebar-menu {
+  @include Desktop {
+  }
+
+  @include Phone {
+    width: 100px;
+    .wrapperSidebar{
+      width: 100px;
+      .sidebar-item  .text{
+        display: none;  
+      }
+    }
+  }
+
+  @include Tablet {
+    width: 100px;
+    .wrapperSidebar{
+      width: 100px;
+
+      .sidebar-item  .text{
+        display: none;  
+      }
+    }
+  }
+}
