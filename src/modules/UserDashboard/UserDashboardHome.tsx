@@ -18,7 +18,7 @@ import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";
 import { getAllUsers } from "api/services/User";
 
-// import { VerticalDotMenu } from "components/shared/library";
+import { VerticalDotMenu } from "components/shared/library/components/VerticalDotMenu";
 import validations from "./validations";
 
 import "./dashboard.styles.scss";

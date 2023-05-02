@@ -1,5 +1,5 @@
 .ActionBtnStyled{
-  position: relative;
+
   .headerx{
      position:relative;
   }
@@ -29,11 +29,7 @@
     right: 30px;
     margin-top:-35px;
   }
-  .btn-left,
-  .btn-right {
-    /* position: absolute; */
-    
-  }
+  
   .dropbtn {
     background-color: #fff;
     position: fixed;
@@ -76,7 +72,4 @@
   .show {
     display: block;
   }
-
-
-
 }

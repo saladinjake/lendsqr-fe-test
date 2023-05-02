@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./style.scss"
+import "./vstyle.scss"
 export const VerticalDotMenu = ({
   handleDropdown,
   handleBlackListUser,
