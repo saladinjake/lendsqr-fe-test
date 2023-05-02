@@ -213,11 +213,11 @@ function UserDetail() {
        <div className="StyledInformationModal" style={{boxShadow:"13px 1px 12px 1px #eaeaea",padding:"40px"}}>
         {currentTab === 1 && (
           <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Personal Information" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -279,11 +279,11 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Education And Employment" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -340,11 +340,11 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Socials" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
