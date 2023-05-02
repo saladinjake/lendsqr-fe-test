@@ -7,6 +7,7 @@ import { ReactComponent as LoginIllustration } from "assets/img/svg/pablo.svg";
 
 import Logo from "assets/img/svg/logo.svg";
 
+
 const LeftSection = () => {
   return (
     <div className="leftside">

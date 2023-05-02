@@ -1,6 +1,6 @@
 .sidebar-menu {
   min-height: 100vh;
-  width: 330px;
+  width: 250px;
   background-color: #fff;
  
   transition: 0.2s;
@@ -12,55 +12,7 @@
     display: none;
   }
 
-  &.sidebar-closed .link-btn {
-    justify-content: center;
-  }
-
-  &.sidebar-closed .link-btn span {
-    display: none;
-  }
-
-  &.sidebar-closed .text-heading {
-    display: none;
-  }
-
-  &.sidebar-closed .tooltip {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 70px;
-    z-index: -2;
-    background-color: #000;
-    color: #fff;
-    width: max-content;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transform-origin: left;
-    transform: rotate(160deg);
-    opacity: 0;
-    transition: 0.3s;
-  }
-
-  &.sidebar-closed .tooltip::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    left: -7px;
-    background-color: inherit;
-    transform: rotate(45deg) translateY(-50%);
-    top: 50%;
-  }
-
-  &.sidebar-closed .link-btn:hover .tooltip {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-
-  &.sidebar-closed .link-btn .tooltip:hover {
-    opacity: 0;
-    transform: rotate(120deg);
-  }
+  
 }
 
 

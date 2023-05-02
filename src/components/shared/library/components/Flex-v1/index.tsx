@@ -21,7 +21,7 @@ import { FlexProps } from "./flex.types"
 */
 export const Flex = (props) => (
   <div
-    className={props.className}
+    className={props.className|| "flex_classic"}
     style={{
      ...props.style,
       display: props.container ? "flex" : "block",
@@ -33,12 +33,12 @@ export const Flex = (props) => (
       flexWrap: props.flexWrap || "nowrap",
       flex: props.flex || "0 1 auto",
       alignItems: props.alignItems || "stretch",
-      margin: props.margin  || "0",
-      marginRight: props.marginRight || "0",
-      marginBottom: props.marginBottom ||  "0",
-      marginTop: props.margiTop ||  "0",
-      marginLeft: props.marginLeft ||  "0",
-      padding: props.padding || "0",
+      margin: props.margin ,
+      marginRight: props.marginRight ,
+      marginBottom: props.marginBottom ,
+      marginTop: props.margiTop ,
+      marginLeft: props.marginLeft ,
+      padding: props.padding ,
 
       paddingRight: props.paddingRight || props.pr || "0",
       paddingBottom: props.paddingBottom || props.pb || "0",

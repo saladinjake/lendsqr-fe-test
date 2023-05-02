@@ -84,7 +84,7 @@ transition=""}: IBaseProps) => {
   
 
 }
-console.log(Styled)
+
 
 
 return <div >{children}</div>

@@ -27,6 +27,8 @@ import {
 import { RootState } from "reducers";
 import { isAuthenticatedByRoles } from "utils";
 
+import Logo from "assets/img/svg/logo.svg";
+
 function Login() {
   const reduxDispatcher = useDispatch();
   const authContext = useContext(AuthContext);
@@ -108,6 +110,8 @@ function Login() {
 
   return (
     <Box border="none " height="100vh" >
+           <img src={Logo} className="Logo sm-only" />
+
       <Flex
         style={{ top: "10vmin"}}
         position="relative"

@@ -20,7 +20,7 @@ function SideBarItem(props) {
   return <div className="sidebar-item">
 <Box onClick={handleClick} className={link=="dashboard"?"baseActive":""}>
     <span className="icon-set">{Icon}</span>
-       {name}
+       <span className="text">{name}</span>
     </Box>
 
   </div> ;
