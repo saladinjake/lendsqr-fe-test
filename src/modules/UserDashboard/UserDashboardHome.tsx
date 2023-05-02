@@ -228,12 +228,12 @@ function Home() {
       Header: "Action",
       accessor: "id",
       Cell: (data) => {
-        return <button onClick={() => goTo(data.id)}>test</button>;
-        //  return <VerticalDotMenu
-        //     handleBlackListUser={mockFunc}
-        //     handleDropdown={mockFunc}
-        //     handleViewDetail={data?.value}
-        //   />
+        
+         return <VerticalDotMenu
+            handleBlackListUser={goTo}
+            handleDropdown={goTo}
+            handleViewDetail={data?.value}
+          />
       },
     },
   ];
