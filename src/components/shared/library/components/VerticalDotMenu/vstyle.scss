@@ -1,0 +1,77 @@
+.ActionBtnStyled{
+  position:relative;
+  .headerx{
+     position:relative;
+  }
+  .showLeft {
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    text-shadow: #fff !important;
+    color: #fff !important;
+    padding: 2px;
+  }
+  .icons li {
+    background: none repeat scroll 0 0 black;
+    height: 7px;
+    width: 7px;
+    line-height: 0;
+    list-style: none outside none;
+    margin-right: 15px;
+    margin-top: 3px;
+    vertical-align: top;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .btn-left {
+    left: 0.4em;
+  }
+  .btn-right {
+    right: 30px;
+    margin-top:-35px;
+  }
+  
+  .dropbtn {
+    background-color: #fff;
+    position: relative;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top:-15px;
+    margin-left:30px;
+  }
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #fff;
+  }
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 0.4em;
+  }
+  .dropdown-content {
+    display: none;
+    position: relative;
+    margin-top: 60px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 4px 6px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .show {
+    display: block;
+  }
+}

@@ -18,7 +18,7 @@ import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";
 import { getAllUsers } from "api/services/User";
 
-// import { VerticalDotMenu } from "components/shared/library";
+import { VerticalDotMenu } from "components/shared/library/components/VerticalDotMenu";
 import validations from "./validations";
 
 import "./dashboard.styles.scss";
@@ -228,12 +228,12 @@ function Home() {
       Header: "Action",
       accessor: "id",
       Cell: (data) => {
-        return <button onClick={() => goTo(data.id)}>test</button>;
-        //  return <VerticalDotMenu
-        //     handleBlackListUser={mockFunc}
-        //     handleDropdown={mockFunc}
-        //     handleViewDetail={data?.value}
-        //   />
+        
+         return <VerticalDotMenu
+            handleBlackListUser={goTo}
+            handleDropdown={goTo}
+            handleViewDetail={data?.value}
+          />
       },
     },
   ];
