@@ -32,6 +32,7 @@ export interface FlexProps {
 
   padding?: string;
   margin?: string;
+  marginBottm?: string;
 
   width?: string;
   height?: string;

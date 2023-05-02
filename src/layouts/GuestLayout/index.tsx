@@ -1,11 +1,11 @@
-import SideBar from "./SideBar";
-import NavBar from "./NavBar";
+
+import NavBar from "layouts/LayoutOne/NavBar";
 import Row from "components/shared/library/components/RowsAndColumns-v1/Row";
 import Col from "components/shared/library/components/RowsAndColumns-v1/Column";
 import { useState, useRef, useEffect } from "react";
-import "./layout.styles.scss";
+import "../LayoutOne/layout.styles.scss";
 
-import Grid from "components/shared/library/components/Grid-v1";
+
 
 const Layout = ({ children }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -70,46 +70,22 @@ const Layout = ({ children }) => {
     "@media screen and (max-width: 1100px)": {
       gridTemplateColumns: sidebarOpen ? "1fr" : "60px 1fr",
 
-      // aside {
-      //   zIndex: sidebarOpen ? "4000" : "3550",
-      // }
-
-      // main {
-      //   position:sidebarOpen ? "fixed" : "sticky",
-      // }
-
-      // .sidebar-overlay {
-      //   display: sidebarOpen ? "block" : "none",
-      //   position: "fixed",
-      //   backgroundColor: "#0009",
-      //   width: "100vw",
-      //   height: "100vh",
-      //   top: 0;
-      //   left: 0;
-      // }
+    
     },
   };
 
   return (
     <Row>
       <Row>
+     
         <NavBar />
+     
       </Row>
     
-        <Col sm={2} lg={2}>
-          <div
-            className="sidebar-overlay"
-            onClick={() => handleSidebarToggle(false)}
-          ></div>
-          <SideBar
-            width={sidebarOpen ? "200px" : "60px"}
-            setSidebarOpen={handleSidebarToggle}
-            sidebarOpen={sidebarOpen}
-          />
-        </Col>
+      
    
 
-      <Col sm={10} lg={10}>
+      <Col sm={12} lg={12}>
         {children}
       </Col>
     </Row>

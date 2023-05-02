@@ -4,6 +4,7 @@ import "./SearchField.styles.scss";
 import { SearchFieldProps } from "./SearchField.types";
 import { Svg } from "./../../../../../assets/svg";
 
+
 const { Search } = Svg;
 
 const SearchField: React.FC<SearchFieldProps> = ({
@@ -53,13 +54,16 @@ const SearchField: React.FC<SearchFieldProps> = ({
   };
 
   return (
-    <div className="StyledSearchField" contentEditable  placeholder={placeholder}
-   
-    onChange={onChange}
-    onFocus={handleFocus}
-    onBlur={handleBlur}
-   >
-     
+    <div className="StyledSearchField" >
+     <input
+      onChange={onChange}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      className="wrapperInput"
+      placeholder={placeholder}
+      
+
+     />
       <div className="tooltip">{"Search table by " + searchColumnsString}</div>
       {withBtn && (
         <>

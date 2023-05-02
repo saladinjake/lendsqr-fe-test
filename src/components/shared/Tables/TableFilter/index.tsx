@@ -37,16 +37,43 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
     <div className="TableFilter">
       {showModalFilter && (
         <div className="filters-dropdown-container filters">
-          <Box mb="3"></Box>
+            <PopUpBox 
+          values 
+          handleChange 
+          filterColumns 
+          onSortColumn
+           onSort
+           setShowModalFilter
+           />
+          
+
+          {children && children}
+
+        
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default TableFilter;
+
+
+
+
+const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, setShowModalFilter}) =>{
+  return (
+    <>
+    <Box mb="3"></Box>
           <Box mb="3">
             <Text>Organization</Text>
             <Box>
               <Select
                 placeholder={"Select Organization"}
                 width="150px"
-                options={filterColumns || []}
+                options={[{name:"test", id:"1"}]|| []}
                 onGetSelectValue={(item) => {
-                  onSortColumn(item.id);
+                 
                 }}
                 hasShadow={false}
                 label=""
@@ -117,7 +144,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
                 { name: "Blocked", id: "desc" },
               ]}
               onGetSelectValue={(item) => {
-                onSort(item.id);
+             
               }}
               hasShadow={false}
             />
@@ -154,12 +181,6 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
               </Box>
             </Flex>
           </GridItem>
-
-          {children && children}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default TableFilter;
+    </>
+  )
+}

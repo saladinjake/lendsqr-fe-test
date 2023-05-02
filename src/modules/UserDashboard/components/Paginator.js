@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./pagination.scss"
+import "./pagination.scss";
 const LEFT_PAGE = "LEFT";
 const RIGHT_PAGE = "RIGHT";
 
@@ -37,8 +37,8 @@ class Pagination extends Component {
     this.gotoPage(1);
   }
 
-  gotoPage = page => {
-    const { onPageChanged = f => f } = this.props;
+  gotoPage = (page) => {
+    const { onPageChanged = (f) => f } = this.props;
 
     const currentPage = Math.max(0, Math.min(page, this.totalPages));
 
@@ -46,7 +46,7 @@ class Pagination extends Component {
       currentPage,
       totalPages: this.totalPages,
       pageLimit: this.pageLimit,
-      totalRecords: this.totalRecords
+      totalRecords: this.totalRecords,
     };
 
     this.setState({ currentPage }, () => onPageChanged(paginationData));
@@ -57,12 +57,12 @@ class Pagination extends Component {
     this.gotoPage(page);
   };
 
-  handleMoveLeft = evt => {
+  handleMoveLeft = (evt) => {
     evt.preventDefault();
     this.gotoPage(this.state.currentPage - this.pageNeighbours * 2 - 1);
   };
 
-  handleMoveRight = evt => {
+  handleMoveRight = (evt) => {
     evt.preventDefault();
     this.gotoPage(this.state.currentPage + this.pageNeighbours * 2 + 1);
   };
@@ -121,66 +121,52 @@ class Pagination extends Component {
     const pages = this.fetchPageNumbers();
 
     return (
-   
-        <nav aria-label="Countries Pagination">
-          <ul className="pagination">
-            {pages.map((page, index) => {
-              if (page === LEFT_PAGE)
-                return (
-                  <li key={index} className="page-item">
-                    <a
-                      className="page-link"
-                      href="#"
-                      aria-label="Previous"
-                      onClick={this.handleMoveLeft}
-                    >
-                      <span aria-hidden="true">&laquo;</span>
-                      <span className="sr-only">Previous</span>
-                    </a>
-                  </li>
-                );
-
-              if (page === RIGHT_PAGE)
-                return (
-                  <li key={index} className="page-item">
-                    <a
-                      className="page-link"
-                      href="#"
-                      aria-label="Next"
-                      onClick={this.handleMoveRight}
-                    >
-                      <span aria-hidden="true">&raquo;</span>
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </li>
-                );
-
-              return (
-                <li
-                  key={index}
-                  className={`page-item${
-                    currentPage === page ? " active" : ""
-                  }`}
+      <nav aria-label="Countries Pagination">
+        <ul className="pagination">
+          <li className="page-item">
+            <a
+              className="page-link"
+              href="#"
+              aria-label="Previous"
+              onClick={this.handleMoveLeft}
+            >
+              
+              <span aria-hidden="true">&laquo;</span>
+              <span className="sr-only">Previous</span>
+            </a>
+          </li>
+          {pages.map((page, index) => {
+            return (
+              <li
+                key={index}
+                className={`page-item${currentPage === page ? " active" : ""}`}
+              >
+                <a
+                  className="page-link"
+                  href="#"
+                  onClick={(e) => this.handleClick(page, e)}
                 >
-                  <a
-                    className="page-link"
-                    href="#"
-                    onClick={e => this.handleClick(page, e)}
-                  >
-                    {page}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-    
+                  {page}
+                </a>
+              </li>
+            );
+          })}
+
+          <li className="page-item">
+            <a
+              className="page-link"
+              href="#"
+              aria-label="Next"
+              onClick={this.handleMoveRight}
+            >
+              <span aria-hidden="true">&raquo;</span>
+              <span className="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }
 
-
-
-
 export default Pagination;
-

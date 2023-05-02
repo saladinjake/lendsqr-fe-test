@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import styled from "styled-components";
+
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
 import LoadingBoxes from "../components/LoadingBoxes";
@@ -9,6 +9,7 @@ import LoadingBoxes from "../components/LoadingBoxes";
 import Main from "layouts/Main";
 import HeaderActions from "../components/HeaderActions";
 import { Svg } from "assets/svg";
+import "./userdetail.style.scss"
 
 
 
@@ -28,6 +29,8 @@ import {
   createLinks,
   manageLinks,
 } from "modules/UserDashboard/utilities/headerLinks";
+import Row from "components/shared/library/components/RowsAndColumns-v1/Row";
+import Col from "components/shared/library/components/RowsAndColumns-v1/Column";
 
 import { getUserById } from "api/services/User";
 
@@ -94,9 +97,9 @@ function UserDetail() {
 
   const [currentTab, setCurrentTab] = useState(1);
 
-  if (isLoading) {
-    return <LoadingBoxes />;
-  }
+  // if (isLoading) {
+  //   return <LoadingBoxes />;
+  // }
 
   return (
     <Main
@@ -110,15 +113,17 @@ function UserDetail() {
         />
       }
     >
-      <div className="styledInformationModal">
-        <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
-          <GridItem>
-            <Flex
+
+      <Row style={{boxShadow:"2px 2px 2px #eaeaea",padding:"40px"}}>
+
+         <Col sm={4} lg={4} >
+         <Flex
             container
               direction="row"
               alignItems="start"
+              backgroundColor="#fff"
               
-              padding="20px"
+              
               style={{
                 borderRight: "1px solid #545F7D",
                 height: "50px",
@@ -129,7 +134,7 @@ function UserDetail() {
                 type="text"
                 src={results?.profile?.avatar}
               />
-              <Box ml="3">
+              <Box marginRight="10px">
                 <div className="DetailLabel">
                   {results?.profile?.firstName +
                     " " +
@@ -138,10 +143,12 @@ function UserDetail() {
                 <div className="DetailValue">{results?.accountNumber}</div>
               </Box>
             </Flex>
-          </GridItem>
+         </Col>
 
-          <GridItem>
-            <Flex
+
+         <Col sm={4} lg={4}>
+
+         <Flex
               direction="column"
               alignItems="start"
               style={{
@@ -156,10 +163,12 @@ function UserDetail() {
                 <Svg.TiersStar />
               </div>
             </Flex>
-          </GridItem>
 
-          <GridItem>
-            <Flex
+         </Col>
+
+
+         <Col sm={4} lg={4}>
+         <Flex
               direction="column"
               alignItems="start"
               style={{
@@ -169,8 +178,11 @@ function UserDetail() {
               <div className="DetailLabel">N{results?.accountBalance}</div>
               <div className="DetailValue">{"9912345678/Providus Bank"}</div>
             </Flex>
-          </GridItem>
-        </Grid>
+         </Col>
+
+      </Row>
+      <Row style={{marginTop:"-30px"}}>
+      
         <div className="Wrapper" >
           <div className="TabContainer">
             <Flex container justifyContent="space-around">
@@ -196,16 +208,16 @@ function UserDetail() {
                </Flex>
           </div>
         </div>
-      </div>
+      </Row>
 
-       <div className="StyledInformationModal">
+       <div className="StyledInformationModal" style={{boxShadow:"13px 1px 12px 1px #eaeaea",padding:"40px"}}>
         {currentTab === 1 && (
           <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Personal Information" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -267,11 +279,11 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Education And Employment" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -328,11 +340,11 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <GridItem colSpan={5}>
+            <Row>
               <Flex justifyContent="start">
                 <Heading text="Socials" />
               </Flex>
-            </GridItem>
+            </Row>
 
             <GridItem>
               <Flex direction="column" alignItems="start">

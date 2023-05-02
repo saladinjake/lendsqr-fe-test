@@ -1,6 +1,6 @@
 import React from "react";
 
-const Col = ({ sm, lg, children }) => {
+const Col = ({ sm, lg, children, style={} }) => {
   let className = "";
 
   if (sm) {
@@ -11,7 +11,7 @@ const Col = ({ sm, lg, children }) => {
     className += ` lg-col-${lg}`;
   }
 
-  return <div className={className}>{children}</div>;
+  return <div style={{...style}} className={className}>{children}</div>;
 };
 
 export default Col;

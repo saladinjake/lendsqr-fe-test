@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 const useContainerDimensions = (myRef, listeners = []) => {
   const getDimensions = () => ({
-    width: myRef.current.clientWidth,
-    height: myRef.current.clientHeight,
+    width: myRef?.current?.clientWidth,
+    height: myRef?.current?.clientHeight,
   });
 
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
