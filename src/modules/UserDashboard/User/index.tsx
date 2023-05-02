@@ -101,6 +101,15 @@ function UserDetail() {
   //   return <LoadingBoxes />;
   // }
 
+  function toggleHambugger() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
   return (
     <Main
       subRoute
@@ -116,7 +125,7 @@ function UserDetail() {
 
       <Row style={{boxShadow:"2px 2px 2px #eaeaea",padding:"40px"}}>
 
-         <Col sm={4} lg={4} >
+         <Col sm={12} lg={4} >
          <Flex
             container
               direction="row"
@@ -146,7 +155,7 @@ function UserDetail() {
          </Col>
 
 
-         <Col sm={4} lg={4}>
+         <Col sm={12} lg={4}>
 
          <Flex
               direction="column"
@@ -167,7 +176,7 @@ function UserDetail() {
          </Col>
 
 
-         <Col sm={4} lg={4}>
+         <Col sm={12} lg={4}>
          <Flex
               direction="column"
               alignItems="start"
@@ -185,27 +194,28 @@ function UserDetail() {
       
         <div className="Wrapper" >
           <div className="TabContainer">
-            <Flex container justifyContent="space-around">
+         
+
+            <div className="topnav" id="myTopnav">
+
+ 
+
+ 
+
 
             {tabs.map((tab) => (
-              <Button className="Tab" floatable={true}
-                // as="button"
-                // active={tab.id === currentTab}
-                // cursor="pointer"
-                // alignItems="center"
-                // position="relative"
-                // justifyContent="center"
-                // onClick={() => setCurrentTab(tab.id)}
-              >
-                <div className="TabText">{tab.name}</div>
+            
 
-                {tab.id === currentTab && <div  className="Line" />}
-              </Button>
-
-         
+              
+            
+              <a href="#" className={tab.id === currentTab ? "active": ""}>{tab.name}</a>
+             
             
             ))}
-               </Flex>
+  <a  className="icon" onClick={()=>toggleHambugger()}>
+               <i className="fa fa-bars right-lnk"></i>
+  </a>
+              </div>
           </div>
         </div>
       </Row>
