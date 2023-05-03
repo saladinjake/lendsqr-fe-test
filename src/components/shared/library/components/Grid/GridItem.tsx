@@ -47,7 +47,7 @@ const GridItem: React.FC<GridItemProps> = ({
     return (
         <div 
            style={GridStyle}
-           className="grid-content"
+           className={"grid-content"}
         >
             {children}
         </div>
