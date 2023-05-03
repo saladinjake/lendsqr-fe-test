@@ -10,18 +10,28 @@
 - change directory in to the download folder: cd /path/to/download/folder
 - run the command : yarn
 - start the app: npm start
-- test run : npm run test
+
 
 
 
 #### PAGES
 -   /login          => login page
 -   /users          => users page
--   /user/:id       =>  user detail page where id is a number
+-   /user-detail/:id       =>  user detail page where id is a number
 #______________________________________
 
 ### Tech Stack/ Approach
-React , Typescript , Component driven design, Sass, Modular architecture, design patterns, context api, react query, redux, functional component, Micro frontends Approach
+- React : Frontend lIBRARY FOR SPA Application
+- Typescript : Strict Typings to Javascript, 
+- Component driven design: Building  reusable component libraries, 
+- Sass: CSS Ppreprocessor, 
+Modular architecture : Towards Microfrontend approach
+- design patterns: React design techniques, 
+- Context api -, 
+- react query - For ease with refetching record based on user defined inputs and caching mechanisms, 
+- Redux: Here Redux is solely used in autentication for persistence storage with the Auth context api,( 2 way communication with redux reducers and auth context reducers) 
+- functional component: self explanatory, 
+
 
 
 
