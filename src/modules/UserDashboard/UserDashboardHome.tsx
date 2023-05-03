@@ -259,7 +259,7 @@ function Home() {
         
          return <VerticalDotMenu
             handleBlackListUser={goTo}
-            index={data.value}
+            index={data?.value}
           />
       }
     },
