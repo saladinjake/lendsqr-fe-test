@@ -20,7 +20,8 @@ export const TableContent = ({
   selectedSortColumn,
   selectedSortOrder,
   showModalFilter = false,
-  setShowModalFilter
+  setShowModalFilter,
+  navLink="./user/"
 }) => {
 
  
@@ -53,8 +54,13 @@ export const TableContent = ({
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+              {row.cells.map((cell, index) => {
+              
+                const length = cell.row.cells.length 
+                const lastCell = cell.row.cells[length -1]
+                const actionID = lastCell.row.original.id;
+                
+                return <td style={{cursor:"pointer"}} onClick={() => window.location.href=  navLink+ actionID} {...cell.getCellProps()}>{cell.render("Cell")}</td>;
               })}
             </tr>
           );

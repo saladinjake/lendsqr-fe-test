@@ -114,6 +114,7 @@ function Table(props) {
           selectedSortOrder={selectedSortOrder}
           showModalFilter={showModalFilter} 
           setShowModalFilter={setShowModalFilter}
+          navLink={"./user/"}
         />
       </div>
     </div>
