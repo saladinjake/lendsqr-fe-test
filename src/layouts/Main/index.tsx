@@ -13,6 +13,7 @@ type MainProps = {
   };
   subRouteLinks?: SubRouteLinks[];
   headerActions?: any;
+  backArrow?: boolean
 };
 
 function Main({
@@ -22,9 +23,12 @@ function Main({
   links,
   subRouteLinks,
   headerActions,
+  backArrow
+
 }: MainProps) {
   return (
     <div className="StyledMain">
+      { backArrow && (<div className="backText"> <span className="go-back"></span><p> Back to User</p></div>)}
       <div className="main-header">
         {mainRoute && (
           <MainRouteHeader links={links} headerActions={headerActions} />
