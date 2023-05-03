@@ -196,20 +196,10 @@ function UserDetail() {
           <div className="TabContainer">
          
 
-            <div className="topnav" id="myTopnav">
-
- 
-
- 
-
-
+            <div className="tab-navi" id="myTopnav">
             {tabs.map((tab) => (
             
-
-              
-            
-              <a href="#" className={tab.id === currentTab ? "active": ""}>{tab.name}</a>
-             
+              <a href="" className={tab.id === currentTab ? "active": ""}>{tab.name}</a>
             
             ))}
   <a  className="icon" onClick={()=>toggleHambugger()}>
