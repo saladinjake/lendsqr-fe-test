@@ -103,17 +103,19 @@ function UserDetail() {
 
   function toggleHambugger() {
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  if (x.className === "tab-navi") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "tab-navi";
   }
 }
 
   return (
     <Main
+  
       subRoute
       subRouteLinks={headerLinks}
+
       headerActions={
         <HeaderActions
           isActive={initialValues.isActive}
@@ -142,14 +144,15 @@ function UserDetail() {
                 shape="rounded"
                 type="text"
                 src={results?.profile?.avatar}
+
               />
               <Box marginRight="10px">
-                <div className="DetailLabel">
+                <div className="DetailLabelHead">
                   {results?.profile?.firstName +
                     " " +
                     results?.profile?.lastName}
                 </div>
-                <div className="DetailValue">{results?.accountNumber}</div>
+                <div className="DetailValue2">{results?.accountNumber}</div>
               </Box>
             </Flex>
          </Col>
@@ -165,8 +168,8 @@ function UserDetail() {
                 height: "50px",
               }}
             >
-              <div className="DetailLabel">User's tier</div>
-              <div className="DetailValue">
+              <div className="DetailLabelTier">User's tier</div>
+              <div className="DetailValue2">
                 <Svg.TiersStar />
                 <Svg.TiersStar />
                 <Svg.TiersStar />
@@ -184,8 +187,8 @@ function UserDetail() {
                 height: "50px",
               }}
             >
-              <div className="DetailLabel">N{results?.accountBalance}</div>
-              <div className="DetailValue">{"9912345678/Providus Bank"}</div>
+              <div className="MoenyDetail">N{results?.accountBalance}</div>
+              <div className="DetailValue2">{"9912345678/Providus Bank"}</div>
             </Flex>
          </Col>
 
@@ -199,7 +202,7 @@ function UserDetail() {
             <div className="tab-navi" id="myTopnav">
             {tabs.map((tab) => (
             
-              <a href="" className={tab.id === currentTab ? "active": ""}>{tab.name}</a>
+              <a href="" className={tab.id === currentTab ? "active": "TabText"}>{tab.name}</a>
             
             ))}
   <a  className="icon" onClick={()=>toggleHambugger()}>
@@ -212,12 +215,15 @@ function UserDetail() {
 
        <div className="StyledInformationModal" style={{boxShadow:"13px 1px 12px 1px #eaeaea",padding:"40px", backgroundColor: "#fff", marginLeft:"-10px"}}>
         {currentTab === 1 && (
-          <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
-            <Row>
+          <>
+
+           <Row>
               <Flex justifyContent="start">
-                <Heading text="Personal Information" />
+                <Heading text="Personal Information"  className="HeaderInfo"/>
               </Flex>
             </Row>
+          <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
+           
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -279,11 +285,20 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <Row>
+          </Grid>
+
+
+           <Row>
               <Flex justifyContent="start">
-                <Heading text="Education And Employment" />
+                <Heading text="Education And Employment"  className="HeaderInfo"/>
               </Flex>
             </Row>
+
+
+           <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
+           
+
+           
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -340,11 +355,44 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <Row>
+             <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+
+            </Grid>
+            
+
+                <Row>
               <Flex justifyContent="start">
-                <Heading text="Socials" />
+                <Heading text="Social"  className="HeaderInfo"/>
               </Flex>
             </Row>
+
+               <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
+        
+
+           
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -367,11 +415,16 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-            <GridItem colSpan={5}>
+            </Grid>
+
+
+             <GridItem colSpan={5}>
               <Flex justifyContent="start">
-                <Heading text="Guarantors" />
+                <Heading text="Guarantors"  className="HeaderInfo"/>
               </Flex>
             </GridItem>
+
+            <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
 
             <GridItem>
               <Flex direction="column" alignItems="start">
@@ -406,6 +459,8 @@ function UserDetail() {
             </GridItem>
             <hr />
           </Grid>
+
+          </>
         )}
 
         {currentTab === 2 && <>Hire me</>}

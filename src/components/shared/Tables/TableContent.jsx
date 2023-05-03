@@ -21,7 +21,7 @@ export const TableContent = ({
   selectedSortOrder,
   showModalFilter = false,
   setShowModalFilter,
-  navLink="./user/"
+  navLink="./user-detail/"
 }) => {
 
  

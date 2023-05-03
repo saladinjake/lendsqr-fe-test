@@ -6,7 +6,7 @@ import { Flex } from "../../components/shared/library/components/Flex-v1";
 import { ReactComponent as LoginIllustration } from "assets/img/svg/pablo.svg";
 import  Col from "../../components/shared/library/components/RowsAndColumns-v1/Column"
 import  Row from "../../components/shared/library/components/RowsAndColumns-v1/Row"
-import Logo from "assets/img/svg/logo.svg";
+import Logo  from "../../assets/img/svg/logo.svg";
 
 
 const LeftSection = () => {
@@ -19,7 +19,7 @@ const LeftSection = () => {
         alignItems="center"
         container
       >
-        <img src={Logo} className="Logo" />
+        <img src={Logo as unknown as string} className="Logo"  alt="basic-column" />
       </Flex>
 
       <div className="StyledIllustration rigidSection">
