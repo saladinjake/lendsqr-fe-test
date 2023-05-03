@@ -355,29 +355,6 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-             <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
 
 
             </Grid>
@@ -457,7 +434,32 @@ function UserDetail() {
                 <div className="DetailValue">{"N/A"}</div>
               </Flex>
             </GridItem>
-            <hr />
+
+            
+             <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+          
           </Grid>
 
           </>
