@@ -23,7 +23,7 @@ function DefaultLayout() {
           <Route path="/*" element={<UserDashBoard />} />
           <Route path="/dashboard" element={<Navigate to="/" replace />}  />
           
-          <Route path="/user/:id" element={<UserDetail />} /> 
+          <Route path="/user-detail/:id" element={<UserDetail />} /> 
          </Route> 
         <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />

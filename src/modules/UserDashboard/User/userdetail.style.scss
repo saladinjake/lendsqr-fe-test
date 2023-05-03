@@ -19,17 +19,114 @@
 }
 
 .DetailLabel {
-  font-size: 13px;
-  color: #979797;
-  margin: 5px;
-  padding: 10px;
+ 
+height: 14px;
+left: 373px;
+top: 609px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #545F7D;
+margin-left:-27px;
+}
+
+.DetailLabelTier {
+width: 73px;
+height: 16px;
+left: 693px;
+top: 349px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+
+color: #545F7D;
+margin-left:20px;
+margin-bottom:10px;
+}
+
+
+.MoenyDetail{
+  width: 137px;
+height: 23px;
+left: 826px;
+top: 344px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+
+color: #213F7D;
+margin-left:20px;
+margin-bottom:10px;
+}
+
+.DetailLabelHead {
+ width: 140px;
+height: 26px;
+left: 493px;
+top: 345px;
+margin-bottom:10px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+/* identical to box height */
+margin-left:20px;
+
+color: #213F7D;
 }
 
 .DetailValue {
-  font-size: 15px;
-  color: black;
-  margin: 7px;
-  padding:10px;
+  width: 102px;
+height: 19px;
+left: 373px;
+top: 631px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #545F7D;
+margin-left:-27px;
+margin-top:5px;
+}
+
+
+.DetailValue2 {
+ margin-left:20px;
+height: 19px;
+left: 373px;
+top: 631px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #545F7D;
+
+margin-top:5px;
 }
 
 .Line {
@@ -43,9 +140,40 @@
   position: absolute;
 }
 
+.HeaderInfo{
+  width: 365px;
+height: 19px;
+left: 373px;
+top: 560px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #213F7D;
+}
+
 .TabText {
-  font-weight: 800;
-  font-size: 15px;
+  width: 84px;
+height: 19px;
+left: 629px;
+top: 471px;
+
+font-family: 'SF Compact Text';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: rgba(0, 0, 0, 0.8);
+
 }
 
 .TabContainer {
@@ -97,6 +225,9 @@
   font-family: courier new;
   font-weight: bold;
   width:240px;
+
+
+
 }
 
 .tab-navi a:hover {
@@ -115,6 +246,8 @@
 }
 
 @media screen and (max-width: 600px) {
+
+
   .tab-navi a:not(:first-child) {display: none;}
   .tab-navi a.icon {
     float: right;
@@ -123,16 +256,20 @@
 }
 
 @media screen and (max-width: 600px) {
-  .tab-navi.responsive {position: relative;}
+   .tab-navi{
+    width: 400px;
+   background:#fff;
+   }
+  .tab-navi.responsive {position: relative; width: 400px;}
   .tab-navi.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    
+    
   }
   .tab-navi.responsive a {
     float: none;
     display: block;
     text-align: left;
+   
   }
 }
 

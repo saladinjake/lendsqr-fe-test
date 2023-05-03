@@ -1,21 +1,21 @@
 
 import { Svg } from "assets/svg";
-import Loader from "components/shared/library/components/Loader";
+import Loader from "../../../../../components/shared/library/components/Loader";
 import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Box } from "components/shared/library/components/Box-v1";
-import { Flex } from "components/shared/library/components/Flex-v1";
-import { Grid } from "components/shared/library/components/Grid";
-import Input from "components/shared/library/components/Input-v1/Input";
-import Button from "components/shared/library/components/Button-v1/Button";
-import styled from "styled-components";
+import { Box } from "../../../../../components/shared/library/components/Box-v1";
+import { Flex } from "../../../../../components/shared/library/components/Flex-v1";
+import { Grid } from "../../../../../components/shared/library/components/Grid";
+import Input from "../../../../../components/shared/library/components/Input-v1/Input";
+import Button from "../../../../../components/shared/library/components/Button-v1/Button";
+
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
 
 
 import validations from "../utilities/validations";
 import useForm, { hasError } from "utils/hooks/useForm";
-import useSendToAPI from "utils/hooks/useSendToApi";
+import useSendToAPI from "../../../../../utils/hooks/useSendToApi";
 import queryKeys from "../utilities/queryKeys";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -23,11 +23,11 @@ import {
   getAcessTokenFromStore,
   getIsAuthenticatedFromStore,
   getUserRolesFromStore,
-} from "reducers/authReducer";
+} from "../../../../../reducers/authReducer";
 import { RootState } from "reducers";
-import { isAuthenticatedByRoles } from "utils";
+import { isAuthenticatedByRoles } from "../../../../../utils";
 
-import Logo from "assets/img/svg/logo.svg";
+import Logo from "../../../../../assets/img/svg/logo.svg";
 
 function Login() {
   const reduxDispatcher = useDispatch();
@@ -110,7 +110,7 @@ function Login() {
 
   return (
     <Box border="none " height="100vh" >
-           <img src={Logo} className="Logo sm-only" />
+           <img src={Logo as unknown as string} className="Logo sm-only" />
 
       <Flex
         style={{ top: "10vmin"}}
