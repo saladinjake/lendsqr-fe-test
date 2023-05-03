@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import LoadingBoxes from "./components/LoadingBoxes";
 import { Table } from "components/shared/Tables";
 
 import TableFilter from "components/shared/Tables/TableFilter";
@@ -75,6 +75,7 @@ function Home() {
   useEffect(() => {
     if (localStorage.getItem("dataStored")) {
       const prefetchedData = JSON.parse(localStorage.getItem("dataStored"));
+
       setAllData(prefetchedData);
       setLoadFromStore(true);
     } else {
@@ -204,26 +205,53 @@ function Home() {
 
     {
       Header: "STATUS",
-      accessor: "",
+      accessor: "status",
       Cell: (data) => {
-        if (data.cell.row.original.isActive == true)
+   
+        if(data.cell.row.original.id% 2== 0 ){
           return (
             <Indicator
               title="Active"
               indicatorClass="online-indicator"
-              blinkClass="blink"
+              onClicker={1}
             />
           );
-        else
-          return (
+
+        }else if(data.cell.row.original.id% 3== 0 ){
+
+           return (
             <Indicator
               title="Inactive"
               indicatorClass="offline-indicator"
-              blinkClass="blink-deactivated"
+              onClicker={1}
             />
           );
+
+        }else if(data.cell.row.original.id% 5== 0 ){
+          return (
+            <Indicator
+              title="Pending"
+              indicatorClass="dormant-indicator"
+              onClicker={1}
+            />
+          );
+        }else{
+           return (
+            <Indicator
+              title="Blaclisted"
+              indicatorClass="inactive-indicator"
+              onClicker={1}
+            />
+          )
+        }
+     
+          
+       
       },
     },
+
+   
+
     {
       Header: "Action",
       accessor: "id",
@@ -231,10 +259,9 @@ function Home() {
         
          return <VerticalDotMenu
             handleBlackListUser={goTo}
-            handleDropdown={goTo}
-            handleViewDetail={data?.value}
+            index={data.value}
           />
-      },
+      }
     },
   ];
 
@@ -250,6 +277,7 @@ function Home() {
   const handleSearch = (value: string) => {
     setSearchField(value);
   };
+
 
   return (
     <Main mainRoute links={mainHeaderLink} headerActions={<></>}>

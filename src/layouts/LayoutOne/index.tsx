@@ -48,6 +48,9 @@ const Layout = ({ children }) => {
   };
 
   useEffect(() => {
+    const body = document.querySelector("body")
+    body.style.backgroundColor ="#fafafa"
+
     // Add event listeners for resize and keydown events
     window.addEventListener("resize", handleResize, { passive: false });
     window.addEventListener("keydown", handleESCKeypress, { passive: false });

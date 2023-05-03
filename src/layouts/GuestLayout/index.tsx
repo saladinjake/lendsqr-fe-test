@@ -76,11 +76,7 @@ const Layout = ({ children }) => {
 
   return (
     <Row>
-      <Row>
      
-        <NavBar />
-     
-      </Row>
     
       
    

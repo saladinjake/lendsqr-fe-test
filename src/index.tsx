@@ -5,7 +5,7 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import App from "./App";
-import "./assets/css/modern-normalize.css";
+import "./assets/css/modern-normalize.scss";
 
 import  "react-datepicker/dist/react-datepicker.css";
 import  "./components/shared/library/components/DatePicker/DatePickerOverrides.css";

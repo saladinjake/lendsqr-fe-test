@@ -1,22 +1,26 @@
 
-
+import React from "react"
  const Indicator = ({
      title, 
      indicatorClass="online-indicator", 
-     blinkClass="blink", 
-     onClicker=null
+
+     onClicker=1
 }) =>{  
+    
    
   return(
-    <div className="IndicatorComponent">
+    <div className={"IndicatorComponent"}>
         <div className={indicatorClass}>
-            <span className={blinkClass}></span>
+           <h2 className="online-text">{title}</h2>
         </div>
-        {onClicker ? <h2 onClick={onClicker} className="online-text">{title}</h2>: <h2  className="online-text">{title}</h2>}
+        
     </div>
 
   )
 }
 
-export default Indicator
+const MemoizedComponent = React.memo(Indicator);
+export default MemoizedComponent
+
+
 
