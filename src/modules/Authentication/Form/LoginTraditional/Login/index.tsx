@@ -158,7 +158,7 @@ function Login() {
           </p>
           <Box ml="2">
             <Button
-              width="100%"
+              width="98%"
               type="submit"
               disabled={invalid}
               onClick={() => loginUser()}

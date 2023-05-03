@@ -97,9 +97,9 @@ function UserDetail() {
 
   const [currentTab, setCurrentTab] = useState(1);
 
-  // if (isLoading) {
-  //   return <LoadingBoxes />;
-  // }
+  if (isLoading) {
+    return <LoadingBoxes />;
+  }
 
   function toggleHambugger() {
   var x = document.getElementById("myTopnav");

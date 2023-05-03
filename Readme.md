@@ -5,6 +5,11 @@
 - Email : juwavictor@gmail.com
 - Password : lead.developer
 
+
+#### PAGES
+-   /login          => login page
+-   /users          => users page
+-   /user/:id       =>  user detail page where id is a number
 #______________________________________
 
 ### Tech Stack/ Approach

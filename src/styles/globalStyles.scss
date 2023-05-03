@@ -6,7 +6,7 @@ $textColor: #545f7d;
 $greenColor: #39cdcc;
 
 body {
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   font-family: $fontfamily1;
   overflow-x: hidden;
 }
@@ -115,6 +115,8 @@ body {
       width: 600px;
       height: 337.57px;
       margin-left: 67px;
+
+
     }
 
     .nav-bar{
@@ -154,14 +156,27 @@ body {
       width: 100%;
       margin: 10px;
       padding: 20px;
-      input,
+        padding:20px;
+     
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    .reset-link,  p a{
+       margin:20px;
+       margin-left:-10px;
+    }
+
+    
+ 
+
+    input,
       .StyledButton2,
       .StyledButton,
       button {
-        width: 80%;
-        width: 200px;
+       
+        width: 180px;
       }
-    }
     body {
       height: 100vh;
       overflow-x: hidden;
@@ -183,14 +198,16 @@ body {
       padding: 10px;
       margin-top: -30px;
 
-      input,
+      
+    }
+
+    input,
       .StyledButton2,
       .StyledButton,
       button {
-        width: 80%;
-        width: 200px;
+       
+        width: 180px;
       }
-    }
 
     h1,
     h2,
@@ -328,3 +345,24 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+.parent , body{
+  max-width: 100vw;
+  margin: auto;
+
+}
+.container-fluid {
+  width: 100vw; 
+  margin-left: calc((-100vw + 100%) / 2);
+  margin-right: calc((-100vw + 100%) / 2);
+
+}

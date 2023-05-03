@@ -4,7 +4,8 @@ import FormSection from "./Form/LoginTraditional/Login";
 import styled from "styled-components";
 import { Flex } from "../../components/shared/library/components/Flex-v1";
 import { ReactComponent as LoginIllustration } from "assets/img/svg/pablo.svg";
-
+import  Col from "../../components/shared/library/components/RowsAndColumns-v1/Column"
+import  Row from "../../components/shared/library/components/RowsAndColumns-v1/Row"
 import Logo from "assets/img/svg/logo.svg";
 
 
