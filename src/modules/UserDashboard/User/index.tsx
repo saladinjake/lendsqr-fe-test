@@ -123,7 +123,7 @@ function UserDetail() {
       }
     >
 
-      <Row style={{boxShadow:"2px 2px 2px #eaeaea",padding:"40px"}}>
+      <Row style={{boxShadow:"2px 2px 2px #eaeaea",padding:"40px", backgroundColor: "#fff"}}>
 
          <Col sm={12} lg={4} >
          <Flex
@@ -220,7 +220,7 @@ function UserDetail() {
         </div>
       </Row>
 
-       <div className="StyledInformationModal" style={{boxShadow:"13px 1px 12px 1px #eaeaea",padding:"40px"}}>
+       <div className="StyledInformationModal" style={{boxShadow:"13px 1px 12px 1px #eaeaea",padding:"40px", backgroundColor: "#fff", marginLeft:"-10px"}}>
         {currentTab === 1 && (
           <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
             <Row>
