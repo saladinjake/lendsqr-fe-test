@@ -5,6 +5,13 @@
 - Email : juwavictor@gmail.com
 - Password : lead.developer
 
+#### How to install 
+- clone the repo or download: 
+- change directory in to the download folder: cd /path/to/download/folder
+- run the command : yarn
+- start the app: npm start
+- test run : npm run test
+
 
 #### PAGES
 -   /login          => login page

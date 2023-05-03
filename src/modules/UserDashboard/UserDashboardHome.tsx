@@ -1,30 +1,30 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import LoadingBoxes from "./components/LoadingBoxes";
-import { Table } from "components/shared/Tables";
+import { Table } from "../../components/shared/Tables";
 
-import TableFilter from "components/shared/Tables/TableFilter";
-import Main from "layouts/Main";
+import TableFilter from "../../components/shared/Tables/TableFilter";
+import Main from "../../layouts/Main";
 
-import { Box } from "components/shared/library/components/Box-v1";
-import { Flex } from "components/shared/library/components/Flex-v1";
+import { Box } from "../../components/shared/library/components/Box-v1";
+import { Flex } from "../../components/shared/library/components/Flex-v1";
 import { mainHeaderLink } from "./utilities/headerLinks";
 
-import Indicator from "components/shared/Indicator";
+import Indicator from "../../components/shared/Indicator";
 
-import { Svg } from "assets/svg";
+import { Svg } from "../../assets/svg";
 
 import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";
-import { getAllUsers } from "api/services/User";
+import { getAllUsers } from "../../api/services/User";
 
-import { VerticalDotMenu } from "components/shared/library/components/VerticalDotMenu";
+import { VerticalDotMenu } from "../../components/shared/library/components/VerticalDotMenu";
 import validations from "./validations";
 
 import "./dashboard.styles.scss";
 
 import Pagination from "./components/Paginator";
-import Button from "components/shared/library/components/Button-v1/Button";
+import Button from "../../components/shared/library/components/Button-v1/Button";
 
 function Home() {
   const navigate = useNavigate();
