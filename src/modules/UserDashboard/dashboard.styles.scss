@@ -222,21 +222,40 @@
   div.online-indicator , div.offline-indicator, div.dormant-indicator, div.inactive-indicator {
     display: inline-block;
     width: 110px;
-    height: 25px;
+    height: 30px;
     margin-right: 10px;
    
     position: relative;
     border-radius: 10px;
     text-align: center;
-    padding:12px;
+    padding:14px;
    
+  }
+
+
+   .online-text{
+  
+    
+      font-weight: 400;
+      font-size:14px;
+    
+      cursor: pointer;
+      margin-top:-5px;
+
   }
 
   div.online-indicator{
 
-    background: #39CD62;
-    opacity: 0.06;
+    /*background: #39CD62;
+    opacity: 0.06;*/
     color: transparent;
+    .online-text{
+     color: #39CD62;
+
+    
+     
+   }
+
 
 
 
@@ -247,60 +266,42 @@
 
   
   div.offline-indicator{
-    background-color: #545F7D;
-    opacity:0.06;
+  
      color: transparent;
+  .online-text{
+    color: #545F7D;
+    
+   }
   }
 
   
   div.dormant-indicator{
    
-    background-color: #E9B200;
-    opacity:0.06; 
-     color: transparent;
-  }
-  div.inactive-indicator{
-   
-    background-color: #E4033B;
-    opacity:0.06; 
-     color: transparent;
-  }
-  
-  
-  
-
-
-
-   div.online-indicator  h2.online-text,  div.offline-indicator  h2.online-text, div.inactive-indicator  h2.online-text, div.dormant-indicator  h2.online-text {
-  
-      display: inline;
-      font-weight: 400;
-      font-size:14px;
-      position: relative;
-      cursor: pointer;
-
-  }
-
-   .online-indicator  h2.online-text{
-     color: transparent;
-     
-   }
-
-
- .offline-indicator  h2.online-text{
-    color: #545F7D;
     
-   }
-
- .dormant-indicator ~  h2.online-text{
+    
+    .online-text{
     color:#E9B200;
     
    }
-
- .inactive-indicator ~  h2.online-text{
+  }
+  div.inactive-indicator{
+   
+  
+     
+    .online-text{
     color:  #E4033B;
       opacity:1; 
    }
+  }
+  
+  
+  
+
+
+
+
+  
+
 
 
 }

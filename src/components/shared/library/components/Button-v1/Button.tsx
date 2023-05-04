@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.styles.scss";
-import Loader from "../Loader";
+import Loader from "../Loader/Loader";
 import { ButtonProps } from "./Button.types";
 
 const Button: React.FC<ButtonProps> = ({
@@ -60,7 +60,7 @@ const Button: React.FC<ButtonProps> = ({
       ) : (
         <>
           {iconLeft && <span className="icon-left">{iconLeft}</span>}
-          <span>{children}</span>
+          <span role="button">{children}</span>
           {iconRight && <span className="icon-right">{iconRight}</span>}
         </>
       )}
