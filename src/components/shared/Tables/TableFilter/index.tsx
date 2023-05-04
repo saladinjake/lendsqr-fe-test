@@ -157,8 +157,8 @@ const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, se
           <Text></Text>
           <Text></Text>
 
-         
-            <Flex height="100%" container ml="1" >
+         <div style={{marginLeft:"-10px"}}>
+            <Flex height="100%" container ml="1"  >
               <div>
                 <Button
                   color="secondary"
@@ -184,6 +184,7 @@ const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, se
                 </Button>
               </Box>
             </Flex>
+            </div>
          
     </div>
   )
