@@ -51,7 +51,8 @@ function Table(props) {
     selectedSortOrder,
     
     showModalFilter,
-    setShowModalFilter
+    setShowModalFilter,
+    setBoxPos
   } = props;
 
   const data = useMemo(
@@ -115,6 +116,7 @@ function Table(props) {
           showModalFilter={showModalFilter} 
           setShowModalFilter={setShowModalFilter}
           navLink={"./user-detail/"}
+          setBoxPos={setBoxPos}
         />
       </div>
     </div>

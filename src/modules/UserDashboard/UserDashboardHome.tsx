@@ -68,6 +68,8 @@ function Home() {
   );
   const [searchField, setSearchField] = useState("");
 
+  const [filterPos, setFilterPos] = useState({ position:"absolute",top:0,left:0})
+
   const [showModalFilter, setShowModalFilter] = useState(false);
   const [allData, setAllData] = useState([]);
   const [loadFromStore, setLoadFromStore] = useState(false);
@@ -304,6 +306,7 @@ function Home() {
             setInitialGlobalFilterFunction={(val) => globalFilteration(val)}
             showModalFilter={showModalFilter}
             setShowModalFilter={setShowModalFilter}
+            positionBox={filterPos}
           />
         </Box>
 
@@ -323,6 +326,7 @@ function Home() {
           hasError={hasError}
           showModalFilter={showModalFilter}
           setShowModalFilter={setShowModalFilter}
+          setBoxPos={setFilterPos}
         />
 
         <Flex

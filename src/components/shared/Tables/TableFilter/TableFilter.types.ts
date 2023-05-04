@@ -24,4 +24,5 @@ export default interface TableFilterProps {
   hasError?: (value: any,value2: any,value3: any) => void;
   showModalFilter?: boolean;
    setShowModalFilter?: (value: boolean) => void;
+  positionBox? : any;
 }
