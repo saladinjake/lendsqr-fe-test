@@ -29,12 +29,15 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
     handleChange,
     showModalFilter,
     setShowModalFilter,
+    positionBox
   } = props;
 
   const [searchValue, setSearchValue] = useState("");
 
+
+
   return (
-    <div className="TableFilter">
+    <div className="TableFilter" style={{top: positionBox.top, position: "absolute", left: positionBox.left}}>
       {showModalFilter && (
         <div className="filters-dropdown-container filters">
             <PopUpBox 
@@ -44,6 +47,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           onSortColumn
            onSort
            setShowModalFilter
+           positionBox
            />
           
 
@@ -61,9 +65,9 @@ export default TableFilter;
 
 
 
-const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, setShowModalFilter}) =>{
+const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, setShowModalFilter,positionBox}) =>{
   return (
-    <>
+    <div >
     <Box mb="3"></Box>
           <Box mb="3">
             <Text>Organization</Text>
@@ -153,8 +157,8 @@ const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, se
           <Text></Text>
           <Text></Text>
 
-          <GridItem colSpan={2}>
-            <Flex height="100%" container>
+         
+            <Flex height="100%" container ml="1" >
               <div>
                 <Button
                   color="secondary"
@@ -180,7 +184,7 @@ const PopUpBox = ({values, handleChange, filterColumns, onSortColumn, onSort, se
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-    </>
+         
+    </div>
   )
 }
