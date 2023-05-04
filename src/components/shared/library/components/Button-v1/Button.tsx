@@ -60,7 +60,7 @@ const Button: React.FC<ButtonProps> = ({
       ) : (
         <>
           {iconLeft && <span className="icon-left">{iconLeft}</span>}
-          <span>{children}</span>
+          <span role="button">{children}</span>
           {iconRight && <span className="icon-right">{iconRight}</span>}
         </>
       )}

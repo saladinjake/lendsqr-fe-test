@@ -153,11 +153,12 @@ function Home() {
   );
 
   const Card = (props) => {
+    const IconProps = props?.Icon;
     return (
       <div className="basic-column w-col w-col-3 CardInfo">
         <div className="tag-wrapper">
           <div className="number-card number-card-content1">
-            <props.Icon></props.Icon>
+           <IconProps></IconProps>
             <div className="number-card-dollars">{props?.title}</div>
             <h1 className="number-card-number">{props?.value}</h1>
 
@@ -287,7 +288,7 @@ function Home() {
 
   return (
     <Main mainRoute links={mainHeaderLink} headerActions={<></>}>
-      <div className="dashboardSample">
+      <div className="dashboardSample" >
         <div className="CardInfo">
           <div className="row w-row">
             <Card title="USERS" value="1200" Icon={AllUsers} />
