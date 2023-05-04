@@ -2,7 +2,7 @@ import React from 'react';
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import Login from '../modules/Authentication/Form/LoginTraditional/Login';
+import ForgetPassword from '../modules/Authentication/Form/LoginTraditional/ForgetPassword/ForgotPass';
 import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
@@ -15,56 +15,52 @@ describe('Login component', () => {
     const mockStore = configureStore();
     let store;
 
-	it('should have an email and password field, and a submit button', () => {
+	it('should have an email reset field', () => {
 		store = mockStore(initialState);
 		render(
 
 			<BrowserRouter>
 			  <Provider store={store}>
-				<Login />
+				<ForgetPassword />
 			</Provider>
 			</BrowserRouter>
 		);
-		const emailField = screen.getByPlaceholderText(/email/i);
-		const passwordField = screen.getByPlaceholderText(/password/i);
+		const passwordField = screen.getByPlaceholderText(/Enter Name/i);
 		const submitButton = screen.getByRole('button');
-		expect(emailField).toBeInTheDocument();
 		expect(passwordField).toBeInTheDocument();
 		expect(submitButton).toBeInTheDocument();
 	});
 
-	it('should show error messages when required fields are empty', async () => {
+	it('should show error messages ', async () => {
 		store = mockStore(initialState);
 		render(
 			<BrowserRouter>
 			  <Provider store={store}>
-				<Login />
+				<ForgetPassword />
 				</Provider>
 			</BrowserRouter>
 		);
 		const submitButton = screen.getByRole('button');
 		await userEvent.click(submitButton);
 		waitFor(() => {
-			const emailError = screen.getByText(/please enter your email/i);
+			const emailError = screen.getByText(/Enter Name/i);
 			expect(emailError).toBeInTheDocument();
 		});
 	});
 
-	it('should allow a user to submit their email and password', () => {
+	it('should allow a user to submit their email ', () => {
 		store = mockStore(initialState);
 		render(
 			<BrowserRouter>
 			  <Provider store={store}>
-				<Login />
+				<ForgetPassword />
 			</Provider>
 			</BrowserRouter>
 		);
-		const emailField = screen.getByPlaceholderText(/email/i);
-		const passwordField = screen.getByPlaceholderText(/password/i);
+		const emailField = screen.getByPlaceholderText(/Enter Name/i);
 		const submitButton = screen.getByRole('button');
 
-		userEvent.type(emailField, 'juwavictor@gmail.com');
-		userEvent.type(passwordField, 'lead.developer');
+		userEvent.type(emailField, 'simon@gmail.com');
 		userEvent.click(submitButton);
 	});
 });
