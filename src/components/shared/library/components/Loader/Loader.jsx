@@ -3,7 +3,7 @@ import  "./Loader.styles.scss";
 
 const Loader = ({ variant }) => {
   return (
-    <div classNmae="StyledLoader" >
+    <div className="StyledLoader">
       <div className="spinner-wrap">
         <span className="spinner"></span>
       </div>

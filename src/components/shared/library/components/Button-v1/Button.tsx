@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.styles.scss";
-import Loader from "../Loader";
+import Loader from "../Loader/Loader";
 import { ButtonProps } from "./Button.types";
 
 const Button: React.FC<ButtonProps> = ({

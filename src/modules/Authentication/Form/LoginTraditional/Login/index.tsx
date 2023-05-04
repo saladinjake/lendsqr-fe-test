@@ -1,6 +1,6 @@
 
 import { Svg } from "assets/svg";
-import Loader from "../../../../../components/shared/library/components/Loader";
+import Loader from "../../../../../components/shared/library/components/Loader/Loader";
 import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box } from "../../../../../components/shared/library/components/Box-v1";
@@ -27,7 +27,6 @@ import {
 import { RootState } from "reducers";
 import { isAuthenticatedByRoles } from "../../../../../utils";
 
-import Logo from "../../../../../assets/img/svg/logo.svg";
 
 function Login() {
   const reduxDispatcher = useDispatch();
@@ -110,8 +109,7 @@ function Login() {
 
   return (
     <Box border="none " height="100vh" >
-           <img src={Logo as unknown as string} className="Logo sm-only" />
-
+          
       <Flex
         style={{ top: "10vmin"}}
         position="relative"
