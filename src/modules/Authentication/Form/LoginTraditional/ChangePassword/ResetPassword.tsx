@@ -115,7 +115,7 @@ function ChangePassword() {
       token: resetToken,
     };   
     const response = await authContext.changePassword(payload);
-    if(response.data.success) navigate("../../get-started", {replace: true})
+    if(response && response.data.success) navigate("../../get-started", {replace: true})
   
   };
 
@@ -158,7 +158,7 @@ function ChangePassword() {
             onChangePure={handleChange}
             error={hasError("password", touched, errors)}
             message={hasError("password", touched, errors)}
-            placeholder="Enter Password"
+            placeholder="Enter Confirmation Password"
           />
 
           <Box ml="2">
