@@ -1,0 +1,160 @@
+
+
+@media only screen and (max-width:319px)  { 
+.navbar{
+    height: 90px;
+    .flex-classic {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 4px 2px 2px #f6f6f6;
+      margin-bottom: 1px;
+    }
+
+    .StyledSearchField {
+      margin-left: -50px;
+      width: 100px;
+    }
+
+    .user-action-notifier {
+      display: none;
+    }
+
+    .searchBar{
+  margin-left: -150px;
+  margin-right: -600px;
+    width:200px;
+}
+  }
+
+   .StyledSearchField {
+
+  input {
+    border: none;
+    outline: none;
+    width: 200px;
+  }
+
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px)  { 
+  .navbar{
+    height: 90px;
+    .flex-classic {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 4px 2px 2px #f6f6f6;
+      margin-bottom: 1px;
+    }
+
+    .StyledSearchField {
+      margin-left: -50px;
+      width: 100px;
+    }
+
+    .user-action-notifier {
+      display: none;
+    }
+
+.searchBar{
+  margin-left: -150px;
+  margin-right: -600px;
+  width:200px;
+}
+  }
+
+
+   .StyledSearchField {
+
+  input {
+    border: none;
+    outline: none;
+    width: 200px;
+  }
+
+  }
+
+
+}
+@media only screen and (min-width:768px) and (max-width:1023px)  { 
+.nav-bar{
+  width: 100%;
+  background-color: #fff;
+  margin-left:20px;
+  height:70px;
+  width:100%;
+}
+
+
+.searchBar{
+  margin-left: 150px;
+  margin-right: 600px;
+}
+
+ .StyledSearchField {
+
+  input {
+    border: none;
+    outline: none;
+    width: 400px;
+  }
+
+  }
+
+}
+@media only screen and (min-width:1024px) and (max-width:1899px) { 
+.nav-bar{
+  width: 100%;
+  background-color: #fff;
+  margin-left:20px;
+  height:70px;
+  width:100%;
+}
+
+.searchBar{
+  margin-left: 150px;
+  margin-right: 600px;
+}
+
+ .StyledSearchField {
+
+  input {
+    border: none;
+    outline: none;
+    width: 400px;
+  }
+
+  }
+}
+@media only screen and (min-width:1900px) {
+  .nav-bar{
+  width: 100%;
+  background-color: #fff;
+  margin-left:20px;
+  height:70px;
+  width:100%;
+}
+
+.searchBar{
+  margin-left: 150px;
+  margin-right: 600px;
+}
+
+ .StyledSearchField {
+
+  input {
+    border: none;
+    outline: none;
+    width: 400px;
+  }
+
+  }
+
+ }
+
+
+
+
+
+
+
+
