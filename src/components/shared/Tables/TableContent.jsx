@@ -21,8 +21,28 @@ export const TableContent = ({
   selectedSortOrder,
   showModalFilter = false,
   setShowModalFilter,
-  navLink="./user-detail/"
+  navLink="./user-detail/",
+  setBoxPos,
 }) => {
+
+  function getElementTopLeft(id) {
+
+    var ele = document.getElementById(id);
+    var top = 0;
+    var left = 0;
+   
+    while(ele.tagName != "BODY") {
+        top += ele.offsetTop;
+        left += ele.offsetLeft;
+        ele = ele.offsetParent;
+    }
+
+
+    setBoxPos({ top: (top- 430)+ "px", left: (left -300)+ "px" })
+   
+ 
+   
+}
 
  
   return (
@@ -36,9 +56,11 @@ export const TableContent = ({
                 
                  <th onClick={()=>{
                   setShowModalFilter(val=>!val)
+                  getElementTopLeft("tabledefined-index"+ index)
                  }} id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render("Header")}
                 <span style={{marginLeft:"10px"}} onClick={()=>{
+ getElementTopLeft("tabledefined-index"+ index)
                   setShowModalFilter(val=>!val)
                  }}>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
               </th>

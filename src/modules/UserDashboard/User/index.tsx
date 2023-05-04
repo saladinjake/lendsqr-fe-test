@@ -112,7 +112,7 @@ function UserDetail() {
 
   return (
     <Main
-  
+      backArrow={true}
       subRoute
       subRouteLinks={headerLinks}
 
@@ -127,7 +127,7 @@ function UserDetail() {
 
       <Row style={{boxShadow:"2px 2px 2px #eaeaea",padding:"40px", backgroundColor: "#fff"}}>
 
-         <Col sm={12} lg={4} >
+         <Col sm={12} lg={3} >
          <Flex
             container
               direction="row"
@@ -158,7 +158,7 @@ function UserDetail() {
          </Col>
 
 
-         <Col sm={12} lg={4}>
+         <Col sm={12} lg={3}>
 
          <Flex
               direction="column"
@@ -179,7 +179,7 @@ function UserDetail() {
          </Col>
 
 
-         <Col sm={12} lg={4}>
+         <Col sm={12} lg={3}>
          <Flex
               direction="column"
               alignItems="start"
@@ -355,29 +355,6 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-             <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
 
 
             </Grid>
@@ -457,7 +434,32 @@ function UserDetail() {
                 <div className="DetailValue">{"N/A"}</div>
               </Flex>
             </GridItem>
-            <hr />
+
+            
+             <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+
+              <GridItem>
+              <Flex direction="column" alignItems="start">
+               
+              </Flex>
+            </GridItem>
+          
           </Grid>
 
           </>
