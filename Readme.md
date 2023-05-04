@@ -2,6 +2,9 @@
 
 #--------------------------------------
 
+#### Note: you can only login with these credentials
+ 
+
 - Email : juwavictor@gmail.com
 - Password : lead.developer
 
@@ -10,6 +13,8 @@
 - change directory in to the download folder: cd /path/to/download/folder
 - run the command : yarn
 - start the app: npm start
+- to run test: npm run test
+
 
 
 
