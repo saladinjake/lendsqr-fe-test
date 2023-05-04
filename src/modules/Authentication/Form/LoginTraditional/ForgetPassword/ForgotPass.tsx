@@ -8,7 +8,7 @@ import { Flex } from "components/shared/library/components/Flex-v1";
 import { Grid } from "components/shared/library/components/Grid";
 import Input from "components/shared/library/components/Input-v1/Input";
 import Button from "components/shared/library/components/Button-v1/Button";
-import Loader from "components/shared/library/components/Loader";
+import Loader from "components/shared/library/components/Loader/Loader";
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
 
