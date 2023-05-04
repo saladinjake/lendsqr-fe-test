@@ -216,6 +216,7 @@ function Home() {
               title="Active"
               indicatorClass="online-indicator"
               onClicker={1}
+              bgColor={"#c9fdd7"}
             />
           );
 
@@ -226,6 +227,7 @@ function Home() {
               title="Inactive"
               indicatorClass="offline-indicator"
               onClicker={1}
+              bgColor={"#d5def5"}
             />
           );
 
@@ -235,14 +237,16 @@ function Home() {
               title="Pending"
               indicatorClass="dormant-indicator"
               onClicker={1}
+              bgColor={"#fdfdcb"}
             />
           );
         }else{
            return (
             <Indicator
-              title="Blaclisted"
+              title="Black listed"
               indicatorClass="inactive-indicator"
               onClicker={1}
+              bgColor={"#ffb6b9"}
             />
           )
         }
