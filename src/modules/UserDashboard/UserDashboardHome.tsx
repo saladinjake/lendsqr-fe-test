@@ -158,7 +158,7 @@ function Home() {
       <div className="basic-column w-col w-col-3 CardInfo">
         <div className="tag-wrapper">
           <div className="number-card number-card-content1">
-           <IconProps></IconProps>
+           { IconProps ? <IconProps></IconProps> : <></>}
             <div className="number-card-dollars">{props?.title}</div>
             <h1 className="number-card-number">{props?.value}</h1>
 

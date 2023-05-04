@@ -1,4 +1,4 @@
-import { useMemo, useEffect } from "react";
+import React ,{ useMemo, useEffect } from "react";
 import { useTable, useExpanded, useGlobalFilter , useFilters, useSortBy} from "react-table";
 import "./Table.styles.scss";
 import Skeleton from "components/shared/Skeleton";
