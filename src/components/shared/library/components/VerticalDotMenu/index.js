@@ -52,12 +52,16 @@ function addEvent(element, evnt, funct){
             <li></li>
           </ul>
           <div id={"myDropdown"+ index} className="dropdown-content">
+          <a href={`./user-detail/${index}`} id={"myDropdownx"+ index} onclick="showDropdown()">
+              View Detail
+            </a>
             <a href={`./user/${index}`}  onClick={handleBlackListUser}>
               Blacklist User
             </a>
-            <a href={`./user/${index}`} id={"myDropdownx"+ index} onclick="showDropdown()">
-              View Detail
+            <a href={`./user/${index}`}  onClick={handleBlackListUser}>
+              Activate User
             </a>
+            
           </div>
         </div>
       </div>
