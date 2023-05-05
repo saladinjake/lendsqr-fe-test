@@ -89,7 +89,7 @@ const NavBar = () => {
 
           {isAuth && (
             <>
-              <div className="searchBar">
+              <div className="searchBar ">
                 <Flex
                   height="100%"
                   alignItems="center"
@@ -138,10 +138,10 @@ const NavBar = () => {
                     {" "}
                     <Svg.NotificationBell />
                   </Box>
-                  <Box marginRight="25px" marginLeft="25px"  className="">
+                  <Box marginRight="25px" marginLeft="25px"  className="user-action-notifier">
                     <Avatar shape="rounded" type="text" src={avatarProfile} />
                   </Box>
-                  <Box mr="5" color={"#213F7D"}  className="">
+                  <Box mr="5" color={"#213F7D"}  className="user-action-notifier">
                     <a
                       href="#anyId"
                       className="drop-toggle collapsed"

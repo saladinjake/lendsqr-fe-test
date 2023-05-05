@@ -10,7 +10,7 @@ export const Box = (props) => (
   <div
     className={props.className}
     style={{
-       display: props.container ? "flex" : props.className !=="user-action-notifier"?  "block": "none",
+      // display: props.container ? "flex" : props.className !=="user-action-notifier"?  "block": "none",
       textDecoration: props?.underline ? "underline": "none",
       color: props.color? props?.color: "#000",
 

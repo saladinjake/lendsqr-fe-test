@@ -6,7 +6,7 @@ export const Flex = (props) => (
     className={props.className || "flex_classic"}
     style={{
      ...props.style,
-      display: props.container ? "flex" : props.className !=="user-action-notifier"?  "block": "none",
+      display:  "flex" ,
       justifyContent: props.justifyContent || "flex-start",
       flexDirection: props.flexDirection || "row",
       flexGrow: props.flexGrow || 0,
