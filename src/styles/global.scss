@@ -35,27 +35,7 @@ body {
 
 }
 
-/*main workbench responsiive*/
-.StyledMain  {
-  @include Desktop {
-  }
 
-  @include Phone {
-    margin-top:-60px;
-   
-   
-  
-  
-  }
-
-  @include Tablet {
-    margin-top:-60px;
-    
-
-   
-    
-  }
-}
 
 
 
