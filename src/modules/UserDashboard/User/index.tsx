@@ -436,23 +436,8 @@ function UserDetail() {
             </GridItem>
 
             
-             <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
-
-              <GridItem>
-              <Flex direction="column" alignItems="start">
-               
-              </Flex>
-            </GridItem>
+           
+           
 
               <GridItem>
               <Flex direction="column" alignItems="start">
