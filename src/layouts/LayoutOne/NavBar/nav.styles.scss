@@ -20,6 +20,13 @@
 
 
 
-.userInform{
+.userInform, .user-action-notifier{
   display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+    .user-action-notifier{
+  display: none;
+}
 }

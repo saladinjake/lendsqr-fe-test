@@ -116,7 +116,7 @@ const NavBar = () => {
               </div>
 
 
-              <div className="userInform">
+      
                 
                 <Flex
                 container
@@ -130,17 +130,18 @@ const NavBar = () => {
                     marginLeft="25px"
                     underline
                     color={"#213F7D"}
+                     className="user-action-notifier"
                   >
                     Docs
                   </Box>
-                  <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}>
+                  <Box marginRight="25px" marginLeft="25px" color={"#213F7D"}  className="user-action-notifier">
                     {" "}
                     <Svg.NotificationBell />
                   </Box>
-                  <Box marginRight="25px" marginLeft="25px">
+                  <Box marginRight="25px" marginLeft="25px"  className="">
                     <Avatar shape="rounded" type="text" src={avatarProfile} />
                   </Box>
-                  <Box mr="5" color={"#213F7D"}>
+                  <Box mr="5" color={"#213F7D"}  className="">
                     <a
                       href="#anyId"
                       className="drop-toggle collapsed"
@@ -154,7 +155,7 @@ const NavBar = () => {
                   </Box>
                 </Flex>
               </Flex>
-              </div>
+           
 
               
             </>
