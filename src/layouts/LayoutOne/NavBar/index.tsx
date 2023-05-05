@@ -115,7 +115,10 @@ const NavBar = () => {
                 </Flex>
               </div>
 
-              <Flex
+
+              <div className="userInform">
+                
+                <Flex
                 container
                 alignItems="center"
                 margin="0 30px 0px 90px"
@@ -151,6 +154,9 @@ const NavBar = () => {
                   </Box>
                 </Flex>
               </Flex>
+              </div>
+
+              
             </>
           )}
         </Flex>

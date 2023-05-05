@@ -1,31 +1,25 @@
 
 
-@media only screen and (max-width:319px)  { 
- 
 
-  
+@media only screen and (min-width:319px) and (max-width:767px)  { 
+  .StyledMain{
+  padding: 3px 3px;
+  width: 100%;
+  margin-left: 15px;
+ margin-top:20px;
+
+ }
+
 .dashboardSample{
-
+   margin-left: 20px;
   .PaginationDropdown{
     display: none;
   }
 
-  }
-}
-@media only screen and (min-width:320px) and (max-width:767px)  { 
+
+
   
-
-.dashboardSample{
-
-  .PaginationDropdown{
-    display: none;
-  }
-
-  }
-
-.dashboardSample{
    .CardInfo{
-   
    
       h1 {
         font-size: 1em;
@@ -158,6 +152,13 @@
   }
 }
 @media only screen and (min-width:768px) and (max-width:1900px)  { 
+ .StyledMain{
+  padding: 3px 3px;
+  width: 100%;
+  margin-left: 5px;
+ margin-top:20px;
+
+ }
 .dashboardSample{
  .PaginationDropdown{
     display: block;

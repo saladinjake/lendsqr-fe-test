@@ -1,6 +1,10 @@
 
 
-@media only screen and (max-width:319px)  { 
+@media only screen and (max-width:319px)  {
+ .user-action-notifier,.userInform {
+      display: none;
+    }
+
 .navbar{
     height: 90px;
     .flex-classic {
@@ -15,10 +19,7 @@
       width: 100px;
     }
 
-    .user-action-notifier {
-      display: none;
-    }
-
+   
     .searchBar{
   margin-left: -160px;
   margin-right: -600px;
@@ -37,6 +38,10 @@
   }
 }
 @media only screen and (min-width:320px) and (max-width:767px)  { 
+ .user-action-notifier,.userInform {
+      display: none;
+    }
+
   .navbar{
     height: 90px;
     .flex-classic {
@@ -51,9 +56,6 @@
       width: 100px;
     }
 
-    .user-action-notifier {
-      display: none;
-    }
 
 .searchBar{
   margin-left: -160px;

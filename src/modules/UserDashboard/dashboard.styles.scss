@@ -60,7 +60,6 @@
 
 
 .IndicatorComponent{
-
   div.online-indicator , div.offline-indicator, div.dormant-indicator, div.inactive-indicator {
     display: inline-block;
     width: 110px;
@@ -72,10 +71,7 @@
     padding:14px;
    
   }
-
-
    .online-text{
-    
       font-weight: 400;
       font-size:14px;
       cursor: pointer;
@@ -90,11 +86,6 @@
     }
 
   }
-
-
-
-
-  
   div.offline-indicator{
      color: transparent;
     .online-text{
@@ -102,8 +93,6 @@
     
      }
   }
-
-  
   div.dormant-indicator{
   .online-text{
     color:#E9B200;

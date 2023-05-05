@@ -1,27 +1,9 @@
 import React, { MouseEventHandler } from "react";
 import { FlexProps } from "./flex.types"
-/*example
 
-<Flex container width="300px" margin="32px auto">
-    <img 
-        style={ImageStyle} 
-        src="https://discountdoorhardware.ca/wp-content/uploads/2018/06/profile-placeholder-3.jpg"
-        alt="Profile"
-    />
-    <Flex flex={1} margin="0 0 0 16px"> 
-      <Flex container justifyContent="space-between">
-          <h4 style={NameStyle}> John Doe </h4>
-          <h5 style={DateStyle}> 5 Hours Ago </h5>
-      </Flex>
-      <p style={Message}>
-        Sample flex.
-      </p>
-    </Flex>
-  </Flex>
-*/
 export const Flex = (props) => (
   <div
-    className={props.className|| "flex_classic"}
+    className={props.className || "flex_classic"}
     style={{
      ...props.style,
       display: props.container ? "flex" : "block",
@@ -55,7 +37,8 @@ export const Flex = (props) => (
       zIndex: props.zIndex ? props.zIndex : "1",
       position: props.position ? props.position : "relative",
       top: props.top? props.top: "0px",
-      bottom: props.bottom? props.bottom : "0px"
+      bottom: props.bottom? props.bottom : "0px",
+
       
     }}
     
