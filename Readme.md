@@ -1,9 +1,6 @@
 #### How to Login to https://victorjuwa-lendsqr-fe-test.vercel.app
-
 #--------------------------------------
-
 #### Note: you can only login with these credentials
- 
 
 - Email : juwavictor@gmail.com
 - Password : lead.developer
@@ -14,8 +11,6 @@
 - run the command : yarn
 - start the app: npm start
 - to run test: npm run test
-
-
 
 #### PAGES
 -   /login          => login page
