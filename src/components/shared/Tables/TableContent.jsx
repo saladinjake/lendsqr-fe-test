@@ -75,7 +75,7 @@ export const TableContent = ({
         {page.map((row) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()} title="Click to view user detail">
               {row.cells.map((cell, index) => {
               
                 const length = cell.row.cells.length 
