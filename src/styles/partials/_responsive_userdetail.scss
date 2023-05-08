@@ -1,224 +1,204 @@
 
-@media only screen and (min-width:310px) and (max-width:767px)  { 
+@media only screen and (min-width:310px) and (max-width:767px)  {
 
 
-.StyledLabel {
-  font-size: 11.5px;
-  line-height: 9px;
-  margin-bottom: 10px;
+  .StyledLabel {
+    font-size: 13.5px;
+    line-height: 18px;
+    margin-bottom: 10px;
 
-}
-
-.styledInformationModal {
-  text-align: start;
-
-  margin-bottom: 10px;
-
-  padding: 30px;
-  background: #ffffff;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-
-  .flex_classic{
-    margin-left:-10px;
   }
 
-}
+  .styledInformationModal {
+    text-align: start;
 
-.DetailLabel {
- 
-height: 14px;
-left: 373px;
-top: 609px;
+    margin-bottom: 20px;
 
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
+    padding: 80px;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
 
-text-transform: uppercase;
+  }
 
-color: #545F7D;
-margin-left:-27px;
-}
+  .DetailLabel {
 
-.DetailLabelTier {
-width: 73px;
-height: 16px;
-left: 693px;
-top: 349px;
+  height: 14px;
+  left: 373px;
+  top: 609px;
 
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 16px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
 
-color: #545F7D;
-margin-left:20px;
-margin-bottom:10px;
-margin-top:10px;
+  text-transform: uppercase;
 
-}
+  color: #545F7D;
+  margin-left:-27px;
+  }
 
+  .DetailLabelTier {
+  width: 73px;
+  height: 16px;
+  left: 693px;
+  top: 349px;
 
-.MoenyDetail{
-  width: 137px;
-height: 23px;
-left: 826px;
-top: 344px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 26px;
-
-color: #213F7D;
-margin-left:20px;
-margin-bottom:10px;
-margin-top:10px;
-}
-
-.DetailLabelHead {
- width: 140px;
-height: 26px;
-left: 493px;
-top: 345px;
-margin-bottom:10px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 200;
-font-size: 18px;
-line-height: 26px;
-/* identical to box height */
-margin-left:20px;
-
-color: #213F7D;
-}
-
-.DetailValue {
-  width: 102px;
-height: 19px;
-left: 373px;
-top: 631px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+  color: #545F7D;
+  margin-left:20px;
+  margin-bottom:10px;
+  }
 
 
-color: #545F7D;
-margin-left:-27px;
-margin-top:5px;
-}
+  .MoenyDetail{
+    width: 137px;
+  height: 23px;
+  left: 826px;
+  top: 344px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #213F7D;
+  margin-left:20px;
+  margin-bottom:10px;
+  }
+
+  .DetailLabelHead {
+   width: 140px;
+  height: 26px;
+  left: 493px;
+  top: 345px;
+  margin-bottom:10px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  margin-left:20px;
+
+  color: #213F7D;
+  }
+
+  .DetailValueTop {
+    width: 102px;
+  height: 19px;
+  left: 373px;
+  top: 631px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
 
 
-.DetailValue2 {
- margin-left:20px;
-height: 19px;
-left: 373px;
-top: 631px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+  color: #545F7D;
+  margin-left:-27px;
+  margin-top:20px;
+  }
 
 
-color: #545F7D;
+  .DetailValue {
+    width: 102px;
+  height: 19px;
+  left: 373px;
+  top: 631px;
 
-margin-top:5px;
-}
-
-.Line {
-  border-radius: 10px 10px 0px 0px;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  background-color: #39cdcc;
-  height: 4px;
-  position: absolute;
-}
-
-.HeaderInfo{
-  width: 365px;
-height: 19px;
-left: 373px;
-top: 560px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
 
 
-color: #213F7D;
-}
+  color: #545F7D;
+  margin-left:-67px;
+  margin-top:50px;
+  }
 
-.TabText {
-  width: 84px;
-height: 19px;
-left: 629px;
-top: 471px;
 
-font-family: 'SF Compact Text';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+  .DetailValue2 {
+   margin-left:20px;
+  height: 19px;
+  left: 373px;
+  top: 631px;
 
-text-align: center;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
 
-color: rgba(0, 0, 0, 0.8);
 
-}
+  color: #545F7D;
 
-.TabContainer {
-  column-gap: 22px;
-  display: flex;
-}
+  margin-top:5px;
+  }
 
-.Tab {
-  border: none;
-  background: #fff;
-  height: 56px;
-  width: 250px;
-  margin-top: 30px;
-  color: #39cdcc;
-}
+  .Line {
+    border-radius: 10px 10px 0px 0px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    background-color: #39cdcc;
+    height: 4px;
+    position: absolute;
+  }
 
-.TabNotification {
-  background: #f7685b;
-  color: white;
-  font-size: 11px;
-  font-weight: 900;
-}
+  .HeaderInfo{
+    width: 365px;
+  height: 19px;
+  left: 373px;
+  top: 560px;
 
-.Wrapper {
-  border-bottom: 1px solid #dbdce0;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #213F7D;
+  }
+
+
+
+  .Wrapper {
+    border-bottom: 1px solid #dbdce0;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+
+
+
+
 
 
 
 
 }
-@media only screen and (min-width:768px) and (max-width:1900px)  { 
+@media only screen and (min-width:768px) and (max-width:1900px)  {
 
 .StyledLabel {
   font-size: 13.5px;
@@ -241,7 +221,7 @@ color: rgba(0, 0, 0, 0.8);
 }
 
 .DetailLabel {
- 
+
 height: 14px;
 left: 373px;
 top: 609px;
@@ -312,7 +292,7 @@ margin-left:20px;
 color: #213F7D;
 }
 
-.DetailValue {
+.DetailValueTop {
   width: 102px;
 height: 19px;
 left: 373px;
@@ -328,7 +308,27 @@ line-height: 19px;
 
 color: #545F7D;
 margin-left:-27px;
-margin-top:5px;
+margin-top:20px;
+}
+
+
+.DetailValue {
+  width: 102px;
+height: 19px;
+left: 373px;
+top: 631px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #545F7D;
+margin-left:-67px;
+margin-top:50px;
 }
 
 
@@ -394,12 +394,3 @@ color: #213F7D;
 
 
 }
-
-
-
-
-
-
-
-
-
