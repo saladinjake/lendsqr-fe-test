@@ -11,7 +11,7 @@ import {
 
 
 
-import Page404 from "../components/basic/NotFound";
+
 
 // layout switchers
 import AuthLayout from "../utils/layouts/AuthLayout";
@@ -32,12 +32,17 @@ const getUserInSession = () =>
 const routes = [
   {
     path: "/*",
-    component: lazy(() => import("../views/public/index")),
+    component: lazy(() => import("../views/public/")),
   },
 
   {
     path: "/users/*",
-    component: lazy(() => import("../views/user/index")),
+    component: lazy(() => import("../views/users")),
+  },
+
+  {
+    path: "/dashboard/*",
+    component: lazy(() => import("../views/dashboard")),
   },
 
 
@@ -56,8 +61,8 @@ const AppNavigator = createBrowserRouter(
           <Route key={i} path={route.path} element={<route.component />} />
         ))
       )}
-      <Route path="*" element={<Page404 />} />
-      <Route path="/not-found" element={<Page404 />} />
+      <Route path="*" element={<>404</>} />
+      <Route path="/not-found" element={<>404</>} />
     </Route>
   )
 );
