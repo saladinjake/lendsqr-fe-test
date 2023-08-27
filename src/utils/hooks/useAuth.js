@@ -22,7 +22,7 @@ export const AuthProvider = ({ children, userData }) => {
     () => ({
       user,
       login,
-      logout
+      logout,
     }),
     [user]
   );

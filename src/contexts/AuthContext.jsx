@@ -6,20 +6,21 @@ import React, {
   useEffect,
 } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs";
-import jwt_decode from "jwt-decode";
+
 import * as authService from "../../api/auth.services";
 
 import NotificationContext from "./NotificationContext";
 import { connect, useDispatch, useSelector } from "react-redux";
 import {
-  getUserFromStore,
   getAcessTokenFromStore,
   getIsAuthenticatedFromStore,
   getUserRolesFromStore,
 } from "../redux/reducers/auth.reducer";
 
-import { login as loginSuccessfulDispatcher, logOut as cleanUserSession } from "../redux/actions/auth.action";
-
+import {
+  login as loginSuccessfulDispatcher,
+  logOut as cleanUserSession,
+} from "../redux/actions/auth.action";
 
 import {
   finishAuth,
@@ -30,7 +31,6 @@ import {
   getUserProfile,
   isTokenStillValid,
 } from "../helpers/tokenConfig";
-
 
 import { isAuthenticatedByRoles } from "../helpers";
 
@@ -54,7 +54,6 @@ const initialState = {
   loadAuthUser: () => isTokenStillValid(),
 };
 
-
 const AuthContext = createContext({
   isAuthenticated: cachedAuthorization ? true : false,
   user: cachedUser ? cachedUser : null,
@@ -67,13 +66,13 @@ const AuthContext = createContext({
   userProfile: null,
   login: (credentials) => authService.loginUser(credentials),
   logout: () => {},
-  forgetPassword: (payload) =>  {
-     authService.loggedOutUserForgotPassword(payload);
+  forgetPassword: (payload) => {
+    authService.loggedOutUserForgotPassword(payload);
   },
-  changePassword: (payload) =>  {
+  changePassword: (payload) => {
     authService.ChangePassword(payload);
   },
-  updatePassword: (payload) =>{
+  updatePassword: (payload) => {
     authService.loginUserForgotChangePassword(payload);
   },
   loadAuthUser: () => {},
@@ -136,12 +135,13 @@ function getPublicIp(url) {
 }
 
 async function loadAuthUser(state, dispatch, logout) {
-
   try {
     const isUserStillAuthenticated = await state.loadAuthUser(); //check token profile
     const ssoUserIdentityProfile = isUserStillAuthenticated?.data?.user;
     const ssoUserRole = isUserStillAuthenticated?.data?.user?.roles;
-    const adminOnly = Array.isArray(ssoUserRole) && ssoUserRole?.every((role) => role?.name === "User");
+    const adminOnly =
+      Array.isArray(ssoUserRole) &&
+      ssoUserRole?.every((role) => role?.name === "User");
 
     if (!isUserStillAuthenticated) {
       logout();
@@ -215,13 +215,10 @@ function AuthProvider(props) {
       let count = 0;
       const apiResponseData = await authService.loginUser(payload);
 
-      console.log(apiResponseData,">>>")
+      console.log(apiResponseData, ">>>");
       const decoded = apiResponseData?.data;
       const adminRoles = apiResponseData?.data?.user?.roles;
-      const hasAdminRoles = isAuthenticatedByRoles(
-        "User",
-        getPersistenceRoles
-      );
+      const hasAdminRoles = isAuthenticatedByRoles("User", getPersistenceRoles);
       if (hasAdminRoles) {
         const userToken = apiResponseData?.data?.access_token;
         const userProfile = {
@@ -237,7 +234,7 @@ function AuthProvider(props) {
           instructor_profile: apiResponseData?.data?.user?.instructor_profile,
           roles: apiResponseData?.data?.user?.roles,
         };
-     
+
         const tokenExpiry = ""; //decoded?.expires_at || null;
         const fpPromise = await FingerprintJS.load();
         const fpPromiseGetResult = await fpPromise.get();
@@ -310,7 +307,6 @@ function AuthProvider(props) {
         notificationCtx.success(
           "An Email  was sent to your inbox to reset your password."
         );
-        
       } else {
         dispatch({ type: "FORGOT_PASSWORD_SUCCESS", response });
         notificationCtx.error("Some Error occured");
@@ -324,51 +320,46 @@ function AuthProvider(props) {
   async function changePassword(payload) {
     try {
       const response = await authService.ChangePassword(payload);
-      console.log(response)
+      console.log(response);
       if (response?.data.success) {
         dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
         notificationCtx.success("Your  password was reset successfully.");
-        return response
-     
+        return response;
       } else {
         dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-        reduxAwareDispatcher({type:"RESET_ERROR"})
+        reduxAwareDispatcher({ type: "RESET_ERROR" });
         notificationCtx.error("Some Error occured");
-        return {data: {success: false}}
+        return { data: { success: false } };
       }
     } catch (err) {
       dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-      reduxAwareDispatcher({type:"RESET_ERROR"})
+      reduxAwareDispatcher({ type: "RESET_ERROR" });
       notificationCtx.error(err?.message);
-      return {data: {success: false}}
+      return { data: { success: false } };
     }
   }
 
   async function updatePassword(payload) {
     try {
       const response = await authService.loginUserForgotChangePassword(payload);
-      console.log(response)
+      console.log(response);
       if (response?.data.success) {
         dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
         notificationCtx.success("Your  password was reset successfully.");
-        return response
-     
+        return response;
       } else {
         dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-        reduxAwareDispatcher({type:"RESET_ERROR"})
+        reduxAwareDispatcher({ type: "RESET_ERROR" });
         notificationCtx.error("Some Error occured");
-        return {data: {success: false}}
+        return { data: { success: false } };
       }
     } catch (err) {
       dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-      reduxAwareDispatcher({type:"RESET_ERROR"})
+      reduxAwareDispatcher({ type: "RESET_ERROR" });
       notificationCtx.error(err?.message);
-      return {data: {success: false}}
+      return { data: { success: false } };
     }
   }
-
-
-  
 
   return (
     <AuthContext.Provider
