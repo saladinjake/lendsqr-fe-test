@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { RouterProvider } from "react-router-dom";
 
 import "./styles/global.scss";
-import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
@@ -28,7 +27,6 @@ ReactDOM.render(
     <Provisioner store={Store}>
       <NotificationProvider>
         <NotificationBar />
-
         <AuthProvider client={authClient}>
           <RouterProvider router={AppNavigator} />
         </AuthProvider>

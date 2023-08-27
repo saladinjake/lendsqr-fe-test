@@ -6,10 +6,8 @@ import logger from "redux-logger";
 import rootReducer from "./reducers";
 import { persistStore } from "redux-persist";
 
-
 const initialState = {};
 const middlewareArr = [thunk, logger];
-
 const Store = createStore(
   rootReducer,
   initialState,

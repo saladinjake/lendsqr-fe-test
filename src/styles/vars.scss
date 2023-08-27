@@ -1,0 +1,61 @@
+/**/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+@font-face {
+	font-family: 'Avenir next';
+	src: local('AvenirNext'), url("../assets/fonts/AvenirNextLTPro-Regular.otf") format('truetype');
+}
+@font-face {
+	font-family: 'Avenir next bold';
+	src: local('AvenirNext'), url("../assets/fonts/AvenirNextLTPro-Regular.otf") format('truetype');
+}
+$primaryText: 'Work Sans', sans-serif;
+$secondaryText: 'Avenir next', sans-serif;
+$secondaryTextBold: 'Avenir next bold', sans-serif;
+$primaryColor: #213f7d;
+$primaryText: #545f7d;
+$secondaryColor: #39cdcc;
+@mixin mediaQueriesMobileDesktop {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin mediaQueriesMobileTabletsLandScape {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin mediaQueriesMobileTablets{
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+@mixin mediaQueriesMobilePhones {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+
+@mixin buttonComponent {
+	background-color: $secondaryColor;
+	color: #ffffff;
+	font-family: $secondaryText;
+	font-size: 14px;
+	outline: none;
+	border-radius: 8px;
+	border: none;
+	padding: 15px 20px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+@mixin inputComponent {
+	font-family: $secondaryText;
+	font-size: 14px;
+	color: $primaryText;
+	width: 100%;
+	height: 50px;
+	border: 2px solid #545f7d26;
+	border-radius: 5px;
+	outline: none;
+}
