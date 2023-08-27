@@ -12,7 +12,6 @@ function App() {
 					<Route index path="users" element={<>Users page</>} />
 					<Route path="users/:id/profile" element={<>user details</>} />
 				</Route>
-
 				<Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
 			</Routes>
 		</div>
