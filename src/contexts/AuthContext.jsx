@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs";
 
-import * as authService from "../../api/auth.services";
+import * as authService from "../api/auth.service";
 
 import NotificationContext from "./NotificationContext";
 import { connect, useDispatch, useSelector } from "react-redux";
@@ -30,9 +30,9 @@ import {
   getUserData,
   getUserProfile,
   isTokenStillValid,
-} from "../helpers/tokenConfig";
+} from "../utils/tokenConfig";
 
-import { isAuthenticatedByRoles } from "../helpers";
+import { isAuthenticatedByRoles } from "../utils";
 
 const cachedUser = localStorage && JSON?.parse(localStorage.getItem("user"));
 const cachedRole =
@@ -67,13 +67,13 @@ const AuthContext = createContext({
   login: (credentials) => authService.loginUser(credentials),
   logout: () => {},
   forgetPassword: (payload) => {
-    authService.loggedOutUserForgotPassword(payload);
+   //todo
   },
   changePassword: (payload) => {
-    authService.ChangePassword(payload);
+    //todo
   },
   updatePassword: (payload) => {
-    authService.loginUserForgotChangePassword(payload);
+     //todo
   },
   loadAuthUser: () => {},
   modules: [],
@@ -300,65 +300,15 @@ function AuthProvider(props) {
   }
 
   async function forgetPassword(payload) {
-    try {
-      const response = await authService.loggedOutUserForgotPassword(payload);
-      if (response?.data.success) {
-        dispatch({ type: "FORGOT_PASSWORD_SUCCESS", response });
-        notificationCtx.success(
-          "An Email  was sent to your inbox to reset your password."
-        );
-      } else {
-        dispatch({ type: "FORGOT_PASSWORD_SUCCESS", response });
-        notificationCtx.error("Some Error occured");
-      }
-    } catch (err) {
-      dispatch({ type: "FORGOT_PASSWORD_FAILED" });
-      notificationCtx.error(err?.message);
-    }
+  
   }
 
   async function changePassword(payload) {
-    try {
-      const response = await authService.ChangePassword(payload);
-      console.log(response);
-      if (response?.data.success) {
-        dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
-        notificationCtx.success("Your  password was reset successfully.");
-        return response;
-      } else {
-        dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-        reduxAwareDispatcher({ type: "RESET_ERROR" });
-        notificationCtx.error("Some Error occured");
-        return { data: { success: false } };
-      }
-    } catch (err) {
-      dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-      reduxAwareDispatcher({ type: "RESET_ERROR" });
-      notificationCtx.error(err?.message);
-      return { data: { success: false } };
-    }
+    
   }
 
   async function updatePassword(payload) {
-    try {
-      const response = await authService.loginUserForgotChangePassword(payload);
-      console.log(response);
-      if (response?.data.success) {
-        dispatch({ type: "CHANGE_PASSWORD_SUCCESS", response });
-        notificationCtx.success("Your  password was reset successfully.");
-        return response;
-      } else {
-        dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-        reduxAwareDispatcher({ type: "RESET_ERROR" });
-        notificationCtx.error("Some Error occured");
-        return { data: { success: false } };
-      }
-    } catch (err) {
-      dispatch({ type: "CHANGE_PASSWORD_FAILED" });
-      reduxAwareDispatcher({ type: "RESET_ERROR" });
-      notificationCtx.error(err?.message);
-      return { data: { success: false } };
-    }
+    
   }
 
   return (

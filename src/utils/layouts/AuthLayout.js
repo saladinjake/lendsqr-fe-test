@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
 import { useLoaderData, useOutlet, Await } from "react-router-dom";
 import SleekLoadingIndicator from "../../components/basic/SkeletonLoader";
-import { SomethingWentWrong } from "../../components/Svg/SomethingWentWrong";
+import { SomethingWentWrong } from "../../components/basic/SomethingWentWrong";
 import { AuthProvider } from "../hooks/useAuth";
 
 const AuthLayout = ({ isLoading = true }) => {

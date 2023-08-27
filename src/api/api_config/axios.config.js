@@ -1,6 +1,5 @@
 import axios from "axios";
-import dotenv from "dotenv"
-dotenv.config()
+
 let baseURL = "https://mocky.io/";
 let token;
 

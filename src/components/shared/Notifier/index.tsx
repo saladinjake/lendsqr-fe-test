@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useContext, useRef, useEffect, useState } from "react";
 import NotificationContext from "../../../contexts/NotificationContext";
 
@@ -32,7 +32,7 @@ const NotificationBar = () => {
     });
   }, [notificationCtx]);
   return (
-    notificationCtx.notification !== null && (
+    notificationCtx.notification !== null ? (
       <>
         <div
           ref={toast}
@@ -56,7 +56,7 @@ const NotificationBar = () => {
           <div ref={progressBar} className="progress active"></div>
         </div>
       </>
-    )
+    ): (<></>)
   );
 };
 export default NotificationBar;
