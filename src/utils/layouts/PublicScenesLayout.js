@@ -1,16 +1,13 @@
 import React from "react"
 import { Navigate, useOutlet } from "react-router-dom";
-import { useAuth } from "../helpers/hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
 
 
-const TraditionalWesitesLayout = () => {
+const GuestWesitesLayout = () => {
   const { user } = useAuth();
   const outlet = useOutlet();
 
-  // if (user) {
-  //   return <Navigate to="/dashboard/profile" replace />;
-  // }
-
+ 
   return (
     <div>
       {outlet}
@@ -18,4 +15,4 @@ const TraditionalWesitesLayout = () => {
   );
 };
 
-export default TraditionalWesitesLayout
+export default GuestWesitesLayout 
