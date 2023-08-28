@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './vars.scss';
 
 .module-area {
 	height: 100vh;
@@ -69,7 +69,7 @@
 			@include inputComponent;
 			border-top-right-radius: 0px;
 			border-bottom-right-radius: 0px;
-			border: 1px solid $bluePrimary;
+			border: 1px solid $primaryColor;
 			height: 40px;
 			opacity: 0.5;
 			width: calc(100% - 56px);

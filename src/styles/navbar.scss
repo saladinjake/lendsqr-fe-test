@@ -1,0 +1,47 @@
+@import './vars.scss';
+.nav-bar-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	color: $primaryColor;
+	.logo {
+		width: 120px;
+	}
+	.menu-icon {
+		display: none;
+		img {
+			width: 30px;
+			height: 30px;
+		}
+		@include  mediaQueriesMobileDesktop {
+			display: block;
+			cursor: pointer;
+			z-index: 2400;
+		}
+	}
+}
+
+.nav-bar-right {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	@include mediaQueriesMobileDesktop {
+		display: none;
+	}
+	a {
+		color: $primaryColor;
+	}
+}
+
+.nav-bar-profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	img:first-child {
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+	}
+}
