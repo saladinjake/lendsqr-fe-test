@@ -19,8 +19,8 @@ const FilterForm: FC<Props> = () => {
 		}
 	};
 	return (
-		<form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
-			<div className="form-group">
+		<form className="table-filter" onSubmit={handleSubmit(onSubmit)}>
+			<div className="form-wrapper">
 				<label htmlFor="organization">Organization</label>
 				<select
 					{...register('organization', {
@@ -30,7 +30,7 @@ const FilterForm: FC<Props> = () => {
 					<option value="">Select</option>
 				</select>
 			</div>
-			<div className="form-group">
+			<div className="form-wrapper">
 				<label htmlFor="username">Username</label>
 				<input
 					type="text"
@@ -40,7 +40,7 @@ const FilterForm: FC<Props> = () => {
 					})}
 				/>
 			</div>
-			<div className="form-group">
+			<div className="form-wrapper">
 				<label htmlFor="email">Email</label>
 				<input
 					type="email"
@@ -50,7 +50,7 @@ const FilterForm: FC<Props> = () => {
 					})}
 				/>
 			</div>
-			<div className="form-group">
+			<div className="form-wrapper">
 				<label htmlFor="date">Date</label>
 				<input
 					type="date"
@@ -60,7 +60,7 @@ const FilterForm: FC<Props> = () => {
 					})}
 				/>
 			</div>
-			<div className="form-group">
+			<div className="form-wrapper">
 				<label htmlFor="phone">Phone Number</label>
 				<input
 					type="tel"
@@ -70,7 +70,7 @@ const FilterForm: FC<Props> = () => {
 					})}
 				/>
 			</div>
-			<div className="form-group">
+			<div className="form-wrapper">
 				<label htmlFor="status">Status</label>
 				<select
 					{...register('status', {
