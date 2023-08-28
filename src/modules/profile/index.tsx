@@ -94,7 +94,6 @@ const Profile: FC<Props> = () => {
             </div>
           </div>
 
-          {/*main body*/}
 
           <div className="user-details-main">
 			<div className="user-info-card">

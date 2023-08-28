@@ -3,6 +3,10 @@ import { combineReducers } from "redux";
 import authReducer from "./auth.reducer";
 
 //barrel reducer as root reducer
-export default combineReducers({
-  auth: authReducer,
+const rootReducer  =combineReducers({
+
+  auth:authReducer
 });
+
+export type RootState = ReturnType<typeof rootReducer>
+export default rootReducer

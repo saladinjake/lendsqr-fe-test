@@ -33,10 +33,10 @@ import {
 } from "../utils/tokenConfig";
 
 import { isAuthenticatedByRoles } from "../utils";
-
-const cachedUser = localStorage && JSON?.parse(localStorage.getItem("user"));
+import { RootState } from "../redux/reducers";
+const cachedUser = localStorage && JSON?.parse(""+localStorage.getItem("user"));
 const cachedRole =
-  localStorage && JSON?.parse(localStorage.getItem("user_roles"));
+  localStorage && JSON?.parse(""+ localStorage.getItem("user_roles"));
 const cachedToken = localStorage && localStorage.getItem("token");
 const cachedAuthorization = localStorage.user && localStorage.token;
 
@@ -54,6 +54,24 @@ const initialState = {
   loadAuthUser: () => isTokenStillValid(),
 };
 
+interface IDecoded {
+  email: string;
+  family_name: string;
+  given_name: string;
+  name: string;
+  picture: string;
+  exp: string;
+  designation?: string;
+  employeeNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  userRoleID?: string;
+  id?: string;
+  userName?: string;
+  password?: string;
+  isSuccessful?: boolean;
+}
+
 const AuthContext = createContext({
   isAuthenticated: cachedAuthorization ? true : false,
   user: cachedUser ? cachedUser : null,
@@ -64,23 +82,23 @@ const AuthContext = createContext({
   isTokenStillValid: () => isTokenStillValid(),
   isLoading: false,
   userProfile: null,
-  login: (credentials) => authService.loginUser(credentials),
+  login: (credentials: any) => authService.loginUser(credentials),
   logout: () => {},
-  forgetPassword: (payload) => {
-   //todo
+  forgetPassword: (payload: any): any =>  {
+    
   },
-  changePassword: (payload) => {
-    //todo
+  changePassword: (payload: any): any =>  {
+   
   },
-  updatePassword: (payload) => {
-     //todo
+  updatePassword: (payload: any): any =>{
+   
   },
   loadAuthUser: () => {},
   modules: [],
   permissions: [],
 });
 
-function authReducer(state, action) {
+function authReducer(state:any, action:any) {
   switch (action.type) {
     case "LOGIN_START":
       return {
@@ -110,17 +128,17 @@ function authReducer(state, action) {
         ...state,
       };
     case "FORGOT_PASSWORD_FAILED":
-      cleanUserSession();
+      // logOut();
       return {
         ...state,
       };
     case "CHANGE_PASSWORD_FAILED":
-      cleanUserSession();
+      // logOut();
       return {
         ...state,
       };
     case "CHANGE_PASSWORD_SUCCESS":
-      cleanUserSession();
+      // logOut();
       return {
         ...state,
       };
@@ -130,21 +148,18 @@ function authReducer(state, action) {
   }
 }
 
-function getPublicIp(url) {
-  return fetch(url).then((res) => res.text());
-}
 
-async function loadAuthUser(state, dispatch, logout) {
+
+async function loadAuthUser(state: any, dispatch: any, logout: any) {
+
   try {
     const isUserStillAuthenticated = await state.loadAuthUser(); //check token profile
     const ssoUserIdentityProfile = isUserStillAuthenticated?.data?.user;
     const ssoUserRole = isUserStillAuthenticated?.data?.user?.roles;
-    const adminOnly =
-      Array.isArray(ssoUserRole) &&
-      ssoUserRole?.every((role) => role?.name === "User");
+    const adminOnly = Array.isArray(ssoUserRole) && ssoUserRole?.every((role) => role?.name === "SuperAdmin");
 
     if (!isUserStillAuthenticated) {
-      logout();
+      // logOut();
       await cleanUserSession();
     } else if (ssoUserIdentityProfile && adminOnly) {
       if (!isSessionExpired()) {
@@ -175,26 +190,26 @@ async function loadAuthUser(state, dispatch, logout) {
   }
 }
 
-function AuthProvider(props) {
+function AuthProvider(props: any) {
   const reduxAwareDispatcher = useDispatch();
   const [state, dispatch] = useReducer(authReducer, initialState);
   const notificationCtx = useContext(NotificationContext);
   const [userIp, setMyIp] = useState(null);
   const [message, setMessage] = useState("");
-  const isAuthenticatedFromStore = useSelector((state) =>
+  const isAuthenticatedFromStore = useSelector((state: RootState) =>
     getIsAuthenticatedFromStore(state)
   );
-  const getPersistenceUser = useSelector((state) =>
+  const getPersistenceUser = useSelector((state: RootState) =>
     getUserRolesFromStore(state)
   );
-  const getPersistenceRoles = useSelector((state) =>
+  const getPersistenceRoles = useSelector((state: RootState) =>
     getUserRolesFromStore(state)
   );
-  const getPersistenceAcessTokenFromStore = useSelector((state) =>
+  const getPersistenceAcessTokenFromStore = useSelector((state: RootState) =>
     getAcessTokenFromStore(state)
   );
-  const dispatchPersistenceLogin = (userData) =>
-    reduxAwareDispatcher(loginSuccessfulDispatcher(userData));
+  const dispatchPersistenceLogin = (userData: any) =>
+    reduxAwareDispatcher(loginSuccessfulDispatcher(userData) as any);
   const dispatchPersistenceLogout = () =>
     reduxAwareDispatcher({ type: "LOGIN_FAIL" });
 
@@ -203,22 +218,19 @@ function AuthProvider(props) {
     loadAuthUser(state, dispatch, logout);
   }, [state]);
 
-  const login = async (payload) => {
+  const login = async (payload: any) => {
     try {
       dispatch({ type: "LOGIN_START" });
-      const ipaddr = await getPublicIp(
-        "https://www.cloudflare.com/cdn-cgi/trace"
-      );
-      let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/;
-      let ip = ipaddr.match(ipRegex)[0];
+    
       const MaxTimeForRetrials = 3;
       let count = 0;
-      const apiResponseData = await authService.loginUser(payload);
-
-      console.log(apiResponseData, ">>>");
+      const apiResponseData : any= await authService.loginUser(payload);
       const decoded = apiResponseData?.data;
       const adminRoles = apiResponseData?.data?.user?.roles;
-      const hasAdminRoles = isAuthenticatedByRoles("User", getPersistenceRoles);
+      const hasAdminRoles = isAuthenticatedByRoles(
+        "SuperAdmin",
+        getPersistenceRoles
+      );
       if (hasAdminRoles) {
         const userToken = apiResponseData?.data?.access_token;
         const userProfile = {
@@ -234,7 +246,7 @@ function AuthProvider(props) {
           instructor_profile: apiResponseData?.data?.user?.instructor_profile,
           roles: apiResponseData?.data?.user?.roles,
         };
-
+     
         const tokenExpiry = ""; //decoded?.expires_at || null;
         const fpPromise = await FingerprintJS.load();
         const fpPromiseGetResult = await fpPromise.get();
@@ -244,7 +256,7 @@ function AuthProvider(props) {
           userToken,
           auditLogData: {
             SYSTEMIDENTIFIER: "",
-            SYSTEMIPADDRESS: ip,
+            SYSTEMIPADDRESS: "192.168.1.1",
             SYSTEMMACADDRESS: visitorId,
             SYSTEMNAME: "",
             SUBJECTIDENTIFIER: "",
@@ -299,15 +311,15 @@ function AuthProvider(props) {
     await cleanUserSession();
   }
 
-  async function forgetPassword(payload) {
-  
+  async function forgetPassword(payload:any) {
+   
   }
 
-  async function changePassword(payload) {
-    
+  async function changePassword(payload: any) {
+   
   }
 
-  async function updatePassword(payload) {
+  async function updatePassword(payload: any) {
     
   }
 

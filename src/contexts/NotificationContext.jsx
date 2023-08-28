@@ -2,9 +2,9 @@ import React, { useState } from "react";
 const NotificationContext = React.createContext({
   notification: null,
   notificationMessage: null,
-  success: (text)=> {},
+  success: (text) => {},
   error: (text) => {},
-  clear: ()=> {},
+  clear: () => {},
 });
 
 const STATES = {

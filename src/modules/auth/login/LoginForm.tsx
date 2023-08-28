@@ -1,13 +1,53 @@
-import { FC, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
+import { useForm } from "react-hook-form";
+
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getUserFromStore,
+  getAcessTokenFromStore,
+  getIsAuthenticatedFromStore,
+  getUserRolesFromStore,
+} from "../../../redux/reducers/auth.reducer";
+import { AuthContext } from "../../../contexts/AuthContext";
+import {FC,  useEffect, useState, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { isAuthenticatedByRoles } from "../../../utils";
+import { RootState } from "../../../redux/reducers";
 interface Props {}
 
 const Auth: FC<Props> = () => {
   const [loading, setLoading] = useState<Boolean>(false);
   const navigate = useNavigate();
   const [showPassword, setPassword] = useState<Boolean>(false);
+  const [initialValues, setInitialValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const reduxDispatcher = useDispatch();
+  const authContext = useContext(AuthContext);
+  const isLoading = authContext.isLoading;
+  const [hasAuthAminRole, setHasAdminRoles] = useState(false);
+
+  const isAuthenticatedFromStore = useSelector((state: RootState) =>
+    getIsAuthenticatedFromStore(state)
+  );
+  const isAuth = isAuthenticatedFromStore; //authContext.isAuth; //persistence
+  const getPersistenceUser = useSelector((state: RootState) =>
+    getUserRolesFromStore(state)
+  );
+  const getPersistenceRoles = useSelector((state: RootState) =>
+    getUserRolesFromStore(state)
+  );
+  const getPersistenceAcessTokenFromStore = useSelector((state: RootState) =>
+    getAcessTokenFromStore(state)
+  );
+
+  const { id } = useParams();
+  const [showError, setShowError] = useState(false)
+ 
+  const { user } = useContext(AuthContext);
+
 
   const {
     register,
@@ -18,16 +58,44 @@ const Auth: FC<Props> = () => {
     mode: "all",
   });
 
-  const handleSendToApi = (data: any) => {
+  const handleSendToApi = async (data: any) => {
     if (data) {
       setLoading(true);
-      setTimeout(() => {
-        reset();
-        navigate("/dashboard");
+      // setTimeout(() => {
+      //   reset();
+      //   navigate("/dashboard");
+      //   setLoading(false);
+      // }, 2000);
+      try {
+        const payload = {
+          ...data
+        };
+        localStorage.setItem(
+          "avatar",
+          "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg"
+        );
+        const apiResponseData = await authContext.loginMock(payload);
+  
+        console.log(apiResponseData, ">>>>>>>.")
+  
+        
+  
+        if(!apiResponseData ){
+          return setShowError(true)
+        }
         setLoading(false);
-      }, 2000);
+        return navigate("/dashboard");
+      } catch (error) {}
     }
   };
+
+  const handleChange = (event: Event) =>{
+    let target = event.target as HTMLInputElement
+     setInitialValues({
+      ...initialValues,
+       [target.name]:target.value
+     })
+  }
 
   return (
     <section className="app-login-page">
@@ -58,6 +126,7 @@ const Auth: FC<Props> = () => {
               <div>
                 <input
                   type="email"
+                 
                   placeholder="Email"
                   {...register("email", {
                     required: true,
