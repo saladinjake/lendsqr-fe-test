@@ -1,0 +1,208 @@
+@import './vars.scss';
+
+.profile-module {
+	width: 100%;
+	color: $primaryText;
+	font-family: $primaryText;
+	.back {
+		font-size: 16px;
+		color: $primaryColor;
+		text-decoration: none;
+		cursor: pointer;
+		img {
+			margin-right: 10px;
+		}
+	}
+
+	.cta-activity-handlers {
+		width: 100%;
+		margin: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include mediaQueriesMobilePhones {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		h1 {
+			color: $primaryColor;
+			font-size: 24px;
+			font-weight: 500;
+			@include mediaQueriesMobilePhones {
+				font-size: 20px;
+			}
+		}
+
+		button:first-child {
+			@include buttonComponent;
+			background-color: transparent;
+			color: #e4033b;
+			border: 1px solid #e4033b;
+			margin-right: 20px;
+			padding: 12px 16px;
+			@include mediaQueriesMobilePhones {
+				font-size: 12px;
+			}
+		}
+		button:last-child {
+			@include buttonComponent;
+			background-color: transparent;
+			color: $secondaryColor;
+			border: 1px solid $secondaryColor;
+			padding: 12px 16px;
+			@include mediaQueriesMobilePhones {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.header-widget {
+		overflow-x: auto;
+		background-color: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.06);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+		padding: 30px 30px 0px 30px;
+
+		.header-info {
+			min-width: fit-content;
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			margin-bottom: 50px;
+			@include mediaQueriesMobilePhones{
+				margin-bottom: 20px;
+			}
+			.avatar {
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
+				background-color: #21407d58;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+				@include mediaQueriesMobilePhones {
+					width: 60px;
+					height: 60px;
+					img {
+						width: 30px;
+					}
+				}
+			}
+			div:first-child {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+			.tier-level {
+				height: 100px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0 30px;
+				border-left: 1px solid #545f7d6d;
+				border-right: 1px solid #545f7d6d;
+				@include mediaQueriesMobilePhones{
+					height: 70px;
+				}
+				p {
+					margin-bottom: 8px;
+				}
+				.ratings {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+				}
+			}
+
+			div:last-child {
+				color: $primaryColor;
+				p:first-child {
+					font-size: 22px;
+					font-weight: 700px;
+					margin-bottom: 8px;
+					@include mediaQueriesMobilePhones{
+						font-size: 16px;
+					}
+				}
+				p:last-child {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.user-header-nav {
+			width: 100%;
+			display: flex;
+			gap: 10px;
+			justify-content: space-between;
+			a {
+				min-width: fit-content;
+				color: #000000;
+				text-decoration: none;
+				font-size: 16px;
+				padding: 10px;
+				@include mediaQueriesMobilePhones {
+					font-size: 14px;
+				}
+
+				&:first-child {
+					border-bottom: 3px solid $secondaryColor;
+					color: $secondaryColor;
+				}
+			}
+		}
+	}
+
+	.user-details-main {
+		background-color: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.06);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+		padding: 30px;
+		margin-top: 30px;
+
+		.user-info-card {
+            border-bottom: 1px solid #21407d5a;
+			&:last-child {
+				border-bottom: none;
+			}
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+			h2 {
+				color: $primaryColor;
+				font-size: 16px;
+				font-weight: 500;
+				margin-bottom: 30px;
+			}
+            .user-info-main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                div {
+                    margin-right: 2%;
+                    min-width: 150px;
+                }
+            }
+			p {
+				color: $primaryColor;
+				&:first-child {
+					text-transform: uppercase;
+					font-size: 12px;
+                    margin-bottom: 8px;
+				}
+				&:last-child {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
