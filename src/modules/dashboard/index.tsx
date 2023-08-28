@@ -1,5 +1,5 @@
 import StatisticsWidget from "./components/cardWidget"
-import { TablePaginator } from "./components/table"
+import { TablePaginator, Table } from "./components/table"
 import  { useState , useEffect } from "react";
 import axios from "axios"
 const DasboardManagement = () => {
@@ -33,7 +33,7 @@ const DasboardManagement = () => {
 		setCurrentItems(totalRecords?.slice(offset, endOffset));
 		setPageCount(Math.ceil(totalRecords?.length / perPage));
 	}, [ totalRecords,offset, perPage]);
-    
+
 	const handleChange= (event: any) => {
 		const pageOffset = (event?.selected * perPage) % totalRecords?.length;
 		setItemOffset( pageOffset );
@@ -45,11 +45,15 @@ const DasboardManagement = () => {
      <div className="dashboard-module">
         <StatisticsWidget />
 
+        <Table
+           allRecords={currentItems}
+           loading={loading} />
+
         <TablePaginator  
-          offset={1}
-          perPage={10}
-          totalRecord={200}
-          pageCount={1}
+          offset={offset}
+          perPage={perPage}
+          totalRecord={totalRecords?.length}
+          pageCount={pageCount}
           handleChange={handleChange}
         />
      </div>
