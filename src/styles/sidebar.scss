@@ -1,0 +1,92 @@
+@import "./vars.scss";
+.side-bar {
+    height: 100vh;
+	width: 370px;
+    overflow-y: auto;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scrollbar-width: 5px;
+	font-family: $primaryText;
+	background-color: #ffffff;
+	
+	position: relative;
+	z-index: 1020;
+	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+	
+	@include mediaQueriesMobileDesktop {
+		position: fixed;
+		width: 262px;
+		left: -270px;
+		z-index: 999;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		&.enabled {
+			left: 0px;
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+		}
+	}
+
+    .branding {
+		height: 100px;
+		padding-left: 35px;
+		display: flex;
+		align-items: center;
+		@include mediaQueriesMobileDesktop {
+			height: 70px;
+		}
+		img {
+			width: 110px;
+		}
+	}
+	
+	.side-bar-navigation-menu {
+		padding: 30px 0px;
+		a {
+			color: $primaryColor;
+			font-size: 16px;
+			font-weight: 400;
+			text-decoration: none;
+		}
+		.menu-item {
+            gap: 10px;
+			margin-bottom: 20px;
+			border-left: 4px solid transparent;
+			padding: 10px 30px;
+			display: flex;
+			align-items: center;
+			
+			cursor: pointer;
+			&.active {
+				background-color: #39cdcd38;
+				padding: 10px 30px;
+				border-left: 4px solid $secondaryColor;
+			}
+		}
+		.link-description {
+			padding: 10px 30px;
+			color: $primaryText;
+			font-weight: 500;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+	.cta-revoke {
+		
+		color: $primaryColor;
+		font-size: 16px;
+        border-top: 1px solid #21407d5a;
+		padding: 10px 30px;
+		cursor: pointer;
+		div {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+
+		.info-app {
+			font-size: 12px;
+		}
+	}
+}

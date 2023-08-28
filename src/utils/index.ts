@@ -11,3 +11,11 @@ export function isAuthenticatedByRoles(role:  any, roles: any[]){
   export const appendCurrency =(value: string) => value
   
   export const formatNumber = (value: string) => value
+
+  export const currentRouteActivated = (route: string, pathname: string) => {
+    if (pathname === "/dashboard" && route === "/dashboard") {
+      return true;
+    }
+    const path = route.split("/")[2];
+    return Boolean(pathname.includes(path));
+  };
