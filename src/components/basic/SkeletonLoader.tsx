@@ -1,7 +1,7 @@
 import React from "react";
 import "./indicator.scss";
 
-const SleekLoadingIndicator = ({ isLoading, count = 1 }) => {
+const SleekLoadingIndicator = () => {
   return (
     <>
       <div className="contain">

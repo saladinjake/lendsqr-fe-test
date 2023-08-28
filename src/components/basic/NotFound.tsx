@@ -3,7 +3,7 @@ import "./notfound.scss";
 import { useNavigation } from "react-router-dom";
 
 const NotFound = () => {
-  const navigate = useNavigation();
+  const navigate: any = useNavigation();
   return (
     <>
       <svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1">
@@ -54,7 +54,7 @@ const NotFound = () => {
           <div className="action-link-wrap">
             <a
               onClick={() => {
-                window.history.back(-1);
+                window.history.back();
               }}
               className="btn-widget success"
             >

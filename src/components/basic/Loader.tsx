@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loader = ({ width= "10px" }) => {
+const Loader = ({ width= "10px" }: {width: string}) => {
   return (
     <div className="loader" style={{ width: `${width}px`, height:"20px" }}>
       <svg

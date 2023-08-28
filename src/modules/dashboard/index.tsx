@@ -28,7 +28,7 @@ const DasboardManagement = () => {
         setAllRecords(response?.data?.data);
         setLoading(false);
 
-        disPatchUsers(response?.data?.data);
+        //disPatchUsers(response?.data?.data);
       })
       .catch((error) => {
         const err = error.response.data;

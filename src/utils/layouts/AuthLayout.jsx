@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import React, { Suspense, useState } from "react";
 import { useLoaderData, useOutlet, Await } from "react-router-dom";
 import SleekLoadingIndicator from "../../components/basic/SkeletonLoader";
 import { SomethingWentWrong } from "../../components/basic/SomethingWentWrong";
@@ -7,14 +7,14 @@ import { AuthProvider } from "../hooks/useAuth";
 const AuthLayout = ({ isLoading = true }) => {
   const outlet = useOutlet();
 
-  const { userPromise } = useLoaderData();
+  const loadData = useLoaderData();
 
   return (
     <Suspense
-      fallback={<SleekLoadingIndicator isLoading={isLoading} count={20} />}
+      fallback={<SleekLoadingIndicator  />}
     >
       <Await
-        resolve={userPromise}
+        resolve={loadData?.userPromise()}
         errorElement={<SomethingWentWrong />}
         children={(user) => (
           <AuthProvider userData={user}>{outlet}</AuthProvider>
