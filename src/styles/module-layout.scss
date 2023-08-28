@@ -31,28 +31,39 @@
 	}
 }
 
-.top-nav {
-	background-color: #ffffff;
-	height: 100px;
-	padding: 0 30px;
+.app-navigations {
+	position: fixed;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: fixed;
-	width: 100%;
-	z-index: 1030;
-	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+	box-shadow: 3px 0px 19px rgba(0, 0, 0, 0.04);
+	background-color: #ffffff;
+	height: 100px;
+	padding: 0 30px;
+	
 	@include mediaQueriesMobileDesktop {
 		height: 70px;
 	}
 
-	.search-input {
+	.search-input-widget-area {
 		width: 400px;
 		height: 40px;
 		display: flex;
 		align-items: center;
 		@include mediaQueriesMobileDesktop {
 			display: none;
+		}
+		button {
+			@include buttonComponent;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			width: 56px;
+			background-color: $secondaryColor;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		input {
 			@include inputComponent;
@@ -65,16 +76,6 @@
 			height: 100%;
 			padding: 0px 12px;
 		}
-		button {
-			@include buttonComponent;
-			border-top-left-radius: 0px;
-			border-bottom-left-radius: 0px;
-			width: 56px;
-			background-color: $greenPrimary;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+		
 	}
 }
