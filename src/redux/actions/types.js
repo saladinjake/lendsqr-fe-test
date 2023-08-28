@@ -9,3 +9,9 @@ export const LOGOUT = "LOGOUT";
 export const SET_LOADING ="SET_LOADING"
 export const SET_PATH ="SET_PATH"
 export const RESET_ERROR ="RESET_ERROR"
+
+export const GET_USERS = 'GET_USERS';
+export const SET_CURRENT = 'SET_CURRENT';
+export const CLEAR_CURRENT = 'CLEAR_CURRENT';
+export const USER_ERROR = 'USER_ERROR';
+export const SEARCH_USER = 'SEARCH_USER';

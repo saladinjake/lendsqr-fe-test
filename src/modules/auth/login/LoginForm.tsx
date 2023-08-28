@@ -26,8 +26,7 @@ const Auth: FC<Props> = () => {
 
   const reduxDispatcher = useDispatch();
   const authContext = useContext(AuthContext);
-  const isLoading = authContext.isLoading;
-  const [hasAuthAminRole, setHasAdminRoles] = useState(false);
+ 
 
   const isAuthenticatedFromStore = useSelector((state: RootState) =>
     getIsAuthenticatedFromStore(state)
@@ -43,11 +42,9 @@ const Auth: FC<Props> = () => {
     getAcessTokenFromStore(state)
   );
 
-  const { id } = useParams();
   const [showError, setShowError] = useState(false)
  
-  const { user } = useContext(AuthContext);
-
+  
 
   const {
     register,
@@ -73,7 +70,6 @@ const Auth: FC<Props> = () => {
         );
         const apiResponseData = await authContext.login(payload);
   
-        console.log(apiResponseData, ">>>>>>>.")
   
         if(!apiResponseData ){
           setShowError(true)
@@ -84,13 +80,7 @@ const Auth: FC<Props> = () => {
     }
   };
 
-  const handleChange = (event: Event) =>{
-    let target = event.target as HTMLInputElement
-     setInitialValues({
-      ...initialValues,
-       [target.name]:target.value
-     })
-  }
+  
 
   return (
     <section className="app-login-page">
