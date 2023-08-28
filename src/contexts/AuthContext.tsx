@@ -10,7 +10,7 @@ import FingerprintJS from "@fingerprintjs/fingerprintjs";
 import * as authService from "../api/auth.service";
 
 import NotificationContext from "./NotificationContext";
-import { connect, useDispatch, useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 import {
   getAcessTokenFromStore,
   getIsAuthenticatedFromStore,
