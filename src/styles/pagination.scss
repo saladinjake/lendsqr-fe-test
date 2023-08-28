@@ -1,0 +1,52 @@
+
+@import "./vars.scss";
+.pagination-widget {
+    color: $primaryColor;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 23px;
+	
+	@include mediaQueriesMobilePhones {
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+	}
+	.pagination-info {
+		span {
+			padding: 7px 10px;
+			color: $primaryColor;
+			font-weight: 500;
+			background-color: rgba(33, 63, 125, 0.1);
+			border-radius: 4px;
+			img {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.pagination-wrapper {
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		list-style: none;
+		.active {
+			color: $primaryColor;
+			font-weight: 500;
+		}
+		.page-link {
+			cursor: pointer;
+		}
+		.arrow {
+			cursor: pointer;
+			height: 24px;
+			width: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(33, 63, 125, 0.1);
+			border-radius: 4px;
+		}
+	}
+}
