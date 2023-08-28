@@ -30,7 +30,7 @@ const Auth: FC<Props> = () => {
   };
 
   return (
-    <section className="pp-login-page">
+    <section className="app-login-page">
       <div className="wrapper">
         <section className="illustrations">
           <img src="/images/logo.svg" alt="logo" className="app-logo" />
@@ -50,7 +50,7 @@ const Auth: FC<Props> = () => {
               onSubmit={handleSubmit(handleSendToApi)}
               className="login-box"
             >
-              {errors.email && errors.email.type === "required" && (
+              {errors?.email && errors?.email?.type === "required" && (
                 <span role="alert" className="input-has-error">
                   Please enter your email
                 </span>
@@ -66,7 +66,7 @@ const Auth: FC<Props> = () => {
               </div>
 
               <div>
-                {errors.password && errors.password.type === "required" && (
+                {errors?.password && errors?.password?.type === "required" && (
                   <span role="alert" className="input-has-error">
                     Please enter your password
                   </span>

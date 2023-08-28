@@ -2,16 +2,16 @@
 
 .welcome {
   h1 {
-    font-family: $avenirNextBold;
+    font-family: $secondaryTextBold;
     font-size: 2rem;
     font-weight: 700;
-    color: $bluePrimary;
+    color: $primaryColor;
     margin-bottom: 10px;
   }
 
   p {
     font-size: 20px;
-    color: $textPrimary;
+    color: $primaryText;
     margin-bottom: 60px;
   }
 }
@@ -32,7 +32,7 @@
   .app-logo {
     width: 200px;
   }
-  @include breakpointTabletLg {
+  @include mediaQueriesMobileTabletsLandScape {
     display: none;
   }
   height: 100%;
@@ -57,7 +57,7 @@
     margin-bottom: 60px;
     display: none;
 
-    @include breakpointTabletLg {
+    @include mediaQueriesMobileTabletsLandScape {
       display: block;
     }
   }
@@ -69,7 +69,7 @@
   align-items: center;
   justify-content: center;
 
-  @include breakpointTabletLg {
+  @include mediaQueriesMobileTabletsLandScape {
     width: 100%;
   }
 
@@ -77,14 +77,14 @@
     width: 100%;
     max-width: 480px;
     padding: 0 50px;
-    color: $textPrimary;
-    font-family: $avenirNext;
-    @include breakpointTabletLg {
+    color: $primaryText;
+    font-family: $secondaryText;
+    @include mediaQueriesMobileTabletsLandScape {
       padding: 0 20px;
     }
   }
 
-  form.login-box {
+  .login-box {
     div {
       width: 100%;
       display: flex;
@@ -98,10 +98,10 @@
     }
   }
 
-  form.login-box > p {
+  .login-box > p {
     font-size: 12px;
     font-weight: 600;
-    color: $greenPrimary;
+    color: $secondaryColor;
     margin-top: 24px;
   }
 
@@ -127,7 +127,7 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 12px;
-      color: $greenPrimary;
+      color: $secondaryColor;
       font-weight: 700;
       cursor: pointer;
     }

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { RouterProvider } from "react-router-dom";
 
-import "./styles/global.scss";
+import "./styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 

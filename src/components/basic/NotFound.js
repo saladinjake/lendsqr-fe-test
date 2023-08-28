@@ -1,4 +1,4 @@
-import styled from "styled-components";
+
 import "./notfound.scss";
 import { useNavigation } from "react-router-dom";
 
