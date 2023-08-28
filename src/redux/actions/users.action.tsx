@@ -5,13 +5,12 @@ import {
   } from "./types";
   import { getUsers } from "../../api/user.service";
   
-  export const fetchUsers = () => async (dispatch: any) => {
+  export const fetchUsers = (data: any) => async (dispatch: any) => {
     try {
       await setLoading();
-      const res = await getUsers();
       dispatch({
         type: GET_USERS,
-        payload: res.data.data,
+        payload: data,
       });
     } catch (err) {
       dispatch({

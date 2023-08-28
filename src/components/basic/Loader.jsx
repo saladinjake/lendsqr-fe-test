@@ -1,8 +1,8 @@
 import React from "react";
 
-const Loader = ({ width }) => {
+const Loader = ({ width= "10px" }) => {
   return (
-    <div className="loader" style={{ width: `${width}px` }}>
+    <div className="loader" style={{ width: `${width}px`, height:"20px" }}>
       <svg
         version="1.1"
         id="L9"
@@ -11,6 +11,7 @@ const Loader = ({ width }) => {
         y="0px"
         viewBox="0 0 100 100"
         enableBackground="new 0 0 0 0"
+        style={{ width: `${width}px`, height:"90px" }}
       >
         <path
           fill="grey"

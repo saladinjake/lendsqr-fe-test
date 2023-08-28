@@ -51,7 +51,7 @@ const Profile: FC<Props> = () => {
         </div>
       </div>
       {loading ? (
-        <Loader width={30} />
+        <Loader width={"10px"} />
       ) : (
         <div>
           <div className="header-widget">

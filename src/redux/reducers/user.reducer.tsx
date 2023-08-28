@@ -19,11 +19,11 @@ const userReducer = (state = initialState, action: any) => {
         users: action.payload.users,
       };
     case USER_ERROR:
-        return {
-            ...state,
-            users:[],
-            error:true
-        }
+      return {
+        ...state,
+        users: [],
+        error: true,
+      };
 
     case SET_LOADING:
       return {

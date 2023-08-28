@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { useState } from "react";
 
 import moment from "moment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TableFilters from  "./TableFilters"
 
 
@@ -39,6 +39,7 @@ const tableHeaders = [
 const Table: FC<Props> = ({ allRecords, loading }) => {
   const [toggleFilter, setToggleFilter] = useState<null | Number>(null);
   const [toggleOption, setToggleOption] = useState<null | Number>(null);
+  const navigate = useNavigate()
 
   return (
     <div data-testid="table-responsive" className="table-responsive">
@@ -99,7 +100,7 @@ const Table: FC<Props> = ({ allRecords, loading }) => {
                   {toggleOption === index ? (
 					  <div className="options-dropdown">
 					  <ul>
-						<li>
+						<li onClick={() => navigate("/users/"+ user.id)}>
 						  <img src="/images/icons/eye-icon.svg" alt="eye icon" />{" "}
 						  <span>View Details</span>
 						</li>
