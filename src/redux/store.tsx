@@ -1,33 +1,17 @@
-/*setup react redux store*/
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
-import rootReducer from "./reducers";
-import { persistStore } from "redux-persist";
+import { legacy_createStore as  createStore,applyMiddleware} from 'redux';
+import { configureStore } from "@reduxjs/toolkit";
+import {composeWithDevTools} from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import rootReducer from "./reducers/index";
+
+
 
 const initialState = {};
-const middlewareArr = [thunk, logger];
-const Store = createStore(
-  rootReducer,
-  initialState,
-  //middleware
-  composeWithDevTools(applyMiddleware(...middlewareArr))
-);
-const persistor = persistStore(Store);
+const middleware = [thunk];
 
-export { persistor };
+const store = configureStore({
+    reducer:rootReducer
+})
+export type RootState = ReturnType<typeof rootReducer>
 
-export default Store;
-
-
-
-
-
-
-
-
-
-
-
-
+export default store;

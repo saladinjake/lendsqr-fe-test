@@ -61,27 +61,22 @@ const Auth: FC<Props> = () => {
   const handleSendToApi = async (data: any) => {
     if (data) {
       setLoading(true);
-      // setTimeout(() => {
-      //   reset();
-      //   navigate("/dashboard");
-      //   setLoading(false);
-      // }, 2000);
+   
       try {
         const payload = {
           ...data
         };
+        console.log(payload)
         localStorage.setItem(
           "avatar",
           "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg"
         );
-        const apiResponseData = await authContext.loginMock(payload);
+        const apiResponseData = await authContext.login(payload);
   
         console.log(apiResponseData, ">>>>>>>.")
   
-        
-  
         if(!apiResponseData ){
-          return setShowError(true)
+          setShowError(true)
         }
         setLoading(false);
         return navigate("/dashboard");

@@ -159,10 +159,12 @@ async function loadAuthUser(state: any, dispatch: any, logout: any) {
     const adminOnly = Array.isArray(ssoUserRole) && ssoUserRole?.every((role) => role?.name === "SuperAdmin");
 
     if (!isUserStillAuthenticated) {
+    
       // logOut();
       await cleanUserSession();
     } else if (ssoUserIdentityProfile && adminOnly) {
       if (!isSessionExpired()) {
+        alert("here..")
         let token = getToken();
         let user = getUserData();
         let userProfile = getUserProfile();
@@ -176,11 +178,11 @@ async function loadAuthUser(state: any, dispatch: any, logout: any) {
           });
         } else {
           // logout();
-          await cleanUserSession();
+          // await cleanUserSession();
         }
       } else {
         // logout();
-        await cleanUserSession();
+        // await cleanUserSession();
       }
     }
   } catch (error) {
@@ -222,17 +224,13 @@ function AuthProvider(props: any) {
     try {
       dispatch({ type: "LOGIN_START" });
     
-      const MaxTimeForRetrials = 3;
+     
       let count = 0;
       const apiResponseData : any= await authService.loginUser(payload);
-      const decoded = apiResponseData?.data;
-      const adminRoles = apiResponseData?.data?.user?.roles;
-      const hasAdminRoles = isAuthenticatedByRoles(
-        "SuperAdmin",
-        getPersistenceRoles
-      );
-      if (hasAdminRoles) {
-        const userToken = apiResponseData?.data?.access_token;
+      
+      const userToken = apiResponseData?.data?.access_token;
+      if (userToken) {
+        
         const userProfile = {
           id: apiResponseData?.data?.user?.id,
           employeeNumber: apiResponseData?.data?.user?.employeeNumber,
@@ -252,23 +250,14 @@ function AuthProvider(props: any) {
         const fpPromiseGetResult = await fpPromise.get();
         const visitorId = fpPromiseGetResult.visitorId;
 
-        const data = {
-          userToken,
-          auditLogData: {
-            SYSTEMIDENTIFIER: "",
-            SYSTEMIPADDRESS: "192.168.1.1",
-            SYSTEMMACADDRESS: visitorId,
-            SYSTEMNAME: "",
-            SUBJECTIDENTIFIER: "",
-          },
-        };
+       
 
         try {
           const user = apiResponseData.data?.user;
           const ApiResponseStatus =
             apiResponseData?.data?.success &&
             apiResponseData?.data?.status_code;
-
+          console.log(user)
           if (ApiResponseStatus) {
             finishAuth(userToken, user, visitorId, tokenExpiry, userProfile);
             dispatchPersistenceLogin({
@@ -289,7 +278,7 @@ function AuthProvider(props: any) {
             notificationCtx.error("Invalid credentials. Please Try again");
           }
         } catch (error) {
-          count = count + 1;
+         
           dispatch({ type: "LOGOUT" });
           dispatchPersistenceLogout();
           await cleanUserSession();
