@@ -1,4 +1,4 @@
-#### How to Login to https://victorjuwa-lendsqr-fe-test.vercel.app
+#### How to Login to https://victor-juwa-lendsqr-fe-test.vercel.app
 #--------------------------------------
 #### Note: you can only login with these credentials
 
