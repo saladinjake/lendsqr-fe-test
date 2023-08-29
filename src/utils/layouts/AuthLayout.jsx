@@ -7,14 +7,14 @@ import { AuthProvider } from "../hooks/useAuth";
 const AuthLayout = ({ isLoading = true }) => {
   const outlet = useOutlet();
 
-  const loadData = useLoaderData();
+  const { userPromise } = useLoaderData();
 
   return (
     <Suspense
       fallback={<SleekLoadingIndicator  />}
     >
       <Await
-        resolve={loadData?.userPromise()}
+        resolve={userPromise}
         errorElement={<SomethingWentWrong />}
         children={(user) => (
           <AuthProvider userData={user}>{outlet}</AuthProvider>

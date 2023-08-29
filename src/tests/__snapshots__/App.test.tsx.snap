@@ -2,134 +2,278 @@
 
 exports[`App renders with out crashing Renders with redux provider across all modules 1`] = `
 <div>
-  <h2>
-    Unexpected Application Error!
-  </h2>
-  <h3
-    style="font-style: italic;"
+  <div
+    class="contain"
   >
-    loadData?.userPromise is not a function
-  </h3>
-  <pre
-    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
-  >
-    TypeError: loadData?.userPromise is not a function
-    at userPromise (C:\\Users\\User\\Desktop\\work-dir\\react-work\\src\\utils\\layouts\\AuthLayout.jsx:17:28)
-    at renderWithHooks (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:16305:18)
-    at mountIndeterminateComponent (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:20074:13)
-    at beginWork (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:21587:16)
-    at beginWork$1 (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:27426:14)
-    at performUnitOfWork (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26560:12)
-    at workLoopSync (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26466:5)
-    at renderRootSync (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26434:7)
-    at recoverFromConcurrentError (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:25850:20)
-    at performConcurrentWorkOnRoot (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:25750:22)
-    at flushActQueue (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react\\cjs\\react.development.js:2667:24)
-    at act (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react\\cjs\\react.development.js:2582:11)
-    at C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\act-compat.js:63:25
-    at renderRoot (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\pure.js:159:26)
-    at render (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\pure.js:246:10)
-    at Object.&lt;anonymous&gt; (C:\\Users\\User\\Desktop\\work-dir\\react-work\\src\\tests\\App.test.tsx:58:29)
-    at Promise.then.completed (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\utils.js:231:10)
-    at _callCircusTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:252:3)
-    at _runTestsForDescribeBlock (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:126:9)
-    at _runTestsForDescribeBlock (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:121:9)
-    at run (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:71:3)
-    at runAndTransformResultsToJestFormat (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapterInit.js:122:21)
-    at jestAdapter (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapter.js:79:19)
-    at runTestInternal (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\runTest.js:367:16)
-    at runTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\runTest.js:444:34)
-    at Object.worker (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\testWorker.js:106:12)
-  </pre>
-  <p>
-    💿 Hey developer 👋
-  </p>
-  <p>
-    You can provide a way better UX than this when your app throws errors by providing your own 
-    <code
-      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
     >
-      ErrorBoundary
-    </code>
-     or
-     
-    <code
-      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
     >
-      errorElement
-    </code>
-     prop on your route.
-  </p>
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+  </div>
 </div>
 `;
 
 exports[`App renders with out crashing Renders with redux provider across all modules 2`] = `
 <div>
-  <h2>
-    Unexpected Application Error!
-  </h2>
-  <h3
-    style="font-style: italic;"
+  <div
+    class="contain"
   >
-    loadData?.userPromise is not a function
-  </h3>
-  <pre
-    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
-  >
-    TypeError: loadData?.userPromise is not a function
-    at userPromise (C:\\Users\\User\\Desktop\\work-dir\\react-work\\src\\utils\\layouts\\AuthLayout.jsx:17:28)
-    at renderWithHooks (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:16305:18)
-    at mountIndeterminateComponent (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:20074:13)
-    at beginWork (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:21587:16)
-    at beginWork$1 (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:27426:14)
-    at performUnitOfWork (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26560:12)
-    at workLoopSync (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26466:5)
-    at renderRootSync (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:26434:7)
-    at recoverFromConcurrentError (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:25850:20)
-    at performConcurrentWorkOnRoot (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react-dom\\cjs\\react-dom.development.js:25750:22)
-    at flushActQueue (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react\\cjs\\react.development.js:2667:24)
-    at act (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\react\\cjs\\react.development.js:2582:11)
-    at C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\act-compat.js:63:25
-    at renderRoot (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\pure.js:159:26)
-    at render (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\@testing-library\\react\\dist\\pure.js:246:10)
-    at Object.&lt;anonymous&gt; (C:\\Users\\User\\Desktop\\work-dir\\react-work\\src\\tests\\App.test.tsx:58:29)
-    at Promise.then.completed (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\utils.js:231:10)
-    at _callCircusTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:252:3)
-    at _runTestsForDescribeBlock (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:126:9)
-    at _runTestsForDescribeBlock (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:121:9)
-    at run (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\run.js:71:3)
-    at runAndTransformResultsToJestFormat (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapterInit.js:122:21)
-    at jestAdapter (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapter.js:79:19)
-    at runTestInternal (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\runTest.js:367:16)
-    at runTest (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\runTest.js:444:34)
-    at Object.worker (C:\\Users\\User\\Desktop\\work-dir\\react-work\\node_modules\\jest-cli\\node_modules\\jest-runner\\build\\testWorker.js:106:12)
-  </pre>
-  <p>
-    💿 Hey developer 👋
-  </p>
-  <p>
-    You can provide a way better UX than this when your app throws errors by providing your own 
-    <code
-      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
     >
-      ErrorBoundary
-    </code>
-     or
-     
-    <code
-      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
     >
-      errorElement
-    </code>
-     prop on your route.
-  </p>
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+    <svg
+      height="80"
+      viewBox="-30 0 255 80"
+      width="255"
+    >
+      <ellipse
+        cx="25"
+        cy="20"
+        fill="none"
+        rx="10"
+        ry="10"
+      />
+    </svg>
+  </div>
 </div>
 `;

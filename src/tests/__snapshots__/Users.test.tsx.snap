@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users lists renders without crashing 1`] = `
+<div>
+  <div
+    class="dashboard-module"
+  >
+    <h1>
+      Users
+    </h1>
+    <div
+      class="data-statistics"
+      data-testid="statistics-data"
+      id="statistics"
+    >
+      <div
+        class="statistics-info-detail"
+      >
+        <img
+          alt="stat"
+          src="/images/icons/user-stat-icon-1.svg"
+        />
+        <p
+          data-testid="statistics-data-0"
+        >
+          Users
+        </p>
+        <p>
+          2,453
+        </p>
+      </div>
+      <div
+        class="statistics-info-detail"
+      >
+        <img
+          alt="stat"
+          src="/images/icons/user-stat-icon-2.svg"
+        />
+        <p
+          data-testid="statistics-data-1"
+        >
+          Active Users
+        </p>
+        <p>
+          2,453
+        </p>
+      </div>
+      <div
+        class="statistics-info-detail"
+      >
+        <img
+          alt="stat"
+          src="/images/icons/user-stat-icon-3.svg"
+        />
+        <p
+          data-testid="statistics-data-2"
+        >
+          Users with loans
+        </p>
+        <p>
+          12,453
+        </p>
+      </div>
+      <div
+        class="statistics-info-detail"
+      >
+        <img
+          alt="stat"
+          src="/images/icons/user-stat-icon-4.svg"
+        />
+        <p
+          data-testid="statistics-data-3"
+        >
+          Users with savings
+        </p>
+        <p>
+          102,453
+        </p>
+      </div>
+    </div>
+    <div
+      class="loader"
+      style="height: 20px;"
+    >
+      <svg
+        enable-background="new 0 0 0 0"
+        id="L9"
+        style="height: 90px;"
+        version="1.1"
+        viewBox="0 0 100 100"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <path
+          d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+          fill="grey"
+        >
+          <animatetransform
+            attributeName="transform"
+            attributeType="XML"
+            dur="1s"
+            from="0 50 50"
+            repeatCount="indefinite"
+            to="360 50 50"
+            type="rotate"
+          />
+        </path>
+      </svg>
+    </div>
+    <div
+      class="pagination-widget"
+    >
+      <div
+        class="pagination-info"
+      >
+        <p>
+          Showing
+           
+          <span>
+            9
+             
+            <img
+              alt="down arrow"
+              src="/images/icons/down-arrow.svg"
+            />
+          </span>
+           
+          out of 
+          0
+        </p>
+      </div>
+      <ul
+        aria-label="Pagination"
+        class="pagination-wrapper"
+        role="navigation"
+      >
+        <li
+          class="arrow disabled"
+        >
+          <a
+            aria-disabled="true"
+            aria-label="Previous page"
+            class=" "
+            rel="prev"
+            role="button"
+            tabindex="-1"
+          >
+            &lt;
+          </a>
+        </li>
+        <li
+          class="arrow"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Next page"
+            class=""
+            rel="next"
+            role="button"
+            tabindex="0"
+          >
+            &gt;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

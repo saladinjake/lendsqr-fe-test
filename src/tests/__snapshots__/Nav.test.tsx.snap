@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Bar Component renders without crashing on large screen 1`] = `
+<div>
+  <div>
+    <div
+      class="nav-bar-left"
+      data-testid="nav-responsive"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        data-testid="logo-responsive"
+        src="/images/logo.svg"
+      />
+      <div
+        class="search-input-widget-area "
+      >
+        <input
+          data-testid="search-responsive"
+          placeholder="Search for anything"
+          type="search"
+        />
+        <button>
+          <img
+            alt="search-icon-missing"
+            src="/images/icons/search-icon.svg"
+          />
+        </button>
+      </div>
+      <div
+        class="nav-bar-right"
+      >
+        <a
+          href="/"
+        >
+          Docs
+        </a>
+        <img
+          alt="notification-bell"
+          src="/images/icons/bell-icon.svg"
+        />
+        <div
+          class="nav-bar-profile"
+        >
+          <img
+            alt="avatar"
+            class="avatar"
+            src="/images/avatar.svg"
+          />
+          <p>
+            Adedeji
+          </p>
+          <img
+            alt="Avatar"
+            class="avatar-dropdown"
+            src="/images/icons/dropdown-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="menu-icon"
+      >
+        <img
+          alt="menu icon"
+          src="/images/icons/menu.svg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

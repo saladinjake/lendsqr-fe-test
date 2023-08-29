@@ -9,10 +9,10 @@ interface Props {
 const TopNav: FC<Props> = ({ setIsOpen, isOpen }) => {
   return (
     <div>
-      <div className="nav-bar-left">
-        <img src="/images/logo.svg" alt="logo" className="logo" />
+      <div className="nav-bar-left" data-testid="nav-responsive">
+        <img src="/images/logo.svg" alt="logo" className="logo" data-testid="logo-responsive" />
         <div className="search-input-widget-area ">
-          <input type="search" placeholder="Search for anything" />
+          <input type="search" placeholder="Search for anything" data-testid="search-responsive" />
           <button>
             <img
               src="/images/icons/search-icon.svg"

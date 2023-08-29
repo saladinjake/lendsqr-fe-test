@@ -73,7 +73,7 @@ const Table: FC<Props> = ({ allRecords, loading }) => {
         <tbody>
           {allRecords.map((user: any, index: number) => {
             return (
-              <tr key={index}>
+              <tr key={index}  className={`${index}-test-users random-selector-test-case`}>
                 <td>
                   <Link to={`/dashboard/users/${user?.id}`}>
                     {user?.orgName}

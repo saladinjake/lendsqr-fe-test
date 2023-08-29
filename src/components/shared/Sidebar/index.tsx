@@ -23,7 +23,7 @@ const SideBar: React.FC<Props> = ({ isOpen }) => {
             return (
               <div key={item.id}>
                 {!item.header ? (
-                  <Link to={`${item.link}`}>
+                  <Link to={`${item.link}`} title={`${index}-link`} className="test-links">
                     <li
                       className={`menu-item ${
                         currentRouteActivated(item.link, pathname) && "active"

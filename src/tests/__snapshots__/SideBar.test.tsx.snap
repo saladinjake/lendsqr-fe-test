@@ -1,0 +1,515 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Bar Component renders without crashing on large screen 1`] = `
+<div>
+  <div
+    class="side-bar false"
+  >
+    <div
+      class="branding"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="/images/logo.svg"
+      />
+    </div>
+    <div
+      class="sitemaps-wrapper"
+    >
+      <ul
+        class="side-bar-navigation-menu"
+      >
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="0-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Switch Organization"
+                src="/images/icons/nav-icon-4.svg"
+              />
+              <span>
+                Switch Organization
+              </span>
+              <span>
+                <img
+                  alt=""
+                  src="/images/icons/down-arrow.svg"
+                />
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/dashboard"
+            title="1-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Dashboard"
+                src="/images/icons/home.svg"
+              />
+              <span>
+                Dashboard
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <li
+            class="link-description"
+          >
+            <span>
+              Customers
+            </span>
+          </li>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/dashboard/users"
+            title="3-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Users"
+                src="/images/icons/nav-icon-4.svg"
+              />
+              <span>
+                Users
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="4-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Guarantors"
+                src="/images/icons/nav-icon-5.svg"
+              />
+              <span>
+                Guarantors
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="5-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Loan"
+                src="/images/icons/nav-icon-6.svg"
+              />
+              <span>
+                Loan
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="6-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Decision Models"
+                src="/images/icons/nav-icon-7.svg"
+              />
+              <span>
+                Decision Models
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="7-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Savings"
+                src="/images/icons/nav-icon-8.svg"
+              />
+              <span>
+                Savings
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="8-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Loan Requests"
+                src="/images/icons/nav-icon-9.svg"
+              />
+              <span>
+                Loan Requests
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="9-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Whitelist"
+                src="/images/icons/nav-icon-10.svg"
+              />
+              <span>
+                Whitelist
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="10-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Karma"
+                src="/images/icons/nav-icon-11.svg"
+              />
+              <span>
+                Karma
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <li
+            class="link-description"
+          >
+            <span>
+              Businesses
+            </span>
+          </li>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="12-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Organization"
+                src="/images/icons/nav-icon-13.svg"
+              />
+              <span>
+                Organization
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="13-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Loan Products"
+                src="/images/icons/nav-icon-14.svg"
+              />
+              <span>
+                Loan Products
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="14-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Savings Products"
+                src="/images/icons/nav-icon-15.svg"
+              />
+              <span>
+                Savings Products
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="15-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Fees and Charges"
+                src="/images/icons/nav-icon-16.svg"
+              />
+              <span>
+                Fees and Charges
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="16-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Transactions"
+                src="/images/icons/nav-icon-17.svg"
+              />
+              <span>
+                Transactions
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="17-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Services"
+                src="/images/icons/nav-icon-18.svg"
+              />
+              <span>
+                Services
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="18-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Service Account"
+                src="/images/icons/nav-icon-19.svg"
+              />
+              <span>
+                Service Account
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="19-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Settlements"
+                src="/images/icons/nav-icon-20.svg"
+              />
+              <span>
+                Settlements
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="20-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Reports"
+                src="/images/icons/nav-icon-21.svg"
+              />
+              <span>
+                Reports
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <li
+            class="link-description"
+          >
+            <span>
+              Settings
+            </span>
+          </li>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="22-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Preferences"
+                src="/images/icons/nav-icon-23.svg"
+              />
+              <span>
+                Preferences
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="23-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Fees and Pricing"
+                src="/images/icons/nav-icon-24.svg"
+              />
+              <span>
+                Fees and Pricing
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="24-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Audit Logs"
+                src="/images/icons/nav-icon-25.svg"
+              />
+              <span>
+                Audit Logs
+              </span>
+            </li>
+          </a>
+        </div>
+        <div>
+          <a
+            class="test-links"
+            href="/"
+            title="25-link"
+          >
+            <li
+              class="menu-item false"
+            >
+              <img
+                alt="Systems Messages"
+                src="/images/icons/nav-icon-26.svg"
+              />
+              <span>
+                Systems Messages
+              </span>
+            </li>
+          </a>
+        </div>
+      </ul>
+      <div
+        class="cta-revoke"
+      >
+        <div>
+          <img
+            alt="logout icon"
+            src="/images/icons/logout-icon.svg"
+          />
+          <span>
+            Logout
+          </span>
+        </div>
+        <span
+          class="info-app"
+        >
+          v1.2.0
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
